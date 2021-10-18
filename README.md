@@ -11,7 +11,7 @@ Equipo de Trabajo:
 Nicolas Alceo Davite    (nicolasalceodavite@gmail.com),
 Agustín Diaz Arnaudo    (adiazarnaudo@gmail.com),
 Federico Bianchi        (bianchi.fed@gmail.com),
-Agostina Macchi Souto   ()
+Agostina Macchi Souto   (agosmac@hotmail.com)
 
 
 // TEMATICA DEL SITIO
