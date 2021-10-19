@@ -19,4 +19,5 @@ Agostina Macchi Souto   (agosmac@hotmail.com)
 // PUBLICO OBJETIVO
 
 // REFERENTES
-Green Box https://www.green-box.com.ar/
+Green Box           https://www.green-box.com.ar/
+Sentido Circular    https://www.sentidocircular.com/
