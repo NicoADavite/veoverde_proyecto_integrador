@@ -23,3 +23,4 @@ Green Box           https://www.green-box.com.ar/
 Sentido Circular    https://www.sentidocircular.com/
 EcoMarket https://www.ecomarketshop.com/
 Foodity https://www.foodity.com.ar/
+Cero Market https://ceromarket.com.ar/tienda/
