@@ -15,8 +15,10 @@ Agostina Macchi Souto   (agosmac@hotmail.com)
 
 
 // TEMATICA DEL SITIO
+Marketplace apuntado al comercio de productos sustentables y amigables con el medio ambiente.
 
 // PUBLICO OBJETIVO
+El target apuntado son las personas interesadas en desarrollar una vida con mayor sustentabilidad y responsabilidad ambiental.
 
 // REFERENTES
 Green Box           https://www.green-box.com.ar/
