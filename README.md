@@ -26,3 +26,6 @@ Sentido Circular    https://www.sentidocircular.com/
 EcoMarket https://www.ecomarketshop.com/
 Foodity https://www.foodity.com.ar/
 Cero Market https://ceromarket.com.ar/tienda/
+
+// ENLACES
+TRELLO : https://trello.com/b/j7wr2juX/grupo-9-proyecto-integrador-dh
