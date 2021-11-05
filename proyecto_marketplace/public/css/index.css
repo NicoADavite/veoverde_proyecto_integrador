@@ -1,0 +1,76 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+header{
+    background-color: rgb(175, 214, 175);
+    padding-top: 5px;
+}
+
+.top-header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;  
+    background-color: rgb(175, 214, 175);
+    margin-bottom: 10px;
+}
+
+.burguer-menu{
+    width: 15%;
+    display: flex;
+    justify-content: center;
+}
+
+.header-logo{ 
+    width: 60%;
+    display: flex;
+    justify-content: center;
+}
+.header-logo img{ 
+    width: 90%;
+}
+
+.shopping-cart{
+    width: 15%;
+    display: flex;
+    justify-content: center;
+}
+
+.header-search-form{
+    background-color: rgb(175, 214, 175);
+    text-align: center;
+    padding-bottom: 10px;
+    
+}
+
+.header-search-form input{
+    width: 85%;
+}
+
+header nav{
+    display: none;
+}
+
+@media (min-width: 768px){
+    header nav{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    header nav ul{
+        display: flex;
+        justify-content: space-around;
+        margin: 5px 10px;
+    }
+    
+    header nav ul li{
+        list-style-type: none;
+        padding: 5px;
+    }
+    
+}
+    
+    
