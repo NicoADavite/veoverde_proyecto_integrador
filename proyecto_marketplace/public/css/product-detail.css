@@ -10,7 +10,6 @@ body{
 }
 
 header{
-    font-family: sans-serif;
     background-color: rgb(175, 214, 175);
     padding-top: 5px;
 }
@@ -64,7 +63,6 @@ header nav{
 
 main{
     background-color: rgb(255, 255, 255);
-    font-family: sans-serif;
 }
 
 .first-product{
