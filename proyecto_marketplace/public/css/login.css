@@ -1,0 +1,176 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(206, 241, 206);
+    
+}
+
+header{
+    font-family: sans-serif;
+    background-color: rgb(175, 214, 175);
+    padding-top: 5px;
+}
+
+.top-header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;  
+    background-color: rgb(175, 214, 175);
+    margin-bottom: 10px;
+}
+
+.burguer-menu{
+    width: 15%;
+    display: flex;
+    justify-content: center;
+}
+
+.header-logo{ 
+    width: 60%;
+    display: flex;
+    justify-content: center;
+}
+.header-logo img{ 
+    width: 90%;
+}
+
+.shopping-cart{
+    width: 15%;
+    display: flex;
+    justify-content: center;
+}
+
+.header-search-form{
+    background-color: rgb(175, 214, 175);
+    text-align: center;
+    padding-bottom: 10px;
+    
+}
+
+.header-search-form input{
+    width: 85%;
+}
+
+header nav{
+    display: none;
+    }
+
+/*main*/
+
+main{
+    background-color:  rgb(252, 245, 245);
+}
+
+.desgloce-menu{
+    text-align: center;
+
+}
+
+h2{
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+
+.login-form{
+    text-align: center;
+    margin-top: 70px;
+}
+
+.div-login-form{
+    text-align: inherit;
+    padding: 10px;
+    font-size: 18px;
+}
+.login-form-usuario{
+    font-size: 18px;
+}
+.login-form-password{
+    font-size: 20px;
+}
+.login-forgot-password button{
+   font-size: 9px;
+}
+
+.login-button button{
+   margin: 30px 0;
+}
+.login-not-account{
+    font-weight: bold;
+    padding: 15px;
+}
+
+
+
+
+
+
+/*footer*/
+footer{
+   
+}
+
+.whatsapp{
+        padding: 20px;
+        font-size: 30px;
+        width: 30px;
+        text-align: center;
+        text-decoration: none;
+        margin: 5px 2px;
+        border-radius: 50%;
+        }
+.fab{
+    width: 20px;
+    
+}
+
+.fa-whatsapp {
+        background: rgb(15, 226, 15);
+        color: white;
+        font-size: 30px;
+        width: 35px;
+        height: 35px;
+        text-align: center;
+        size: 30px;
+        margin: 0 auto;
+        }
+
+.copyright{
+    padding-top: 25px;
+}
+
+.imagen-afip{
+    align-items: flex-end;
+    width: 50px;
+    margin: inherit;
+
+}
+.copyright{
+
+}
+
+/*media768*/
+
+
+    @media (min-width: 768px){
+        header nav{
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        header nav ul{
+            display: flex;
+            justify-content: space-around;
+            margin: 5px 10px;
+        }
+        
+        header nav ul li{
+            list-style-type: none;
+            padding: 5px;
+        }
+        
+    }

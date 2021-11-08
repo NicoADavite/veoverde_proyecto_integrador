@@ -4,10 +4,82 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/proyecto_marketplace/public/css/login.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/login.css">
     <title>Document</title>
 </head>
 <body>
-    Login
+    <header>
+        <div class="top-header"> 
+            <div class="burguer-menu">
+                        <i class="fa fa-bars burger"></i>
+            </div>
+            <div class="header-logo">
+                <img src="./images/veoverde-nombre.jpg" alt="veoverde-nombre">
+            </div>
+            <div class="shopping-cart">
+                <i class="fas fa-shopping-cart"></i>
+            </div>
+        </div>
+
+        <form action="" method="GET" class="header-search-form">
+            <div>
+                <input type="text" placeholder="¿Qué estás buscando?">
+                <button class="submit"><i class="fa fa-search"></i></button>
+            </div>
+        </form>
+
+        <nav>
+            <ul>
+                <li><a href="#">Ofertas  <i class="fas fa-tags"></i></a></li>
+                <li><a href="#">Tiendas Oficiales <i class="fas fa-store"></i></a></li>
+                <li><a href="#">Vender <i class="fas fa-dollar-sign"></i></a></li>
+                <li><a href="#">Ayuda <i class="fas fa-question-circle"></i></a></li>
+            </ul>
+            <ul>
+                <li><a href="/register">Creá tu cuenta <i class="far fa-id-card"></i></a></li>
+                <li><a href="/login">Ingresá <i class="fas fa-sign-in-alt"></i></a></li>
+            </ul>
+        </nav>
+   </header>
+
+   <main>
+       <h6 class="desgloce-menu">Inicio > Mi Cuenta > Login</h6>
+    <form action="/" method="post" class="login-form">
+        <h2>INICIAR SESION</h2>
+        <div class= "div-login-form" class="login-form-usuario">
+            <label for="usuario">Usuario:</label>
+            <input type="text" name="usuario" placeholder="Ej: usuario@gmail.com" required>
+        </div>
+        <div class= "div-login-form" class="login-form-password">
+            <label for="clave">Contraseña:</label>
+            <input type="password" name="clave" required>   
+        </div>
+        <div class="login-forgot-password">
+            <button type="submit">¿Olvidaste la contraseña?</button>
+        </div>
+        <div class="login-button">
+            <button type="submit">Iniciar Sesion</button>
+        </div>
+        <div class="login-not-account">
+            <p>¿Aún no tienes cuenta?</p>
+        <a href="/register">Crea tu Cuenta</a>
+        </div>
+        
+                               
+    </form>
+
+
+   </main>
 </body>
+<footer>
+    <div class="footer-button">
+        <i class="fab fa-whatsapp"></i>
+        <a href="https://wa.me/541133333333">Contactanos por Whatsapp</a>
+        <p class="copyright">
+        <P>© VEOVERDE 2021 Todos los derechos reservados</P>
+        <a href="/">Términos y Condiciones<i class="terminos"></i></a>
+        </div>
+    <img src="https://www.afip.gob.ar/images/f960/DATAWEB.jpg" class="imagen-afip">
+</footer>
 </html>
