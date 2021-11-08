@@ -1,0 +1,22 @@
+PALETA DE COLORES:
+
+HEADER-TOP
+fondo: rgb(175, 214, 175)
+fuente: #1F3A3B
+
+HEADER NAV
+
+MAIN
+fondo: white
+
+ICONOS
+#1F3A3B
+
+BOTONES
+fondo: rgb(175, 214, 175)
+fuente: #1F3A3B
+
+FOOTER
+fondo: rgb(175, 214, 175)
+fuente: #1F3A3B
+
