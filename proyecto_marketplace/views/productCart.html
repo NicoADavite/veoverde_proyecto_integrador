@@ -4,10 +4,93 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/proyecto_marketplace/public/css/productCart.css">
+    <script src="https://kit.fontawesome.com/de4d91a3ca.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/product-cart.css">
     <title>Document</title>
 </head>
 <body>
-    ProductCart
+   <header>
+        <div class="top-header"> 
+            <div class="burguer-menu">
+                        <i class="fa fa-bars burger"></i>
+            </div>
+            <div class="header-logo">
+                <img src="./images/veoverde-nombre.jpg" alt="veoverde-nombre">
+            </div>
+            <div class="shopping-cart">
+                <i class="fas fa-shopping-cart"></i>
+            </div>
+        </div>
+
+        <form action="" method="GET" class="header-search-form">
+            <div>
+                <input type="text" placeholder="¿Qué estás buscando?">
+                <button class="submit"><i class="fa fa-search"></i></button>
+            </div>
+        </form>
+
+        <nav>
+            <ul>
+                <li><a href="#">Ofertas  <i class="fas fa-tags"></i></a></li>
+                <li><a href="#">Tiendas Oficiales <i class="fas fa-store"></i></a></li>
+                <li><a href="#">Vender <i class="fas fa-dollar-sign"></i></a></li>
+                <li><a href="#">Ayuda <i class="fas fa-question-circle"></i></a></li>
+            </ul>
+            <ul>
+                <li><a href="/register">Creá tu cuenta <i class="far fa-id-card"></i></a></li>
+                <li><a href="/login">Ingresá <i class="fas fa-sign-in-alt"></i></a></li>
+            </ul>
+        </nav>
+   </header>
+
+   <main>
+       <div class= "go-back">
+           <p><a href="/">Inicio</a></p> >> Carrito
+       </div>
+       <h2 class= "cart-title">Mi carrito de compras</h2>
+  <!-- Simulacion de compra pendiente de vinculacion con compra en productDetail-->
+        <!-- Producto 1-->
+       <div class= "main-shopping-cart">
+           <div class= "description-cart">
+           <img src="./images/veoverde-lapiz-plantable.png" alt="veoverde-lapiz-plantable">
+           <p class= "product-description">Lápiz Plantable</p>
+           <p class= "quantity-product">1</p>
+           <p class= "product-price">$200</p>
+            </div>
+           <ul class= "shopping-cart-options">
+               <li><a href="#">Eliminar</a></li>
+               <li><a href="#">Comprar ahora</a></li>
+               <li><a href="#">Guardar para después</a></li>
+           </ul>
+       </div>
+         <!-- Producto 2-->
+       <div class= "main-shopping-cart">
+        <div class= "description-cart">
+        <img src="./images/veoverde-lapiz-plantable.png" alt="veoverde-lapiz-plantable">
+        <p class= "product-description">Lápiz Plantable</p>
+        <p class= "quantity-product">1</p>
+        <p class= "product-price">$300</p>
+         </div>
+        <ul class= "shopping-cart-options">
+            <li><a href="#">Eliminar</a></li>
+            <li><a href="#">Comprar ahora</a></li>
+            <li><a href="#">Guardar para después</a></li>
+        </ul>
+    </div>
+
+<!-- Estructura a la espera de funcion compra-->
+    <div class= "total-amount-cart">
+        <p>Total compra</p>
+        <p>$500</p>
+    </div>
+
+    <!-- Buscar la forma de vincular boton con metodo de pago-->
+<div class= "check-out">
+    <button>Continuar compra</button>
+</div>
+   </main>
+   <footer>
+
+   </footer>
 </body>
 </html>
