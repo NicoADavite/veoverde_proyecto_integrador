@@ -22,6 +22,11 @@ header{
     width: 15%;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+}
+
+.burguer-menu i{
+    font-size: 24px;
 }
 
 .header-logo{ 
@@ -29,14 +34,20 @@ header{
     display: flex;
     justify-content: center;
 }
+
 .header-logo img{ 
     width: 90%;
+    max-width: 160px;
 }
 
 .shopping-cart{
     width: 15%;
     display: flex;
     justify-content: center;
+}
+
+.shopping-cart i{
+    font-size: 22px;
 }
 
 .header-search-form{

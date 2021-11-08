@@ -35,6 +35,7 @@ header{
     display: flex;
     justify-content: center;
 }
+
 .header-logo img{ 
     width: 90%;
 }
