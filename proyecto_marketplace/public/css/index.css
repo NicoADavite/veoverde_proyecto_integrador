@@ -65,6 +65,55 @@ header nav{
     display: none;
 }
 
+main{
+    padding: 5px;
+    padding-bottom: 14px;
+}
+
+/*Footer*/
+
+footer{
+    background-color: rgb(175, 214, 175);   
+}
+
+.footer-wsp-button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(15, 226, 15);
+    box-shadow: 2px 2px 6px rgb(0 0 0 / 70%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 8px;
+    right: 8px;
+}
+
+.footer-wsp-button a i{
+    font-size: 35px;
+    width: 90%;
+    background-color: rgb(15, 226, 15);
+    color: white;
+    text-align: center;
+    position: relative;
+    left: 0.5px;
+}
+
+.copyright{
+    padding-top: 25px;
+}
+
+.imagen-afip{
+    align-items: flex-end;
+    width: 50px;
+    margin: inherit;
+
+}
+.copyright{
+
+}
+
 @media (min-width: 768px){
     header nav{
         display: flex;
