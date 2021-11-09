@@ -63,7 +63,7 @@ header nav{
 /*main*/
 
 main{
-    background-color:  rgb(252, 245, 245);
+    background-color:  white;
 }
 
 .desgloce-menu{
@@ -111,35 +111,93 @@ h2{
 
 /*footer*/
 footer{
+   display: flex;
+   flex-direction: column;
+}
+.footer-nav{
+    display: flex;
+    flex-direction: row;
+    padding: 0 70px;
+}
+.logo-footer{
+    width: 55px;
+    height: 55px;
+    display: flex;
+    flex-direction: column;
    
 }
-
-.whatsapp{
-        padding: 20px;
-        font-size: 30px;
-        width: 30px;
-        text-align: center;
-        text-decoration: none;
-        margin: 5px 2px;
-        border-radius: 50%;
-        }
-.fab{
-    width: 20px;
-    
+.titulo-redes{
+    text-decoration: underline;
 }
 
-.fa-whatsapp {
-        background: rgb(15, 226, 15);
-        color: white;
-        font-size: 30px;
-        width: 35px;
-        height: 35px;
-        text-align: center;
-        size: 30px;
-        margin: 0 auto;
-        }
+.footer-nav-redes{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 15px;
+}
+.footer-nav-nosotros{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 15px;
+}
+.fa-instagram{
+    background-color: rgb(245, 66, 93);
+    color: white;
+    font-size: large;
+    text-align: center;
+    width: 20px;
+    height: 20px;
+}
+.fa-facebook-square{
+    background-color: rgb(66, 72, 245);
+    color: white;
+    font-size: large;
+    text-align: center;
+    width: 20px;
+    height: 20px;
+}
+.fa-twitter{
+    background-color: rgb(66, 135, 245);
+    color: white;
+    font-size: large;
+    text-align: center;
+    width: 20px;
+    height: 20px;
+}
+.footer-nav-newsletter{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding: 15px;
+}
 
-.copyright{
+.footer-wsp-button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(15, 226, 15);
+    box-shadow: 2px 2px 6px rgb(0 0 0 / 70%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 8px;
+    right: 8px;
+}
+
+.footer-wsp-button a i{
+    font-size: 35px;
+    width: 90%;
+    background-color: rgb(15, 226, 15);
+    color: white;
+    text-align: center;
+    position: relative;
+    left: 0.5px;
+    }
+
+.footer-copyright{
     padding-top: 25px;
 }
 
@@ -149,9 +207,8 @@ footer{
     margin: inherit;
 
 }
-.copyright{
 
-}
+
 
 /*media768*/
 
