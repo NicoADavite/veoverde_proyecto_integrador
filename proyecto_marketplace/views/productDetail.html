@@ -14,7 +14,7 @@
     <header>
         <div class="top-header"> 
             <div class="burguer-menu">
-                        <i class="fa fa-bars burger"></i>
+                <button type="menu"><i class="fa fa-bars burger"></i></button>
             </div>
             <div class="header-logo">
                 <img src="./images/veoverde-nombre.png" alt="veoverde-nombre">
@@ -26,7 +26,7 @@
 
         <form action="" method="GET" class="header-search-form">
             <div>
-                <input type="text" placeholder="¿Qué estás buscando?">
+                <input type="text" name="header-search-input" placeholder="¿Qué estás buscando?">
                 <button class="submit"><i class="fa fa-search"></i></button>
             </div>
         </form>
@@ -56,35 +56,49 @@
                 <img src="./images/calendario-plantable-2022.png" alt="Foto calendario plantable 2022">
                 </div>
                 
-                <div>
-                    <h3>PRECIO</h3>
+                <div class="product-article-discount">
+                    <p class="discount-discount">10% OFF </p>
+                    <p class="discount-p">COMPRANDO</p>
+                    <p class="discount-p"> 100 o MÁS</p>
                 </div>
 
                 <div>
-                    <h4>condiciones de entrega</h4>
+                    <h3>$400</h3>
+                </div>
+
+                <div class="payment-shipping">
+                    <h4><i class="fas fa-credit-card"></i>    medios de pago</h4>
+                
+                    <h4><i class="fas fa-truck-loading"></i>    formas de entrega</h4>
                 </div>
 
                 
                 <form action="" metod="POST">
                     
 
-                    <div class="register-form-submit">
+                    <div class="buy-form-submit">
                         <div class="quantity">
                             <input type="text" placeholder="Cantidad">
                         </div>
-                        <button type="submit">Comprar</button>
-                        <a href="#"></a>
-                        <button type="submit">Agregar al carrito <a href="/productCart"></a></button>
+                        <button type="submit"><a href="/productCart" style="text-decoration:none">Comprar</a></button>
+                        
                         
                     </div>
                 </form>
 
                 <div>
-                    <h5>12 Postales Plantables 10x15 cm (un mes por tarjeta).
-                        <br>
-                        12 Semillas diferentes para que llenes tu año de verde.
+                    <h5>
+                        <ul>
+                            <li>
+                                12 Postales Plantables 10x15 cm (un mes por tarjeta).
+                            </li>
+                            <li>
+                                12 Semillas diferentes para que llenes tu año de verde.
                         Instructivo, con tips y consejos para utilizarlo.
-                        Packaging que se transforma en soporte de escritorio.</h5>
+                        Packaging que se transforma en soporte de escritorio.
+                            </li>
+                        </ul>
+                    </h5>
                 </div>
 
                 <div>
@@ -96,12 +110,40 @@
                 </div>
            </article>
        </section>
-    
-    
-
    </main>
    <footer>
+    <nav class="footer-nav">
+        
+        <img src="/images/veoverde-logo.png" alt="logo" class="logo-footer">
+        <ul class="footer-nav-redes">
+            <h5 class="titulo-redes">Redes</h5>
+            <li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i><i class="menu-redes"></i></a></li>
+            <li><a href="https://www.facebook.com/"><i class="fab fa-facebook-square"></i><i class="menu-redes"></i></a></li>
+            <li><a href="https://twitter.com/"><i class="fab fa-twitter"></i><i class="menu-redes"></i></a></li>
+        </ul>
+        <ul class="footer-nav-nosotros">
+            <h5 class="titulo-redes">Nosotros</h5>
+            <li><i class="fas fa-map-marked-alt"></i><a href="https://www.google.com.ar/">Ubicacion<i class="menu-nosotros"></i></a></li>
 
-   </footer>
+        </ul>
+        <ul class="footer-nav-newsletter">
+            <h5 class="titulo-redes">Suscribite a nuestro Newsletter</h5>
+            <div class="email-newsletter">
+                <label for="newsletter"></label>
+                <input type="email" name="newsletter" placeholder="Ej: usuario@gmail.com">
+                <button type="submit">Registrarme</button>
+            </div>
+        </ul>
+    </nav>
+
+    <div class="footer-wsp-button">
+        <a href="https://wa.me/541133333333"><i class="fab fa-whatsapp"></i></a>
+    </div>
+    <div class="footer-copyright">
+            <p>© Veoverde - 2021. Todos los derechos reservados.</p>
+            <a href="/">Términos y Condiciones</a>
+    </div>
+    <img src="https://www.afip.gob.ar/images/f960/DATAWEB.jpg" class="imagen-afip">
+    </footer>
 </body>
 </html>

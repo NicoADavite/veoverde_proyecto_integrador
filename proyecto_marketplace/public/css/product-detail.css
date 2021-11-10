@@ -5,10 +5,6 @@
     font-family: "sarabun", sans-serif;
 }
 
-body{
-    background-color: rgb(206, 241, 206);
-}
-
 header{
     background-color: rgb(175, 214, 175);
     padding-top: 5px;
@@ -27,6 +23,16 @@ header{
     width: 15%;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+}
+
+.burguer-menu button{
+    border: none;
+    background-color: rgb(175, 214, 175);
+}
+
+.burguer-menu i{
+    font-size: 24px;
 }
 
 .header-logo{ 
@@ -36,6 +42,7 @@ header{
 }
 .header-logo img{ 
     width: 90%;
+    max-width: 160px;
 }
 
 .shopping-cart{
@@ -44,22 +51,38 @@ header{
     justify-content: center;
 }
 
+.shopping-cart i{
+    font-size: 22px;
+}
+
 .header-search-form{
     background-color: rgb(175, 214, 175);
     text-align: center;
     padding-bottom: 10px;
-    border-radius: 4px;
-    
 }
 
 .header-search-form input{
-    width: 85%;
-    border-radius: 4px;
+    width: 87%;
+    padding: 3px;
+    border: 2px solid black;
+    border-radius: 3px;
+    position: relative;
+    right: -5px;
+}
+
+.header-search-form button{
+    padding: 3px;
+    border: 2px solid black;
+    border-radius: 3px;
+    position: relative;
+    left: -4px;
 }
 
 header nav{
     display: none;
 }
+
+/*Main*/
 
 main{
     background-color: rgb(255, 255, 255);
@@ -71,20 +94,66 @@ main{
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
-    flex-wrap: wrap;
-}
-
-.first-product img{
-    margin-top: 10px;
-    margin-bottom: 10px;
-    height: 70vh;
-    width: 70vw;
+    border: 1px solid rgb(0, 39, 0);
     border-radius: 5px;
+    box-shadow: 2px 2px 6px rgb(0 0 0 / 60%);
 }
 
 h2{
     font-size: 15px;
     text-align: justify;
+    margin-top: 10px;
+}
+
+h3{
+    font-size: 30px;
+    font-weight: lighter;
+}
+
+.first-product img{
+    width:100%;
+    margin: 10px auto;
+    height: 70vh;
+    position: relative;
+    border-radius: 5px;
+    border:rgb(255, 255, 255)
+}
+
+.product-article-discount{
+    position: absolute;
+    right: 50px;
+    top: 220px;
+    width: 25%;
+    padding: 5px;
+    background-color: rgb(59, 59, 59);
+    color: white;
+    border-radius: 10px;
+    opacity: 0.8;
+}
+
+.discount-discount{
+    font-size: 14px;
+    font-style: bold;
+    color: rgb(113, 224, 1);
+    text-align: center;
+ }
+ 
+.discount-p{
+     font-size: 12px;
+     text-align: center;
+ }
+
+.payment-shipping{
+    display: flex;
+    flex-direction: column;
+    font-size: 10px;
+    text-align: center;
+    color: rgb(175, 214, 175); 
+    margin-top: 2%;
+}
+
+h4{
+   margin-top: 5px; 
 }
 
 .quantity{
@@ -92,33 +161,8 @@ h2{
     padding-bottom: 10px;
     border-radius: 4px;
     margin-bottom: 5px;
-}
-h5{
-    margin-top: 15px;
-    font-size: 12px;
-}
-
-h6{
-    margin-top: 15px;
-    font-size: 12px;
-    font-style: italic;
-    text-align: justify;
-    font-weight: lighter;
-}
-.register-form{
-    padding: 20px;
-    width: 89%;
-    margin: 30px auto;
-    background-color: rgb(241, 241, 241);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.register-form h2{
-    margin-bottom: 20px;
-    text-align: center;
+    margin-top: 20px;
+    box-sizing: border-box;
 }
 
 .buy{
@@ -127,51 +171,167 @@ h6{
     flex-direction: column;
 }
 
-.register-form-input label{
+.buy-form-input label{
     margin-bottom: 3px;
-
 }
 
-.register-form-show-password{
+.buy-form-submit{
+    width: 100%;
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    margin-top: 4px;
-    font-size: 14px;
+    text-decoration: none;
 }
 
-.register-form-show-password input{
-    margin-right: 4px;
-}
-
-.register-form h5{
+.buy-form-submit button{
+    width: 50%;
+    padding: 4px;
+    background-color: rgb(175, 214, 175);
+    color: #1F3A3B;
     text-align: center;
-    color: red;
-    margin-top: 10px;
+    border-radius: 15px; 
+    box-shadow: 2px 2px 6px rgb(0 0 0 / 40%);
     margin-bottom: 10px;
 }
 
-.register-form-submit{
-    margin-top: 10px;
+h5{
+    margin: 15px 20px;
+    font-size: 12px;
+    text-align: justify;
+}
+
+h6{
+    margin: 15px 20px;
+    font-size: 12px;
+    font-style: italic;
+    text-align: justify;
+    font-weight: lighter;
+}
+
+
+
+/*footer*/
+
+footer{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    border-radius: 4px;
-}
-
-.register-form-submit button{
-    padding: 5px;
-    width: 80%;
-    background-color: rgb(91, 219, 91);
-    border-radius: 4px;
-}
-
-.register-form-submit a{
-    margin-top: 7px;
-    text-align: center;
-}
-
-
-
+    font-size: 12px;
+    padding-left: 5px;
+    margin: auto;
+    background-color: rgb(175, 214, 175)
+ }
+ .footer-nav{
+     display: flex;
+     flex-direction: row;
+     justify-content: space-around;
+     margin: auto;
+     padding-bottom: 5px;
+ }
+ .logo-footer{
+     width: 50px;
+     height: 50px;
+     display: flex;
+     flex-direction: column;
+     padding: 15px 20px 0 0
+ 
+    
+ }
+ .titulo-redes{
+     text-decoration: underline;
+     padding-bottom: 5px;
+ }
+ 
+ .footer-nav-redes{
+     display: flex;
+     flex-direction: column;
+     list-style: none;
+     padding: 10px;
+ }
+ 
+ .fa-instagram{
+     background-color: rgb(245, 66, 93);
+     color: white;
+     font-size: large;
+     text-align: center;
+     width: 20px;
+     height: 20px;
+     
+ }
+ .fa-facebook-square{
+     background-color: rgb(66, 72, 245);
+     color: white;
+     font-size: large;
+     text-align: center;
+     width: 20px;
+     height: 20px;
+     
+ }
+ 
+ .fa-twitter{
+     background-color: rgb(66, 135, 245);
+     color: white;
+     font-size: large;
+     text-align: center;
+     width: 20px;
+     height: 20px;
+ }
+ .footer-nav-nosotros{
+     display: flex;
+     flex-direction: column;
+     list-style: none;
+     padding: 10px;
+ }
+ .footer-nav-nosotros li{
+     display: flex;
+     flex-direction: row;
+ }
+ .footer-nav-newsletter{
+     display: flex;
+     flex-direction: column;
+     list-style: none;
+     padding: 10px;
+ 
+ }
+ 
+ .email-newsletter{
+     font-size: smaller;
+ }
+ 
+ .footer-wsp-button{
+     width: 50px;
+     height: 50px;
+     border-radius: 50%;
+     background-color: rgb(15, 226, 15);
+     box-shadow: 2px 2px 6px rgb(0 0 0 / 70%);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     position: fixed;
+     bottom: 8px;
+     right: 8px;
+ }
+ 
+ .footer-wsp-button a i{
+     font-size: 35px;
+     width: 90%;
+     background-color: rgb(15, 226, 15);
+     color: white;
+     text-align: center;
+     position: relative;
+     left: 0.5px;
+ }
+ 
+ .footer-copyright{
+     padding: 25px 0 0 10px
+ }
+ 
+ .imagen-afip{
+     align-items: flex-end;
+     width: 40px;
+     margin: inherit;
+     padding: 25px 0 0 10px
+ }
 
 @media (min-width: 768px){
     header nav{
@@ -189,7 +349,23 @@ h6{
         list-style-type: none;
         padding: 5px;
     }
+
+    .product-article-discount{
+        top: 38px;
+        left: 300px;
+        opacity: 80%;
+        width: 30%
+    }
+
+    .first-product{
+        margin: 20px;
+    }
     
+    h6{
+        margin-top:5px;
+        padding: 30px;
+    }
+
 }
     
     
