@@ -105,9 +105,27 @@ main{
     background-color: rgb(255, 255, 255);
 }
 
-.first-product{
-    margin-top: 20px;
+.go-back {
     display: flex;
+    margin: 10px;
+    }
+    
+.go-back a{
+    padding-right: 2px;
+    text-decoration: none;
+    color: teal;
+    font-weight: bold;
+}
+
+section{
+    margin: 0px auto;
+}
+.first-product{
+    max-width:100%;
+    margin: 20px auto;
+    position: relative;
+    display: flex;
+    padding: 20px 15px;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
@@ -117,30 +135,27 @@ main{
 }
 
 h2{
-    font-size: 15px;
+    font-size: 30px;
     text-align: justify;
     margin-top: 10px;
+    margin-bottom: 15px;
 }
 
-h3{
-    font-size: 30px;
-    font-weight: lighter;
+.calendario-plantable-2022{
+    width: 100%;
 }
-
 .first-product img{
     width:100%;
-    margin: 10px auto;
-    height: 70vh;
-    position: relative;
+    height: 70%;
     border-radius: 5px;
     border:rgb(255, 255, 255)
 }
 
 .product-article-discount{
     position: absolute;
-    right: 50px;
-    top: 220px;
-    width: 25%;
+    left: 15px;
+    top: 80px;
+    width: 120px;
     padding: 5px;
     background-color: rgb(59, 59, 59);
     color: white;
@@ -159,6 +174,12 @@ h3{
      font-size: 12px;
      text-align: center;
  }
+
+h3{
+    font-size: 30px;
+    font-weight: lighter;
+    margin-top: 20px;
+}
 
 .payment-shipping{
     display: flex;
@@ -203,13 +224,22 @@ h4{
 
 .buy-form-submit button{
     width: 50%;
-    padding: 4px;
-    background-color: rgb(175, 214, 175);
-    color: #1F3A3B;
+    padding: 4px; 
+    background-color: #1F3A3B;
     text-align: center;
     border-radius: 15px; 
     box-shadow: 2px 2px 6px rgb(0 0 0 / 40%);
     margin-bottom: 10px;
+    border: none;
+    transition: all 450ms 
+}
+
+.buy-form-submit button:hover{
+    background-color: rgb(175, 214, 175);
+}
+
+.buy-form-submit a{
+    color:rgb(255, 255, 255)
 }
 
 h5{
@@ -526,7 +556,6 @@ footer{
     
     h6{
         margin-top:5px;
-        padding: 30px;
     }
 
     /* Footer */
