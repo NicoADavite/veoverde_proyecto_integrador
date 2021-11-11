@@ -20,7 +20,7 @@
                 <img src="./images/veoverde-nombre.png" alt="veoverde-nombre">
             </div>
             <div class="shopping-cart">
-                <i class="fas fa-shopping-cart"></i>
+                <a href="/productCart"><i class="fas fa-shopping-cart"></i></a>
             </div>
         </div>
 
@@ -54,9 +54,9 @@
             <div class="products">
 
                 <article class="p-a-calendario-plantable product-article">
-                    <div class="product-article-img">
+                    <figure class="product-article-img">
                         <img src="images/calendario-plantable-2022.png" alt="Calendario Plantable">
-                    </div>
+                    </figure>
                     <div class="product-article-discount">
                         <p class="discount-discount">10% OFF </p>
                         <p class="discount-p">COMPRANDO</p>
@@ -73,9 +73,9 @@
                 </article>
 
                 <article class="p-a-kit-plantable product-article">
-                    <div class="product-article-img">
+                    <figure class="product-article-img">
                         <img src="images/veoverde-kits.jpg" alt="Kits Plantables">
-                    </div>
+                    </figure>
                     <div class="product-article-discount">
                         <p class="discount-discount">10% OFF </p>
                         <p class="discount-p">COMPRANDO</p>
@@ -92,9 +92,9 @@
                 </article>
 
                 <article class="p-a-lapiz-plantable product-article">
-                    <div class="product-article-img">
+                    <figure class="product-article-img">
                         <img src="images/veoverde-lapiz-plantable.png" alt="Lapiz Plantable">
-                    </div>
+                    </figure>
                     <div class="product-article-discount">
                         <p class="discount-discount">10% OFF </p>
                         <p class="discount-p">COMPRANDO</p>
@@ -105,27 +105,27 @@
                         <p class="product-article-price">$100</p>
                     </div>                        
                     <div class="product-article-buttons">
-                            <button class="product-article-buy-button">COMPRAR</button>
-                            <button class="product-article-view-button"><i class="far fa-eye"></i></button>
+                        <button class="product-article-buy-button">COMPRAR</button>
+                        <button class="product-article-view-button"><i class="far fa-eye"></i></button>
                     </div>                    
                 </article>
 
                 <article class="p-a-sobres-compostables product-article">
-                    <div class="product-article-img">
+                    <figure class="product-article-img">
                         <img src="images/veoverde-sobres-compostables.jpg" alt="Sobres Compostables">
-                    </div> 
+                    </figure> 
                     <div class="product-article-discount">
                         <p class="discount-discount">10% OFF </p>
                         <p class="discount-p">COMPRANDO</p>
                         <p class="discount-p"> 100 o MÁS</p>
                     </div>                    
                     <div class="product-article-details">
-                            <h4 class="product-article-description">Sobres Compostables</h4>
-                            <p class="product-article-price">$30</p>
+                        <h4 class="product-article-description">Sobres Compostables</h4>
+                        <p class="product-article-price">$30</p>
                     </div>
                     <div class="product-article-buttons">
-                            <button class="product-article-buy-button">COMPRAR</button>
-                            <button class="product-article-view-button"><i class="far fa-eye"></i></button>
+                        <button class="product-article-buy-button">COMPRAR</button>
+                        <button class="product-article-view-button"><i class="far fa-eye"></i></button>
                     </div>                    
                 </article>
             </div>
@@ -134,19 +134,49 @@
     </main>
 
    <footer>
+    
+        <nav class="footer-nav">
 
-    <div class="footer-wsp-button">
-        <a href="https://wa.me/541133333333"><i class="fab fa-whatsapp"></i></a>
-    </div>
+            <div class="footer-nav-redes">
+                <h2 class="titulo-redes">Nuestras Redes</h2>
+                <div class="footer-red footer-instagram"><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></div>
+                <div class="footer-red footer-facebook"><a href="https://www.facebook.com/"><i class="fab fa-facebook-square"></i></a></div>
+                <div class="footer-red footer-twitter"><a href="https://twitter.com/"><i class="fab fa-twitter"></i></a></div>
+            </div>
 
-    <div class="footer-copyright">
-            <p>© Veoverde - 2021. Todos los derechos reservados.</p>
-            <a href="/">Términos y Condiciones</a>
-    </div>
+            <div class="footer-nav-nosotros">
+                <h2 class="titulo-nosotros">Nosotros</h2>
+                <div class="footer-nosotros-location"><a href="https://www.google.com.ar/"><i class="fas fa-map-marker-alt"></i> Avenida Siempre Viva 742, Springfield</a></div>
+            </div>
+                
+            <form action="" method="POST" class="footer-email-newsletter">
+                <label for="newsletter" class="footer-titulo-newsletter"><h3>Suscribite a nuestro Newsletter</h3></label>
+                <input type="email" name="newsletter" class="footer-input-newsletter" placeholder="Ej: user@gmail.com">
+                <button type="submit" class="footer-button-newsletter">Registrarme</button>
+            </form>
 
-    <img src="https://www.afip.gob.ar/images/f960/DATAWEB.jpg" class="imagen-afip">
+        </nav>
 
-   </footer>
+        <div class="footer-wsp-button">
+            <a href="https://wa.me/541133333333"><i class="fab fa-whatsapp"></i></a>
+        </div>
+
+        <div class="footer-bottom">
+            <figure class="logo-footer">
+                <img src="images/veoverde-logo.png" alt="Logo Footer">
+            </figure>
+
+            <figure class="imagen-afip">
+                <img src="https://www.afip.gob.ar/images/f960/DATAWEB.jpg">
+            </figure>
+
+            <div class="footer-copyright">
+                <p>© Veoverde - 2021. Todos los derechos reservados.</p>
+                <a href="/">Términos y Condiciones</a>
+            </div>
+        </div>      
+
+    </footer>
 
 </body>
 </html>

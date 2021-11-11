@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/product-cart.css">
     <title>Carro de Compras | VEOVERDE</title>
 </head>
+
 <body>
    <header>
         <div class="top-header"> 
@@ -45,10 +46,11 @@
         </nav>
    </header>
    <main>
-      <div class= "go-back">
+        <div class= "go-back">
            <p><a href="/">Inicio</a></p> >> Carrito
-       </div> 
-<!-- Simulacion de compra pendiente de vinculacion con compra en productDetail-->
+        </div> 
+        <!-- Simulacion de compra pendiente de vinculacion con compra en productDetail-->
+
         <!-- Producto 1-->
         <div class= "main-shopping-cart">
             <div class= "description-cart">
@@ -63,34 +65,79 @@
                 <li><a href="#">Guardar para después</a></li>
             </ul>
         </div>
+
           <!-- Producto 2-->
         <div class= "main-shopping-cart">
-         <div class= "description-cart">
-         <img src="./images/veoverde-lapiz-plantable.png" alt="veoverde-lapiz-plantable">
-         <p class= "product-description">Lápiz Plantable</p>
-         <p class= "quantity-product">1</p>
-         <p class= "product-price">$300</p>
-          </div>
-         <ul class= "shopping-cart-options">
-             <li><a href="#">Eliminar</a></li>
-             <li><a href="#">Comprar ahora</a></li>
-             <li><a href="#">Guardar para después</a></li>
-         </ul>
-     </div>
+            <div class= "description-cart">
+            <img src="./images/veoverde-lapiz-plantable.png" alt="veoverde-lapiz-plantable">
+            <p class= "product-description">Lápiz Plantable</p>
+            <p class= "quantity-product">1</p>
+            <p class= "product-price">$300</p>
+        </div>
+            <ul class= "shopping-cart-options">
+                <li><a href="#">Eliminar</a></li>
+                <li><a href="#">Comprar ahora</a></li>
+                <li><a href="#">Guardar para después</a></li>
+            </ul>
+        </div>
  
- <!-- Estructura a la espera de funcion compra-->
-     <div class= "total-amount-cart">
-         <p>Total compra</p>
-         <p>$500</p>
-     </div>
+         <!-- Estructura a la espera de funcion compra-->
+        <div class= "total-amount-cart">
+            <p>Total compra</p>
+            <p>$500</p>
+         </div>
  
-     <!-- Buscar la forma de vincular boton con metodo de pago-->
- <div class= "check-out">
-     <button>Continuar compra</button>
- </div>
+        <!-- Buscar la forma de vincular boton con metodo de pago-->
+        <div class= "check-out">
+            <button>Continuar compra</button>
+        </div>
    </main>
-   <footer>
 
-   </footer>
+   <footer>
+    
+        <nav class="footer-nav">
+
+            <div class="footer-nav-redes">
+                <h2 class="titulo-redes">Nuestras Redes</h2>
+                <div class="footer-red footer-instagram"><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></div>
+                <div class="footer-red footer-facebook"><a href="https://www.facebook.com/"><i class="fab fa-facebook-square"></i></a></div>
+                <div class="footer-red footer-twitter"><a href="https://twitter.com/"><i class="fab fa-twitter"></i></a></div>
+            </div>
+
+            <div class="footer-nav-nosotros">
+                <h2 class="titulo-nosotros">Nosotros</h2>
+                <div class="footer-nosotros-location"><a href="https://www.google.com.ar/"><i class="fas fa-map-marker-alt"></i> Avenida Siempre Viva 742, Springfield</a></div>
+            </div>
+
+            <form action="" method="POST" class="footer-email-newsletter">
+                <label for="newsletter" class="footer-titulo-newsletter"><h3>Suscribite a nuestro Newsletter</h3></label>
+                <input type="email" name="newsletter" class="footer-input-newsletter" placeholder="Ej: user@gmail.com">
+                <button type="submit" class="footer-button-newsletter">Registrarme</button>
+            </form>
+
+        </nav>
+
+        <div class="footer-wsp-button">
+            <a href="https://wa.me/541133333333"><i class="fab fa-whatsapp"></i></a>
+        </div>
+
+        <div class="footer-bottom">
+
+            <figure class="logo-footer">
+                <img src="images/veoverde-logo.png" alt="Logo Footer">
+            </figure>
+
+            <figure class="imagen-afip">
+                <img src="https://www.afip.gob.ar/images/f960/DATAWEB.jpg">
+            </figure>
+
+            <div class="footer-copyright">
+                <p>© Veoverde - 2021. Todos los derechos reservados.</p>
+                <a href="/">Términos y Condiciones</a>
+            </div>
+
+        </div>      
+
+    </footer>
 </body>
 </html>
