@@ -83,6 +83,9 @@ header{
 header nav{
     display: none;
 }
+header nav ul li a{
+    
+}
 
 header nav ul li a:hover{
     color: #1F3A3B;;
@@ -433,6 +436,10 @@ transform: scale(1.02);
     text-align: center;
     position: relative;
     left: 0.5px;
+}
+a:visited{
+    color: initial;
+
 }
 
 @keyframes logo-wsp{

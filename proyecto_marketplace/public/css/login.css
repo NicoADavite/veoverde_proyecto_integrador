@@ -89,9 +89,11 @@ header{
 header nav{
     display: none;
 }
-
+header nav ul li a{
+    color: #48427e;
+}
 header nav ul li a:hover{
-    color: #1F3A3B;;
+    color: #2f2b53;
 }
 
 header nav ul li a:visited{
@@ -131,19 +133,37 @@ h2{
     font-size: 20px;
 }
 .login-forgot-password button{
-   font-size: 9px;
-   border: none;
-}
-
+    font-size: 9px;
+    border: none;
+     background-color: #1F3A3B;
+     text-align: center;
+     
+     box-shadow: 2px 2px 6px rgb(0 0 0 / 40%);
+     transition: all 450ms;
+     color: white;
+ }
+ .login-forgot-password button:hover {
+     background-color: rgb(175, 214, 175);
+     }
 .login-button button{
    margin: 30px 0;
    border: none;
-   background-color: white;
+    background-color: #1F3A3B;
+    text-align: center;
+    box-shadow: 2px 2px 6px rgb(0 0 0 / 40%);
+    border: none;
+    transition: all 450ms;
+    color: white;
+    font-size: 18px;
+}
+.login-button button:hover {
+    background-color: rgb(175, 214, 175);
 }
 .login-not-account{
     font-weight: bold;
     padding: 15px;
 }
+
 
 .login-not-account a{
     text-decoration: none;
@@ -363,6 +383,10 @@ footer{
     text-align: center;
     position: relative;
     left: 0.5px;
+}
+
+a:visited{
+    color: initial;
 }
 
 @keyframes logo-wsp{

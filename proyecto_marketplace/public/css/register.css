@@ -169,12 +169,23 @@ main{
 .register-form-submit button{
     padding: 5px;
     width: 80%;
-    background-color: rgb(91, 219, 91);
+    background-color: #1F3A3B;
+    text-align: center;
+    border-radius: 15px; 
+    box-shadow: 2px 2px 6px rgb(0 0 0 / 40%);
+    margin-bottom: 10px;
+    border: none;
+    transition: all 450ms;
+    color: white;
+    font-size: 18px;
 }
-
+.register-form-submit button:hover {
+    background-color: rgb(175, 214, 175);
+    }
 .register-form-submit a{
     margin-top: 7px;
     text-align: center;
+    text-decoration: none;
 }
 
 
@@ -390,6 +401,10 @@ footer{
     text-align: center;
     position: relative;
     left: 0.5px;
+}
+a:visited{
+    color: initial;
+
 }
 
 @keyframes logo-wsp{

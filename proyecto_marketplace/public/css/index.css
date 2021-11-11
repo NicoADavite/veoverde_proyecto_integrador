@@ -473,6 +473,10 @@ footer{
     position: relative;
     left: 0.5px;
 }
+a:visited{
+    color: initial;
+
+}
 
 @keyframes logo-wsp{
 
