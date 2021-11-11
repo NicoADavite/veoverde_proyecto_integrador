@@ -5,10 +5,11 @@
     font-family: "sarabun", sans-serif;
 }
 
+/* Header */
+
 header{
     background-color: rgb(175, 214, 175);
     padding-top: 5px;
-    position: relative;
 }
 
 .top-header{
@@ -31,6 +32,7 @@ header{
     border: none;
     background-color: rgb(175, 214, 175);
 }
+
 
 .burguer-menu i{
     font-size: 24px;
@@ -57,10 +59,14 @@ header{
     font-size: 22px;
 }
 
+.shopping-cart a:visited{
+    color: initial;
+}
+
 .header-search-form{
     background-color: rgb(175, 214, 175);
     text-align: center;
-    padding-bottom: 10px; 
+    padding-bottom: 10px;
 }
 
 .header-search-form input{
@@ -69,7 +75,7 @@ header{
     border: 2px solid black;
     border-radius: 3px;
     position: relative;
-    right: -5px;    
+    right: -5px;
 }
 
 .header-search-form button{
@@ -84,6 +90,18 @@ header nav{
     display: none;
 }
 
+
+header nav ul li a:hover{
+    color: #1F3A3B;;
+}
+
+header nav ul li a:visited{
+    color:initial;
+}
+
+
+/* Main */
+
 main{
     background-color: white;
 }
@@ -92,11 +110,14 @@ main{
     padding: 20px;
     width: 89%;
     margin: 18px auto;
-    background-color: rgb(241, 241, 241);
+    background-color: rgb(233, 233, 233);
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    border: 1px solid rgb(0, 39, 0);
+    border-radius: 4px; 
+    box-shadow: 2px 2px 6px rgb(0 0 0 / 60%);
 }
 
 .register-form h2{
@@ -112,7 +133,12 @@ main{
 
 .register-form-input label{
     margin-bottom: 3px;
+}
 
+.register-form-input input{
+    padding: 4px;
+    border-radius: 4px; 
+    box-shadow: 2px 2px 6px rgb(0 0 0 / 20%);
 }
 
 .register-form-show-password{
@@ -152,10 +178,193 @@ main{
 }
 
 
+
 /*Footer*/
 
 footer{
-    background-color: rgb(175, 214, 175);   
+    background-color: rgb(175, 214, 175);
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-nav{
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer-nav-redes{
+    margin-top: 10px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.footer-nav-redes h2{
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.footer-red{  
+    margin-right: 10px;
+}
+
+.footer-red a{
+    text-decoration: none;
+}
+
+.footer-red a i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 2rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 10%;
+}
+
+.fa-twitter{
+    background-color: rgb(66, 135, 245);
+    color: white;
+}
+
+
+.fa-instagram{
+    background-color: rgb(245, 66, 93);
+    color: white;
+}
+
+.fa-facebook-square{
+    background-color: rgb(66, 72, 245);
+    color: white;  
+}
+
+.footer-nav-nosotros{
+    margin-bottom: 30px;
+}
+
+.footer-nav-nosotros h2{    
+    margin-bottom: 10px;
+}
+
+.footer-nav-nosotros div{
+    font-size: 1.2em;
+    text-decoration: none;
+}
+
+.footer-nav-nosotros div a{
+    color: rgb(8, 92, 8);
+    text-decoration: none;
+}
+
+.footer-nav-nosotros div a:hover{
+    color: rgb(16, 182, 16);
+}
+
+.footer-nav-nosotros div a:visited{
+    color: rgb(8, 92, 8);
+}
+
+.footer-email-newsletter{
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.footer-email-newsletter label{
+    width: 100%;
+}
+
+.footer-email-newsletter h3{
+    font-size: 1.05rem;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.footer-email-newsletter input{
+    width: 55%; 
+    padding: 2px; 
+    margin-right: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 6px rgb(0 0 0 / 40%);
+    max-width: 150px;
+    max-height: 28px;
+}
+
+.footer-email-newsletter button{
+    width: 35%;
+    padding: 6px;
+    background-color: #1F3A3B;
+    color:rgb(255, 255, 255);
+    border: none;
+    border-radius: 15px;        
+    box-shadow: 2px 2px 6px rgb(0 0 0 / 40%);
+    min-width: 90px;
+    max-width: 95px;
+    max-height: 28px;
+    transition: all 450ms;
+}
+    
+.footer-email-newsletter button:hover{
+    background-color: rgb(88, 151, 88);
+}
+
+.footer-bottom{
+    padding: 20px;
+    background-color: rgb(147, 207, 147);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-bottom .logo-footer{
+    width: 27%;
+    max-width: 82px;
+}
+
+.footer-bottom .logo-footer img{
+    width: 100%;
+}
+
+.footer-bottom .imagen-afip{
+    width: 20%;
+    max-width: 60px;
+}
+
+.footer-bottom .imagen-afip img{
+    width: 100%;
+}
+
+.footer-bottom .footer-copyright{
+    width: 100%;
+    text-align: center;
+    margin: 25px 0px;
+}
+
+.footer-bottom .footer-copyright p{
+    margin-bottom: 3px;
+}
+
+.footer-bottom .footer-copyright a{
+    text-decoration: none;
+}
+
+.footer-bottom .footer-copyright a:visited{
+    text-decoration: none;
+    color: initial;
+}
+
+.footer-bottom .footer-copyright a:hover{
+    text-decoration: none;
+    color: #1F3A3B;
 }
 
 .footer-wsp-button{
@@ -170,6 +379,7 @@ footer{
     position: fixed;
     bottom: 8px;
     right: 8px;
+    animation: logo-wsp 2.5s normal;
 }
 
 .footer-wsp-button a i{
@@ -182,24 +392,54 @@ footer{
     left: 0.5px;
 }
 
-.copyright{
-    padding-top: 25px;
+@keyframes logo-wsp{
+
+    0%{
+        right: -300px;
+        bottom: -300px;
+    }
+
+    90%{
+        right: -50px;
+        bottom: -50px;
+        transform: scale(0.1);
+    }
+
+    95%{
+        transform: scale(0.4);
+    }
+
+    100%{
+        right: 8;
+        scale: 1;
+        transform: scale(1);
+    }    
 }
 
-.imagen-afip{
-    align-items: flex-end;
-    width: 50px;
-    margin: inherit;
+
+@media (min-width: 481px){
+
+    .our-products-title h2{
+        font-size: 1.7em;
+    }
+    
+    .products{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: stretch;
+    }
+    
+    .product-article{
+        width: 48%;
+    }
 
 }
-.copyright{
-
-}
-
-
-
+    
 
 @media (min-width: 768px){
+    /*Header*/
+
     header nav{
         display: flex;
         justify-content: space-between;
@@ -209,13 +449,86 @@ footer{
         display: flex;
         justify-content: space-around;
         margin: 5px 10px;
+        
     }
     
     header nav ul li{
         list-style-type: none;
-        padding: 5px;
+        padding: 7.5px;
+    }
+
+    header nav ul li a{
+        text-decoration: none;
+        list-style-type: none;
+    }
+
+    /*Footer*/
+
+    .footer-bottom .logo-footer{
+        order: -2;
+    }
+
+    .footer-bottom .footer-copyright{
+        align-self: flex-end;
+        margin: 0px;
+        width: 60%;
+        order: -1;
+    }
+
+}
+
+@media (min-width: 1280px){
+
+    .our-products-title h2{
+        font-size: 2em;
+    }
+    
+    .products{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: stretch;
+    }
+    
+    .product-article{
+        width: 24%;
+    }
+    
+
+    /*Footer*/
+
+    .footer-nav{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .footer-nav-redes{
+        width: 25%;
+    }
+
+    .footer-nav-redes h2{
+        align-self: flex-start;
+    }
+
+    .footer-nav-nosotros{
+        width: 32%;
+        margin-top: 10px;
+    }
+
+    .footer-nav-nosotros h2{
+        margin-bottom: 30px;
+    }
+
+    .footer-email-newsletter{
+        margin-top: 10px;
+        width: 40%;
+    }
+
+    .footer-email-newsletter h3{
+        font-size: 1.4rem;
+        margin-bottom: 10px;
+        align-self: flex-start;
     }
     
 }
-    
-    
