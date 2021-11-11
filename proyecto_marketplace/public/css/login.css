@@ -260,7 +260,7 @@ text-decoration: none;
 
 /*media*/
 
-@media (min-width: 481px){
+@media (min-width: 375px){
     .footer-copyright{
         margin: 0 auto;
         text-align: center;
