@@ -249,14 +249,15 @@ footer{
     font-size: 12px;
     padding-left: 5px;
     margin: auto;
-    background-color: rgb(175, 214, 175)
+    background-color: rgb(175, 214, 175);
  }
  .footer-nav{
      display: flex;
      flex-direction: row;
      justify-content: space-around;
-     margin: auto;
-     padding-bottom: 5px;
+     margin: 0px 10px;
+     padding: 5px ;
+     font-size: 15px;
  }
  .logo-footer{
      width: 50px;
@@ -316,6 +317,9 @@ footer{
      display: flex;
      flex-direction: row;
  }
+ .footer-nav-nosotros li a{
+ text-decoration: none;
+ }
  .footer-nav-newsletter{
      display: flex;
      flex-direction: column;
@@ -327,6 +331,24 @@ footer{
  .email-newsletter{
      font-size: smaller;
  }
+ 
+ .email-newsletter button{
+     border: none;
+     background-color: #1F3A3B;
+     border-radius: 15px; 
+     box-shadow: 2px 2px 6px rgb(0 0 0 / 40%);
+     border: none;
+     transition: all 450ms ;
+     color:rgb(255, 255, 255);
+     padding: 5px;
+ }
+     
+     .email-newsletter button:hover{
+         background-color: rgb(175, 214, 175);
+     }
+ 
+ 
+         
  
  .footer-wsp-button{
      width: 50px;
@@ -387,6 +409,26 @@ footer{
         margin-top:5px;
     }
 
+    .footer-nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin: auto;
+        padding-bottom: 5px;
+        }
+        .footer-nav-redes{
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+            padding: 10px;
+            flex-wrap: wrap;
+            }
+        .footer-nav-redes h5{
+        width: 100%;
+        }
+        .footer-nav-redes li{
+            margin-right: 10px;
+        }
 }
     
     
