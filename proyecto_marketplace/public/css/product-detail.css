@@ -134,8 +134,8 @@ section{
     box-shadow: 2px 2px 6px rgb(0 0 0 / 60%);
 }
 
-h2{
-    font-size: 30px;
+.product-name{
+    font-size: 20px;
     text-align: justify;
     margin-top: 10px;
     margin-bottom: 15px;
@@ -147,14 +147,14 @@ h2{
 .first-product img{
     width:100%;
     height: 70%;
-    border-radius: 5px;
-    border:rgb(255, 255, 255)
+    border-radius: 10px;
+    border:rgb(255, 255, 255);
 }
 
 .product-article-discount{
     position: absolute;
     left: 15px;
-    top: 80px;
+    top: 68px;
     width: 120px;
     padding: 5px;
     background-color: rgb(59, 59, 59);
@@ -203,6 +203,10 @@ h4{
     box-sizing: border-box;
 }
 
+.quantity input{
+    width: 50%;
+}
+
 .buy{
     margin-bottom: 12px;
     display: flex;
@@ -238,13 +242,29 @@ h4{
     background-color: rgb(175, 214, 175);
 }
 
-.buy-form-submit a{
-    color:rgb(255, 255, 255)
+.buy-form-submit button a{
+    color:rgb(255, 255, 255);
 }
+
+.description{
+    list-style: none;
+    font-size: 12px;
+}
+
+.description li{
+    margin: 5px;
+}
+.description i{
+    font-size: 7px;
+    text-align: center;
+    padding: 1px;
+}
+
+
 
 h5{
     margin: 15px 20px;
-    font-size: 12px;
+    
     text-align: justify;
 }
 
@@ -499,17 +519,45 @@ footer{
 
 @media (min-width: 481px){
 
-    .our-products-title h2{
-        font-size: 1.7em;
-    }
-    
-    .products{
-        flex-direction: row;
+    .first-product{
+        flex-direction: column;
         flex-wrap: wrap;
         justify-content: space-around;
         align-items: stretch;
     }
+
+    .product-name{
+        font-size: 1.7em;
+        text-align: center;
+    }
     
+    .product-article-discount{
+        top: 77px;
+        left: 15px;
+        opacity: 80%;
+        width: 30%
+    }
+
+    h3{
+        font-size: 3em;
+        text-align: center
+    }
+
+    .payment-shipping{
+        font-size: 0.7em;
+    }
+
+    .quantity input{
+        padding: 4px;
+        font-size: 16px;
+        width: 150px;
+    }
+
+    .buy-form-submit button{
+        width: 150px;
+    }
+
+
     .product-article{
         width: 48%;
     }
@@ -542,17 +590,43 @@ footer{
     }
 
     /* Main */
+  
+    .first-product{
+        margin: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .product-name{
+        font-size: 2em;
+        text-align: center;
+    }
 
     .product-article-discount{
-        top: 38px;
-        left: 300px;
+        top: 82px;
+        left: 15px;
         opacity: 80%;
         width: 30%
     }
-    
-    .first-product{
-        margin: 20px;
+
+    h3{
+        font-size: 4em;
+        text-align: center
     }
+
+    .payment-shipping{
+        font-size: 1em;
+    }
+
+    .quantity input{
+        padding: 4px;
+        font-size: 16px;
+    }
+
+    .buy-form-submit button{
+        width: 170px;
+    }
+
     
     h6{
         margin-top:5px;
@@ -579,11 +653,11 @@ a:visited{
 
 @media (min-width: 1280px){
 
-    .our-products-title h2{
+    .product-name{
         font-size: 2em;
     }
     
-    .products{
+    .first-product{
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-around;
