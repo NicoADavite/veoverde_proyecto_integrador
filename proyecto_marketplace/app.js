@@ -1,7 +1,10 @@
 // Require de Express y Path
+const { application } = require('express');
 const express = require('express');
 const app = express();
 const path = require('path');
+
+app.set("view engine", "ejs")
 
 // Definimos la carpeta public para acceder a los elementos estaticos
 
