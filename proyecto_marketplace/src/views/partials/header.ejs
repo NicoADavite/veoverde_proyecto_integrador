@@ -1,0 +1,35 @@
+<header>
+    <div class="top-header"> 
+        <div class="burguer-menu">
+            <button type="menu"><i class="fa fa-bars burger"></i></button>
+        </div>
+        <div class="header-logo">
+            <a href="/"><img src="./images/veoverde-nombre.png" alt="veoverde-nombre"></a>
+        </div>
+        <div class="shopping-cart">
+            <a href="/productCart"><i class="fas fa-shopping-cart"></i></a>
+        </div>
+    </div>
+
+    <form action="" method="GET" class="header-search-form">
+        <div>
+            <input type="text" name="header-search-input" placeholder="¿Qué estás buscando?">
+            <button class="submit"><i class="fa fa-search"></i></button>
+        </div>
+    </form>
+
+    <nav>
+        <ul>
+            <li><a href="#">Ofertas  <i class="fas fa-tags"></i></a></li>
+            <li><a href="#">Tiendas Oficiales <i class="fas fa-store"></i></a></li>
+            <li><a href="#">Vender <i class="fas fa-dollar-sign"></i></a></li>
+            <li><a href="#">Ayuda <i class="fas fa-question-circle"></i></a></li>
+        </ul>
+        <ul>
+            <li><a href="/register">Creá tu cuenta <i class="far fa-id-card"></i></a></li>
+            <li><a href="/login">Ingresá <i class="fas fa-sign-in-alt"></i></a></li>
+        </ul>
+    </nav>
+</header>
+
+<%- include("./partials/header") %>
