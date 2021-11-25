@@ -1,0 +1,9 @@
+const express = require("express");
+
+const mainController = {
+    index: (req, res) => {
+        res.render("index");
+    }
+}
+
+module.exports = mainController;
