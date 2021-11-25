@@ -5,28 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/de4d91a3ca.js" crossorigin="anonymous"></script>
-    <link rel="icon" href="images/veoverde-icono.ico">    
+    <link rel="icon" href="images/veoverde-icono.ico">
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/login.css">
-    <title>Log In | VEOVERDE</title>
+    <link rel="stylesheet" href="css/product-cart.css">
+    <title>Carro de Compras | VEOVERDE</title>
 </head>
+
 <body>
-    <header>
+   <header>
         <div class="top-header"> 
             <div class="burguer-menu">
-                <button type="menu"><i class="fa fa-bars burger"></i></button>
+                        <i class="fa fa-bars burger"></i>
             </div>
             <div class="header-logo">
-                <img src="./images/veoverde-nombre.png" alt="veoverde-nombre">
+                <a href="/"><img src="./images/veoverde-nombre.png" alt="veoverde-nombre"></a>
             </div>
             <div class="shopping-cart">
-                <a href="/productCart"><i class="fas fa-shopping-cart"></i></a>
+                <i class="fas fa-shopping-cart"></i>
             </div>
         </div>
 
         <form action="" method="GET" class="header-search-form">
             <div>
-                <input type="text" name="header-search-input" placeholder="¿Qué estás buscando?">
+                <input type="text" placeholder="¿Qué estás buscando?">
                 <button class="submit"><i class="fa fa-search"></i></button>
             </div>
         </form>
@@ -43,39 +44,56 @@
                 <li><a href="/login">Ingresá <i class="fas fa-sign-in-alt"></i></a></li>
             </ul>
         </nav>
-    </header>
+   </header>
+   <main>
+        <div class= "go-back">
+           <p><a href="/">Inicio</a></p> >> Carrito
+        </div> 
+        <!-- Simulacion de compra pendiente de vinculacion con compra en productDetail-->
 
-    <main>
+        <!-- Producto 1-->
+        <div class= "main-shopping-cart">
+            <div class= "description-cart">
+            <img src="./images/veoverde-lapiz-plantable.png" alt="veoverde-lapiz-plantable">
+            <p class= "product-description">Lápiz Plantable</p>
+            <p class= "quantity-product">1</p>
+            <p class= "product-price">$200</p>
+             </div>
+            <ul class= "shopping-cart-options">
+                <li><a href="#">Eliminar</a></li>
+                <li><a href="#">Comprar ahora</a></li>
+                <li><a href="#">Guardar para después</a></li>
+            </ul>
+        </div>
 
-        <h6 class="desgloce-menu">Inicio > Mi Cuenta > Login</h6>
+          <!-- Producto 2-->
+        <div class= "main-shopping-cart">
+            <div class= "description-cart">
+            <img src="./images/veoverde-lapiz-plantable.png" alt="veoverde-lapiz-plantable">
+            <p class= "product-description">Lápiz Plantable</p>
+            <p class= "quantity-product">1</p>
+            <p class= "product-price">$300</p>
+        </div>
+            <ul class= "shopping-cart-options">
+                <li><a href="#">Eliminar</a></li>
+                <li><a href="#">Comprar ahora</a></li>
+                <li><a href="#">Guardar para después</a></li>
+            </ul>
+        </div>
+ 
+         <!-- Estructura a la espera de funcion compra-->
+        <div class= "total-amount-cart">
+            <p>Total compra</p>
+            <p>$500</p>
+         </div>
+ 
+        <!-- Buscar la forma de vincular boton con metodo de pago-->
+        <div class= "check-out">
+            <button>Continuar compra</button>
+        </div>
+   </main>
 
-        <form action="/" method="post" class="login-form">
-
-            <h2>INICIAR SESION</h2>
-            <div class= "div-login-form" class="login-form-usuario">
-                <label for="usuario">Usuario:</label>
-                <input type="text" name="usuario" placeholder="Ej: usuario@gmail.com" required>
-            </div>
-            <div class= "div-login-form" class="login-form-password">
-                <label for="clave">Contraseña:</label>
-                <input type="password" name="clave" required>   
-            </div>
-            <div class="login-forgot-password">
-                <button type="submit">¿Olvidaste la contraseña?</button>
-            </div>
-            <div class="login-button">
-                <button type="submit">Iniciar Sesion</button>
-            </div>
-            <div class="login-not-account">
-                <p>¿Aún no tienes cuenta?</p>
-            <a href="/register">Crea tu Cuenta</a>
-            </div>
-
-        </form>
-
-    </main>
-
-    <footer>
+   <footer>
     
         <nav class="footer-nav">
 
@@ -90,7 +108,7 @@
                 <h2 class="titulo-nosotros">Nosotros</h2>
                 <div class="footer-nosotros-location"><a href="https://www.google.com.ar/"><i class="fas fa-map-marker-alt"></i> Avenida Siempre Viva 742, Springfield</a></div>
             </div>
-                
+
             <form action="" method="POST" class="footer-email-newsletter">
                 <label for="newsletter" class="footer-titulo-newsletter"><h3>Suscribite a nuestro Newsletter</h3></label>
                 <input type="email" name="newsletter" class="footer-input-newsletter" placeholder="Ej: user@gmail.com">
@@ -121,6 +139,5 @@
         </div>      
 
     </footer>
-
 </body>
 </html>
