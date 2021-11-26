@@ -1,50 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/de4d91a3ca.js" crossorigin="anonymous"></script>
-    <link rel="icon" href="images/veoverde-icono.ico">
-    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/product-cart.css">
+    <!-- partial del head -->
+    <%- include("../partials/head") %>
+    <link rel="stylesheet" href="/css/product-cart.css">
     <title>Carro de Compras | VEOVERDE</title>
 </head>
-
 <body>
-   <header>
-        <div class="top-header"> 
-            <div class="burguer-menu">
-                        <i class="fa fa-bars burger"></i>
-            </div>
-            <div class="header-logo">
-                <a href="/"><img src="./images/veoverde-nombre.png" alt="veoverde-nombre"></a>
-            </div>
-            <div class="shopping-cart">
-                <i class="fas fa-shopping-cart"></i>
-            </div>
-        </div>
 
-        <form action="" method="GET" class="header-search-form">
-            <div>
-                <input type="text" placeholder="¿Qué estás buscando?">
-                <button class="submit"><i class="fa fa-search"></i></button>
-            </div>
-        </form>
+    <!-- partial del header -->
+    <%- include("../partials/header") %>
 
-        <nav>
-            <ul>
-                <li><a href="#">Ofertas  <i class="fas fa-tags"></i></a></li>
-                <li><a href="#">Tiendas Oficiales <i class="fas fa-store"></i></a></li>
-                <li><a href="#">Vender <i class="fas fa-dollar-sign"></i></a></li>
-                <li><a href="#">Ayuda <i class="fas fa-question-circle"></i></a></li>
-            </ul>
-            <ul>
-                <li><a href="/register">Creá tu cuenta <i class="far fa-id-card"></i></a></li>
-                <li><a href="/login">Ingresá <i class="fas fa-sign-in-alt"></i></a></li>
-            </ul>
-        </nav>
-   </header>
    <main>
         <div class= "go-back">
            <p><a href="/">Inicio</a></p> >> Carrito
@@ -54,7 +20,7 @@
         <!-- Producto 1-->
         <div class= "main-shopping-cart">
             <div class= "description-cart">
-            <img src="./images/veoverde-lapiz-plantable.png" alt="veoverde-lapiz-plantable">
+            <img src="/images/veoverde-lapiz-plantable.png" alt="veoverde-lapiz-plantable">
             <p class= "product-description">Lápiz Plantable</p>
             <p class= "quantity-product">1</p>
             <p class= "product-price">$200</p>
@@ -69,7 +35,7 @@
           <!-- Producto 2-->
         <div class= "main-shopping-cart">
             <div class= "description-cart">
-            <img src="./images/veoverde-lapiz-plantable.png" alt="veoverde-lapiz-plantable">
+            <img src="/images/veoverde-lapiz-plantable.png" alt="veoverde-lapiz-plantable">
             <p class= "product-description">Lápiz Plantable</p>
             <p class= "quantity-product">1</p>
             <p class= "product-price">$300</p>
@@ -93,51 +59,8 @@
         </div>
    </main>
 
-   <footer>
+    <!-- partial del header -->
+    <%- include("../partials/footer") %>
     
-        <nav class="footer-nav">
-
-            <div class="footer-nav-redes">
-                <h2 class="titulo-redes">Nuestras Redes</h2>
-                <div class="footer-red footer-instagram"><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></div>
-                <div class="footer-red footer-facebook"><a href="https://www.facebook.com/"><i class="fab fa-facebook-square"></i></a></div>
-                <div class="footer-red footer-twitter"><a href="https://twitter.com/"><i class="fab fa-twitter"></i></a></div>
-            </div>
-
-            <div class="footer-nav-nosotros">
-                <h2 class="titulo-nosotros">Nosotros</h2>
-                <div class="footer-nosotros-location"><a href="https://www.google.com.ar/"><i class="fas fa-map-marker-alt"></i> Avenida Siempre Viva 742, Springfield</a></div>
-            </div>
-
-            <form action="" method="POST" class="footer-email-newsletter">
-                <label for="newsletter" class="footer-titulo-newsletter"><h3>Suscribite a nuestro Newsletter</h3></label>
-                <input type="email" name="newsletter" class="footer-input-newsletter" placeholder="Ej: user@gmail.com">
-                <button type="submit" class="footer-button-newsletter">Registrarme</button>
-            </form>
-
-        </nav>
-
-        <div class="footer-wsp-button">
-            <a href="https://wa.me/541133333333"><i class="fab fa-whatsapp"></i></a>
-        </div>
-
-        <div class="footer-bottom">
-
-            <figure class="logo-footer">
-                <img src="images/veoverde-logo.png" alt="Logo Footer">
-            </figure>
-
-            <figure class="imagen-afip">
-                <img src="https://www.afip.gob.ar/images/f960/DATAWEB.jpg">
-            </figure>
-
-            <div class="footer-copyright">
-                <p>© Veoverde - 2021. Todos los derechos reservados.</p>
-                <a href="/">Términos y Condiciones</a>
-            </div>
-
-        </div>      
-
-    </footer>
 </body>
 </html>
