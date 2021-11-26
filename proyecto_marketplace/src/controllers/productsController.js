@@ -7,8 +7,11 @@ const productsController = {
     productDetail: (req, res) => {
         res.render("./products/productDetail");
     },
-    productCreationEdit: (req, res) => {
-        res.render("./products/productCreationEdit");
+    productCreation: (req, res) => {
+        res.render("./products/productCreation");
+    },
+    productEdit: (req, res) => {
+        res.render("./products/productEdit");
     },
 };
 
