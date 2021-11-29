@@ -12,14 +12,14 @@
     <%- include("../partials/header") %>
    
     <main>
-       <section>
-           <article class="first-product">
+       <section>  
+        <article class="<%= product.class %> first-product">
                 <div>
-                    <h2 class="product-name">Calendario Plantable 2022</h2>
+                    <h2 class="<%= product.title %> product-name"></h2>
                 </div>
                 
                 <div class="calendario-plantable-2022">
-                <img src="/images/calendario-plantable-2022.png" alt="Foto calendario plantable 2022">
+                <img src="/images/<%= product.img %>" alt="<%= product.title %>">
                 </div>
                 
                 <div class="product-article-discount">
@@ -29,7 +29,7 @@
                 </div>
 
                 <div>
-                    <h3>$400</h3>
+                    <h3><%= product.price %></h3>
                 </div>
 
                 <div class="payment-shipping">
@@ -56,23 +56,17 @@
                     <h5>
                         <ul class="description">
                             <li>
-                                <i class="fas fa-circle"></i>12 Postales Plantables 10x15 cm (un mes por tarjeta).
+                                <i class="fas fa-circle"></i><%= product.descriptionA1 %>
                             </li>
                             <li>
-                                <i class="fas fa-circle"></i>12 Semillas diferentes para que llenes tu año de verde.
-                        Instructivo, con tips y consejos para utilizarlo.
-                        Packaging que se transforma en soporte de escritorio.
+                                <i class="fas fa-circle"></i><%= product.descriptionA2 %>
                             </li>
                         </ul>
                     </h5>
                 </div>
 
                 <div>
-                    <h6>Este calendario tiene su origen en materiales recuperados y fue gracias al reciclaje que logró esta nueva forma y destino.
-
-                        Este año queremos que nos acompañes mes a mes con las fechas más importantes del calendario ambiental.
-                        
-                        Una buena oportunidad para conocer más, generar conciencia y acción sobre diversos temas que nos invitan a reflexinar sobre nuestros hábitos y costumbres.</h6>
+                    <h6><%= product.descriptionB %></h6>
                 </div>
            </article>
        </section>
