@@ -89,105 +89,145 @@ header{
 header nav{
     display: none;
 }
-header nav ul li a{
-    color: #48427e;
-}
+
 header nav ul li a:hover{
-    color: #2f2b53;
+    color: #1F3A3B;;
 }
 
 header nav ul li a:visited{
     color:initial;
 }
 
-/*main*/
+/*Main*/
 
 main{
-    background-color:  white;
+    padding: 20px 5px;
 }
 
-/*main*/
-
-.go-back {
+main,
+.main-section, 
+.products, 
+.product-article{
     display: flex;
-    margin: 10px;
-    }
-    
-    .go-back a{
-        padding-right: 2px;
-        text-decoration: none;
-        color: teal;
-        font-weight: bold;
-    }
-
-
-.desgloce-menu{
-    text-align: center;
-
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-h2{
+.our-products{
+    border: 1px solid black;
+    border-radius: 4px;
+    box-shadow: 2px 2px 6px rgb(0 0 0 / 70%);;
+    padding: 20px 15px;
+    margin: 10px 15px;
+    background-color: rgb(233, 233, 233);
+}
+
+.product-article{
+    justify-content: space-around;
+}
+
+.our-products-title{
+    width: 100%;
+    background-color: rgb(233, 233, 233);
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    position: sticky;
+    top: 0.1px;
+    z-index: 100;
+    opacity: 80%;
+}
+
+.our-products-title h2{
+    font-size: 1.1em;
+    text-align: center;
+    position: sticky;
+    top: 1px;
+    opacity: 80%;
+    padding-top: 10px;
+    margin-bottom: 10px;
+}
+
+.product-article{
     margin-bottom: 20px;
-    font-size: 25px;
-}
-
-.login-form{
-    text-align: center;
-    margin-top: 70px;
-}
-
-.div-login-form{
-    text-align: inherit;
     padding: 10px;
-    font-size: 18px;
-}
-.login-form-usuario{
-    font-size: 18px;
-}
-.login-form-password{
-    font-size: 20px;
-}
-.login-forgot-password button{
-    font-size: 9px;
-    border: none;
-     background-color: #1F3A3B;
-     text-align: center;
-     
-     box-shadow: 2px 2px 6px rgb(0 0 0 / 40%);
-     transition: all 450ms;
-     color: white;
- }
- .login-forgot-password button:hover {
-     background-color: rgb(175, 214, 175);
-     }
-.login-button button{
-   margin: 30px 0;
-   border: none;
-    background-color: #1F3A3B;
-    text-align: center;
-    box-shadow: 2px 2px 6px rgb(0 0 0 / 40%);
-    border: none;
+    background-color: rgb(238, 238, 238);
+    border: 1px solid rgb(0, 39, 0);
+    border-radius: 5px;
+    position: relative;
     transition: all 450ms;
+}
+
+.product-article:hover{
+    box-shadow: 2px 2px 6px rgb(0 0 0 / 60%);
+}
+
+.product-article-img{
+    padding: 10px;
+    margin-bottom: 20px;
+    border-bottom: 3px solid rgb(0, 39, 0) ;
+    transition: all 650ms;    
+}
+
+.product-article:hover .product-article-img img{
+    transform: scale(1.05);
+    opacity: 90%;
+    border-radius: 5%;
+}
+
+.product-article-img img{
+    max-width: 100%;      
+    transition: all 650ms;
+}
+
+.product-article-details h4{
+    text-align: center;
+}
+
+.product-article-description{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.product-article-price{
+    font-style: bold;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.product-article-button{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: center;
+}
+
+.product-article-button button{
+    min-width: 82px;
+    max-width: 100px;
+}
+
+.product-article-edit-button{
+    width: 40%;
+    padding: 4px;
+    background-color: rgb(59, 59, 59);
     color: white;
-    font-size: 18px;
-}
-.login-button button:hover {
-    background-color: rgb(175, 214, 175);
-}
-.login-not-account{
-    font-weight: bold;
-    padding: 15px;
+    text-align: center;
+    border-radius: 15px; 
+    box-shadow: 2px 2px 6px rgb(0 0 0 / 40%);
+
 }
 
 
-.login-not-account a{
-    text-decoration: none;
+.fa-edit{
+    padding: 5px;
 }
 
 
 
-
-/* footer */
+/*Footer*/
 
 footer{
     background-color: rgb(175, 214, 175);
@@ -399,9 +439,9 @@ footer{
     position: relative;
     left: 0.5px;
 }
-
 a:visited{
     color: initial;
+
 }
 
 @keyframes logo-wsp{
@@ -428,7 +468,6 @@ a:visited{
     }    
 }
 
-/* media */
 
 @media (min-width: 481px){
 
@@ -446,12 +485,12 @@ a:visited{
     .product-article{
         width: 48%;
     }
-    
+
 }
+    
 
 @media (min-width: 768px){
-
-    /* Header */
+    /*Header*/
 
     header nav{
         display: flex;
@@ -475,7 +514,7 @@ a:visited{
         list-style-type: none;
     }
 
-    /* Footer */
+    /*Footer*/
 
     .footer-bottom .logo-footer{
         order: -2;
@@ -545,3 +584,4 @@ a:visited{
     }
     
 }
+    

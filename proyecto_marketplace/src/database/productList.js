@@ -4,6 +4,9 @@ const productList = [
         title: 'Calendario Plantable',
         class: "p-a-calendario-plantable",
         price: '$400',
+        descriptionA1: "12 Postales Plantables 10x15 cm (un mes por tarjeta).",
+        descriptionA2: "12 Semillas diferentes para que llenes tu año de verde. Instructivo, con tips y consejos para utilizarlo. Packaging que se transforma en soporte de escritorio.",
+        descriptionB: "Este calendario tiene su origen en materiales recuperados y fue gracias al reciclaje que logró esta nueva forma y destino. Este año queremos que nos acompañes mes a mes con las fechas más importantes del calendario ambiental. Una buena oportunidad para conocer más, generar conciencia y acción sobre diversos temas que nos invitan a reflexinar sobre nuestros hábitos y costumbres.",
         img: 'calendario-plantable-2022.png',
     },
     {
