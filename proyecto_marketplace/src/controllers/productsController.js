@@ -14,7 +14,8 @@ const productsController = {
         res.render("./products/productCreation");
     },
     productEdit: (req, res) => {
-        res.render("./products/productEdit");
+        res.render("./products/productEdit", {product: productList});
+
     },
 };
 
