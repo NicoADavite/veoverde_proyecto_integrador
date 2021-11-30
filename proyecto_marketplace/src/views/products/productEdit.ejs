@@ -32,10 +32,36 @@
                 <article class="<%= product[i].class %>  product-article">
                     <figure class="product-article-img">
                         <img src="/images/<%= product[i].img %>" alt="<%= product[i].title %>">
+                        <div class="img-edit">
+                            <label for="user_email-confirmation"></label>
+                            <input type="file" name="user_email-confirmation" id="user_email-confirmation">
+                        </div>
                     </figure>
+ 
+
                     <div class="product-article-details">
                         <h4 class="product-article-description"><%= product[i].title %></h4>
+
+                        <div class="product-title-edit">
+                            <label for="user_name-surname"></label>
+                            <input type="text" name="user_name-surname" id="user_name-surname" placeholder="Título"> 
+                        </div>
+
+                        <div>
+                            <h6 class="product-description"><%= product[i].description %></h6>
+                        </div>
+
+                        <div class="product-description-edit">
+                            <label for="user_email"></label>
+                            <input type="email" name="user_email" id="user_email" placeholder="Descripción"> 
+                        </div>
+
                         <p class="product-article-price"><%= product[i].price %></p>
+
+                        <div class="price-edit">
+                            <label for="user_password-confirmation"></label>
+                            <input type="text" name="user_password-confirmation" id="user_password-confirmation" placeholder="Precio">
+                        </div>
                     </div>                                               
                     <div class="product-article-button">
                         <button class="product-article-edit-button">EDITAR<i class="far fa-edit"></i></button>

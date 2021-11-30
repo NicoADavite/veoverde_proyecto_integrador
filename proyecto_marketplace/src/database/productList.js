@@ -4,9 +4,7 @@ const productList = [
         title: 'Calendario Plantable',
         class: "p-a-calendario-plantable",
         price: '$400',
-        descriptionA1: "12 Postales Plantables 10x15 cm (un mes por tarjeta).",
-        descriptionA2: "12 Semillas diferentes para que llenes tu año de verde. Instructivo, con tips y consejos para utilizarlo. Packaging que se transforma en soporte de escritorio.",
-        descriptionB: "Este calendario tiene su origen en materiales recuperados y fue gracias al reciclaje que logró esta nueva forma y destino. Este año queremos que nos acompañes mes a mes con las fechas más importantes del calendario ambiental. Una buena oportunidad para conocer más, generar conciencia y acción sobre diversos temas que nos invitan a reflexinar sobre nuestros hábitos y costumbres.",
+        description: "Este calendario tiene su origen en materiales recuperados y fue gracias al reciclaje que logró esta nueva forma y destino. Este año queremos que nos acompañes mes a mes con las fechas más importantes del calendario ambiental. Una buena oportunidad para conocer más, generar conciencia y acción sobre diversos temas que nos invitan a reflexinar sobre nuestros hábitos y costumbres.",
         img: 'calendario-plantable-2022.png',
     },
     {
@@ -14,6 +12,7 @@ const productList = [
         title: 'Kits Plantables',
         class: "p-a-kit-plantable",
         price: '$1.500',
+        description: "Diferentes propuestas que invitan a sembrar y crear hábitos más sustentables.",
         img: 'veoverde-kits.jpg',
     },
     {
@@ -21,6 +20,7 @@ const productList = [
         title: 'Lapiz Plantable',
         class: "p-a-lapiz-plantable",
         price: '$100',
+        description: "Lápiz color negro, cuerpo natural cilíndrico y cápsula biodegradable con semillas.",
         img: 'veoverde-lapiz-plantable.png',
     },
     {
@@ -28,6 +28,7 @@ const productList = [
         title: 'Sobres Compostables',
         class: "p-a-sobres-compostables",
         price: '$30',
+        description: "Realizado con materiales biobasados de fuentes renovables. Producto biodegradable de origen vegetal, compostable en 180 días. Impresión con tintas al agua 4 colores.",
         img: 'veoverde-sobres-compostables.jpg',
     }
 ];

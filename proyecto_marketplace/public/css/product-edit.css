@@ -180,13 +180,39 @@ main,
     transition: all 650ms;
 }
 
+.img-edit{
+    padding: 10px;
+    text-align: center;    
+}
+
 .product-article-details h4{
     text-align: center;
+}
+
+.product-title-edit{
+    padding: 2px;
+    text-align: center;
+    margin-bottom: 25px;
 }
 
 .product-article-description{
     text-align: center;
     margin-bottom: 10px;
+}
+
+.product-description{
+    padding: 3px;
+    margin: 5px 20px;
+    font-size: 12px;
+    font-style: italic;
+    text-align: justify;
+    font-weight: lighter;
+}
+
+.product-description-edit{
+    text-align: center;
+    margin-bottom: 30px;
+    
 }
 
 .product-article-price{
@@ -196,6 +222,11 @@ main,
     margin-bottom: 10px;
 }
 
+.price-edit{
+    padding: 2px;
+    text-align: center;
+    margin-bottom: 25px;
+}
 .product-article-button{
     width: 90%;
     display: flex;
