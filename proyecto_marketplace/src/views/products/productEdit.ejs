@@ -40,33 +40,35 @@
  
 
                     <div class="product-article-details">
-                        <h4 class="product-article-description"><%= product[i].title %></h4>
+                    <!--<h4 class="product-article-description"><%= product[i].title %></h4>-->    
 
                         <div class="product-title-edit">
                             <label for="user_name-surname"></label>
-                            <input type="text" name="user_name-surname" id="user_name-surname" placeholder="Título"> 
+                            <input type="text" name="user_name-surname" id="user_name-surname" placeholder="<%= product[i].title %>"> 
                         </div>
 
                         <div>
-                            <h6 class="product-description"><%= product[i].description %></h6>
+                         <!--   <h6 class="product-description"><%= product[i].description %></h6>--> 
                         </div>
 
                         <div class="product-description-edit">
                             <label for="user_email"></label>
-                            <input type="email" name="user_email" id="user_email" placeholder="Descripción"> 
+                            <input type="email" name="user_email" id="user_email" placeholder="<%= product[i].description %>"> 
                         </div>
 
-                        <p class="product-article-price"><%= product[i].price %></p>
+                        <!--  <p class="product-article-price"><%= product[i].price %></p>--> 
 
                         <div class="price-edit">
                             <label for="user_password-confirmation"></label>
-                            <input type="text" name="user_password-confirmation" id="user_password-confirmation" placeholder="Precio">
+                            <input type="text" name="user_password-confirmation" id="user_password-confirmation" placeholder="<%= product[i].price %>">
                         </div>
                     </div>                                               
                     <div class="product-article-button">
                         <button class="product-article-edit-button">EDITAR<i class="far fa-edit"></i></button>
+                        <button class="product-article-trash-button">ELIMINAR<i class="fas fa-trash-alt"></i></button>
                     </div>
                 </article>
+                
 
                 <% } %> 
 
