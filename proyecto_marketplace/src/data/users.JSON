@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "firstName": "Agostina",
+        "lastName": "Macchi Souto",
+        "email": "agosmac@hotmail.com",
+        "password": "Agos*5099",
+        "category": "Admin",
+        "image": "defaul-image.png"
+    },
+    {
+        "id": 2,
+        "firstName": "Agustín",
+        "lastName": " Diaz Arnaudo",
+        "email": "adiazarnaudo@gmail.com",
+        "password": "Agus/3031",
+        "category": "Admin",
+        "image": "defaul-image.png"
+    },
+    {
+        "id": 3,
+        "firstName": "Federico",
+        "lastName": "Bianchi",
+        "email": "bianchi.fed@gmail.com",
+        "password": "Fede&5523",
+        "category": "Admin",
+        "image": "defaul-image.png"
+    },
+    {
+        "id": 4,
+        "firstName": "Nicolás",
+        "lastName": "Alceo Davite",
+        "email": "nicolasalceodavite@gmail.com",
+        "password": "Nico-#55567",
+        "category": "Admin",
+        "image": "defaul-image.png"
+    }
+]
