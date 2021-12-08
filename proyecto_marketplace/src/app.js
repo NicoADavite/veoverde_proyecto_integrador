@@ -12,23 +12,23 @@ app.set('views', path.join(__dirname, '/views')); // Define la ubicación de la 
 
 
 // ************ Middlewares - (don't touch) ************
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: false })); // Nos permite guardar la información de los formularios como objetos literales 
+app.use(express.json()); // Nos permite convertir la información de los formularios de objetos literales a formato JSON, en caso de ser necesario
 app.use(express.static(path.join(__dirname, "../public"))); // Define la carpeta public para acceder a los elementos estaticos
 app.use(methodOverride("_method")) // Define el string a utilizar para acceder a la funcionalidad de methodOverride
 
 
 // ************ Route System require and use() ************
-const mainRouter = require("./routes/mainRouter")
-const usersRouter = require("./routes/usersRouter")
-const productsRouter = require("./routes/productsRouter")
+const mainRouter = require("./routes/mainRouter"); // Requiere el modulo: mainRouter
+const usersRouter = require("./routes/usersRouter"); // Requiere el modulo: usersRouter
+const productsRouter = require("./routes/productsRouter"); // Requiere el modulo: productsRouter
 
-app.use("/", mainRouter);
-app.use("/users", usersRouter);
-app.use("/products", productsRouter);
+app.use("/", mainRouter); // define al mainRouter como enrutador para todos aquellas solicitudes con el prefijo "/"
+app.use("/users", usersRouter); // define al usersRouter como enrutador para todos aquellas solicitudes con el prefijo "/users"
+app.use("/products", productsRouter); // define al productsRouter como enrutador para todos aquellas solicitudes con el prefijo "/products"
 
 
-// ************ app.listen to lift the server ************
+// ************ app.listen to lift the server on port 3000 ************
 app.listen(3000, ()=>{
-    console.log('Servidor funcionando 3000');
+    console.log('Servidor funcionando 3000'); //
 });
