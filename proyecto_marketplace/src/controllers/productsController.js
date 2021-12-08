@@ -13,7 +13,6 @@ const productsController = {
     // metodo para obtener la vista del detalle de un producto en particular
     detail: (req, res) => {
         let product = products.find(product => product.id == req.params.id);
-        console.log(product)
         res.render("./products/productDetail", {product})
     },
 
@@ -43,7 +42,27 @@ const productsController = {
 
     // metodo para puttear el formulario de edicion del producto
     update: (req, res) => {
-        res.render("./products/productList");
+        let productoElegido = products.find(producto => {
+            return producto.id == req.params.id;
+        });
+
+        let idxProdEleg = products.indexOf(productoElegido);
+
+        products[idxProdEleg] = {
+            id: parseInt(req.params.id),
+            title: req.body.title,
+            price: parseInt(req.body.price),
+            category: req.body.category,
+            description: req.body.description,
+            size: req.body.size,
+            // image: "img" + req.body.name + path.extname(req.file.originalname)
+        };
+
+        let productsJSON = JSON.stringify(products);
+
+        fs.writeFileSync(productsFilePath, productsJSON);
+
+        res.redirect("/products/");
     },
 
     // metodo para eliminar un producto 
