@@ -15,7 +15,7 @@
        <section>  
         <article class="<%= product.class %> first-product">
                 <div>
-                    <h2 class="<%= product.title %> product-name"></h2>
+                    <h2 class="<%= product.title %> product-title"></h2>
                 </div>
                 
                 <div class="calendario-plantable-2022">
@@ -33,7 +33,7 @@
                 </div>
                 
                 <div>
-                    <h3><%= product.price %></h3>
+                    <h3>$<%= product.price %></h3>
                 </div>
 
                 <div class="payment-shipping">
@@ -51,10 +51,22 @@
                             <input type="text" placeholder="Cantidad">
                         </div>
                         <button type="submit"><a href="/productCart" style="text-decoration:none">Comprar</a></button>
-                        
-                        
+                                                
                     </div>
+
+
                 </form>
+
+                <div class="product-article-button">
+                    <a href="/products/edit/<%= product.id %>"><button class="product-article-edit-button">EDITAR<i class="far fa-edit"></i></a></button>
+
+                    <form action="/products/<%= product.id %>?_method=DELETE" metod="POST">
+                        
+                        <button  class="product-article-trash-button" type="submit">ELIMINAR<i class="fas fa-trash-alt"></i></button>
+                    </form>
+                    
+                </div>
+
            </article>
        </section>
     </main>

@@ -36,15 +36,16 @@ router.get("/create", productsController.create);
 // ruta para postear la creacion de un producto (solo administrador)
 router.post("/", productsController.store);
 
-/*** GET ONE PRODUCT ***/ 
-// ruta para obtener la vista del detalle de un producto en particular
-router.get("/:id", productsController.detail);
-
 /*** EDIT ONE PRODUCT ***/ 
 // ruta para obtener la vista de el formulario de edicion de un producto en particular (solo administrador)
 router.get("/edit/:id", productsController.edit);
 // ruta para puttear la edicion de un producto en particular (solo administrador)
 router.put("/:id", productsController.update);
+
+/*** GET ONE PRODUCT ***/ 
+// ruta para obtener la vista del detalle de un producto en particular
+router.get("/:id", productsController.detail);
+
 
 /*** DELETE ONE PRODUCT***/ 
 // ruta para eliminar un producto en particular (solo administrador)
