@@ -180,28 +180,64 @@ main,
     transition: all 650ms;
 }
 
+.img-edit{
+    padding: 10px;
+    text-align: center;    
+}
+/*
 .product-article-details h4{
     text-align: center;
 }
+*/
+.product-title-edit{
+    padding: 2px;
+    text-align: center;
+    margin-bottom: 25px;
+}
 
-.product-article-description{
+/*.product-article-description{
     text-align: center;
     margin-bottom: 10px;
 }
 
+.product-description{
+    padding: 3px;
+    margin: 5px 20px;
+    font-size: 12px;
+    font-style: italic;
+    text-align: justify;
+    font-weight: lighter;
+}
+*/
+.product-description-edit{
+    text-align: center;
+    margin-bottom: 30px;
+    display: inline-block;
+       
+}
+input#user_email{
+    min-width: 100%;
+}
+/*
 .product-article-price{
     font-style: bold;
     font-size: 24px;
     text-align: center;
     margin-bottom: 10px;
 }
-
+*/
+.price-edit{
+    padding: 2px;
+    text-align: center;
+    margin-bottom: 25px;
+}
 .product-article-button{
     width: 90%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     margin: center;
+    justify-content: space-around;
 }
 
 .product-article-button button{
@@ -224,7 +260,21 @@ main,
 .fa-edit{
     padding: 5px;
 }
+.product-article-trash-button{
+    width: 40%;
+    padding: 4px;
+    background-color: rgb(59, 59, 59);
+    color: white;
+    text-align: center;
+    border-radius: 15px; 
+    box-shadow: 2px 2px 6px rgb(0 0 0 / 40%);
 
+}
+
+
+.fa-trash-alt{
+    padding: 5px;
+}
 
 
 /*Footer*/

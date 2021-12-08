@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!-- partial del head -->
+   <%- include("../partials/head") %>
+   <link rel="stylesheet" href="/css/product-edit.css">
+   <title>Edicion de Producto | VEOVERDE</title>
+</head>
+<body>
+
+    <!-- partial del header -->
+    <%- include("../partials/header") %>
+
+    <main>
+        <div class= "go-back">
+           <p><a href="/">Inicio</a></p> >> Editar
+        </div> 
+
+
+        <section class="our-products main-section">
+
+            <div class="our-products-title">
+                <h2>Edición del Producto: <% product.name %> </h2>
+            </div>
+
+            <form action="/products/edit/<% product.id %>?_method=PUT" method="PUT">
+
+            </form>
+            <div class="products">
+                <article class="<%= product.class %>  product-article">
+                    <figure class="product-article-img">
+                        <img src="/images/<%= product.img %>" alt="<%= product.title %>">
+                        <div class="img-edit">
+                            <label for="user_email-confirmation"></label>
+                            <input type="file" name="user_email-confirmation" id="user_email-confirmation">
+                        </div>
+                    </figure>
+ 
+
+                    <div class="product-article-details">
+<<<<<<< HEAD:proyecto_marketplace/src/views/products/productEdit.ejs
+                    <!--<h4 class="product-article-description"><%= product[i].title %></h4>-->    
+=======
+                        <h4 class="product-article-description"><%= product.title %></h4>
+>>>>>>> b1dc80cee1ae2102ce2acf5bd2582c0da239691e:proyecto_marketplace/src/views/products/product-edit-form.ejs
+
+                        <div class="product-title-edit">
+                            <label for="user_name-surname"></label>
+                            <input type="text" name="user_name-surname" id="user_name-surname" placeholder="<%= product[i].title %>"> 
+                        </div>
+
+                        <div>
+<<<<<<< HEAD:proyecto_marketplace/src/views/products/productEdit.ejs
+                         <!--   <h6 class="product-description"><%= product[i].description %></h6>--> 
+=======
+                            <h6 class="product-description"><%= product.description %></h6>
+>>>>>>> b1dc80cee1ae2102ce2acf5bd2582c0da239691e:proyecto_marketplace/src/views/products/product-edit-form.ejs
+                        </div>
+
+                        <div class="product-description-edit">
+                            <label for="user_email"></label>
+                            <input type="email" name="user_email" id="user_email" placeholder="<%= product[i].description %>"> 
+                        </div>
+
+<<<<<<< HEAD:proyecto_marketplace/src/views/products/productEdit.ejs
+                        <!--  <p class="product-article-price"><%= product[i].price %></p>--> 
+=======
+                        <p class="product-article-price"><%= product.price %></p>
+>>>>>>> b1dc80cee1ae2102ce2acf5bd2582c0da239691e:proyecto_marketplace/src/views/products/product-edit-form.ejs
+
+                        <div class="price-edit">
+                            <label for="user_password-confirmation"></label>
+                            <input type="text" name="user_password-confirmation" id="user_password-confirmation" placeholder="<%= product[i].price %>">
+                        </div>
+                    </div>                                               
+                    <div class="product-article-button">
+                        <button class="product-article-edit-button">EDITAR<i class="far fa-edit"></i></button>
+                        <button class="product-article-trash-button">ELIMINAR<i class="fas fa-trash-alt"></i></button>
+                    </div>
+                </article>
+<<<<<<< HEAD:proyecto_marketplace/src/views/products/productEdit.ejs
+                
+
+                <% } %> 
+
+=======
+>>>>>>> b1dc80cee1ae2102ce2acf5bd2582c0da239691e:proyecto_marketplace/src/views/products/product-edit-form.ejs
+            </div>
+        </section>
+
+    </main>
+    
+    <!-- partial del footer -->
+    <%- include("../partials/footer") %>
+
+</body>
+</html>

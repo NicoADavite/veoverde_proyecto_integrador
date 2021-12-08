@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- partial del head -->
+    <%- include("../partials/head") %>
+    <link rel="stylesheet" href="css/index.css">
+    <title>VEOVERDE</title>
+</head>
+<body>
+
+    <!-- partial del header -->
+    <%- include("../partials/header") %>
+
+    <main>
+        <section class="our-products main-section">
+
+            <div class="our-products-title">
+                <h2>Nuestros Productos</h2>
+            </div>
+
+            <div class="products">
+
+                <!-- forEach para mostrar los productos de manera dinámica -->
+                <% products.forEach(product => { %> 
+
+                <article class="<%= product.class %>  product-article">
+                    <figure class="product-article-img">
+                        <img src="images/<%= product.img %>" alt="<%= product.title %>">
+                    </figure>
+                    <div class="product-article-discount">
+                        <p class="discount-discount">10% OFF </p>
+                        <p class="discount-p">COMPRANDO</p>
+                        <p class="discount-p"> 100 o MÁS</p>
+                    </div> 
+                    <div class="product-article-details">
+                        <h4 class="product-article-description"><%= product.title %></h4>
+                        <p class="product-article-price"><%= product.price %></p>
+                    </div>                                               
+                    <div class="product-article-buttons">
+                        <button class="product-article-buy-button">COMPRAR</button>
+                        <a href="/products/<%= product.id %>" class="product-article-view-button"><i class="far fa-eye"></i></a>
+                    </div>
+                </article>
+
+                <% }) %> 
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- partial del footer -->
+    <%- include("../partials/footer") %>
+
+</body>
+</html>
