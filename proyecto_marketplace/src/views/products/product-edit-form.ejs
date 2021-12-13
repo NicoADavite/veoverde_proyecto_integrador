@@ -20,67 +20,65 @@
         <section class="our-products main-section">
 
             <div class="our-products-title">
-                <h2>Edición del Producto: <%= product.title %> </h2>
+                <h2>Edición del Producto: <%= product.name %> </h2>
             </div>
 
-            <form action="/products/<%= product.id %>?_method=PUT" method="POST">
+            <form action="/products/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
 
           
                 <div class="products">
-                    <article class="<%= product.class %>  product-article">
-                        <!-- partial del header 
+                    <article class="product-article">
+                        
                         <figure class="product-article-img">
-                            <img src="/images/<%= product.img %>" alt="<%= product.title %>">
+                            <img src="/images/products/<%= product.image %>" alt="<%= product.name %>">
                             <div class="img-edit">
-                                <label for="user_email-confirmation"></label>
-                                <input type="file" name="img" id="user_email-confirmation">
+                                <label for="image"></label>
+                                <input type="file" name="image" id="image">
                             </div>
-                        </figure> -->
+                        </figure> 
  
 
                         <div class="product-article-details">
                             
                             <div class="product-title-edit">
-                                <label for="user_name-surname">Nombre</label>
-                                <input type="text" name="title" id="user_name-surname" value="<%= product.title %>"> 
+                                <label for="name">Nombre</label>
+                                <input type="text" name="name" id="name" value="<%= product.name %>"> 
                             </div>
 
                             <div class="product-description-edit">
-                                <label for="user_email">Descripción</label>
-                                <input type="text" name="description" id="user_email" value="<%= product.description %>"> 
+                                <label for="description">Descripción</label>
+                                <textarea name="description" id="description" cols="20" rows="10"><%= product.description%></textarea> 
                             </div>
 
                             <div class="price-edit">
-                                <label for="user_password-confirmation">Precio</label>
-                                <input type="number" name="price" id="user_password-confirmation" value="<%= product.price %>">
+                                <label for="price">Precio</label>
+                                <input type="number" name="price" id="price" value="<%= product.price %>">
                             </div>
 
                             <div class="register-form-input register-form-phone-numbrer">
-                                <label for="user_phone-number">Categoría (*)</label>
-                                <select name="category" id="productC&E-category" value="<%= product.category %>">
-                                  <option value="Papel">Papel</option>
-                                  <option value="Kits">Kits</option>
-                                  <option value="ProdOficina">Productos de Oficina</option>
-                                  <option value="Calendarios">Calendarios</option>
-                                  <option value="TarjPlantables">Tarjetas Plantables</option>
-                                  <option value="BolCompostables">Bolsas Compostables</option>
-                                  <option value="Otros">Otros</option>
+                                <label for="category">Categoría (*)</label>
+                                <select name="category" id="category">
+                                    <option value="">Elige una categoría</option>
+                                    <% categories.forEach(category => { %>
+                                        <option value="<%= category.value %>" <%= product.category === category.value ? "selected" : null%> ><%= category.name %></option>
+                                    <% }) %>
                                 </select>
                             </div>
                     
                             <div class="register-form-input register-form-password">
-                                <label for="user_password">Tamaño </label>
-                                  <input type="radio" name="size" id="" value="small">Small
-                                  <input type="radio" name="size" id="" value="medium">Medium
-                                  <input type="radio" name="size" id="" value="large">Large
-                                  <input type="radio" name="size" id="" value="jumbo">Jumbo
-                                  <input type="radio" name="size" id="" value="No aplica">No aplica
+                                <label for="size">Tamaño</label>
+                                  <input type="radio" name="size" id="size" value="small">Small
+                                  <input type="radio" name="size" id="size" value="medium">Medium
+                                  <input type="radio" name="size" id="size" value="large">Large
+                                  <input type="radio" name="size" id="size" value="jumbo">Jumbo
+                                  <input type="radio" name="size" id="size" value="n/a">No aplica
                                 </div>
                             </div>
                             
                         </div>                                               
                         <div class="product-article-button">
                             <button type="submit" class="product-article-edit-button">EDITAR<i class="far fa-edit"></i></button>
+                            <a href="/products/create">¿Quieres crear un nuevo producto? ,<b>Haz Click Aquí</b></a>
                         </div>
                     </article>
                 </div>

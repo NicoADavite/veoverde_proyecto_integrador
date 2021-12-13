@@ -13,13 +13,13 @@
    
     <main>
        <section>  
-        <article class="<%= product.class %> first-product">
+        <article class="first-product">
                 <div>
-                    <h2 class="<%= product.title %> product-title"></h2>
+                    <h2 class="<%= product.name %> product-title"></h2>
                 </div>
                 
                 <div class="calendario-plantable-2022">
-                <img src="/images/<%= product.img %>" alt="<%= product.title %>">
+                <img src="/images/products/<%= product.image %>" alt="<%= product.name %>">
                 </div>
                 
                 <div class="product-article-discount">
@@ -60,8 +60,7 @@
                 <div class="product-article-button">
                     <a href="/products/edit/<%= product.id %>"><button class="product-article-edit-button">EDITAR<i class="far fa-edit"></i></a></button>
 
-                    <form action="/products/<%= product.id %>?_method=DELETE" metod="POST">
-                        
+                    <form action="/products/<%= product.id %>?_method=DELETE" method="POST">                        
                         <button  class="product-article-trash-button" type="submit">ELIMINAR<i class="fas fa-trash-alt"></i></button>
                     </form>
                     

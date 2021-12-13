@@ -13,56 +13,53 @@
 
    <main>
     
-    <form action="/products/" method="POST" class="register-form"> 
+    <form action="/products/" method="POST" class="register-form" enctype="multipart/form-data"> 
         <h2>CREA UN PRODUCTO</h2>
-        <div class="register-form-input register-form-name-surname">
-            <label for="user_name-surname">Nombre del producto (*)</label>
-            <input type="text" name="user_name-surname" id="user_name-surname" placeholder="Ej.: Samsung Galaxy S10+" required> 
+        <div class="register-form-input register-form-name">
+            <label for="name">Nombre del producto (*)</label>
+            <input type="text" name="name" id="name" placeholder="Ej.: Lapiz Plantable" required> 
         </div>
 
-        <div class="register-form-input register-form-email">
-            <label for="user_email">Descripción (*)</label>
-            <input type="email" name="user_email" id="user_email" placeholder="Celular Android re cheto, muy bueno y nuevo, no lo use nunca te lo juro" required> 
+        <div class="register-form-input register-form-description">
+            <label for="description">Descripción (*)</label>
+            <input type="textarea" name="description" id="description" placeholder="Lápiz color negro, cuerpo natural cilíndrico y cápsula biodegradable con semillas." required> 
         </div>
 
-        <div class="register-form-input register-form-email-confirmation">
-            <label for="user_email-confirmation">Imagen (*)</label>
-            <input type="file" name="user_email-confirmation" id="user_email-confirmation" required> 
+        <div class="register-form-input register-form-image">
+            <label for="image">Imagen (*)</label>
+            <input type="file" name="image" id="image" required> 
         </div>
 
-        <div class="register-form-input register-form-phone-numbrer">
-            <label for="user_phone-number">Categoría (*)</label>
-            <select name="category" id="productC&E-category">
-              <option value="Papel">Papel</option>
-              <option value="Kits">Kits</option>
-              <option value="ProdOficina">Productos de Oficina</option>
-              <option value="Calendarios">Calendarios</option>
-              <option value="TarjPlantables">Tarjetas Plantables</option>
-              <option value="BolCompostables">Bolsas Compostables</option>
+        <div class="register-form-input register-form-category">
+            <label for="category">Categoría (*)</label>
+            <select name="category" id="category">
+                <option value="">Elige una categoria</option>
+                <% categories.forEach(category => { %>
+                <option value="<%= category.value %>"><%= category.name %></option>
+                <% }) %>
             </select>
         </div>
 
-        <div class="register-form-input register-form-password">
-            <label for="user_password">Tamaño </label>
-              <input type="radio" name="product-size" id="" value="small">Small
-              <input type="radio" name="product-size" id="" value="medium">Medium
-              <input type="radio" name="product-size" id="" value="large">Large
-              <input type="radio" name="product-size" id="" value="jumbo">Jumbo
+        <div class="register-form-input register-form-size">
+            <label for="size">Tamaño</label>
+              <input type="radio" name="size" id="size" value="small">Small
+              <input type="radio" name="size" id="size" value="medium">Medium
+              <input type="radio" name="size" id="size" value="large">Large
+              <input type="radio" name="size" id="size" value="jumbo">Jumbo
+              <input type="radio" name="size" id="size" value="n/a">No aplica
             </div>
         </div>
 
-
-
-        <div class="register-form-input register-form-password">
-            <label for="user_password-confirmation">Precio (*)</label>
-            <input type="text" name="user_password-confirmation" id="user_password-confirmation">
+        <div class="register-form-input register-form-price">
+            <label for="price">Precio (*)</label>
+            <input type="number" name="price" id="price">
         </div>
 
         <h5>Todos los campos (*) son obligatorios</h5>
 
         <div class="register-form-submit">
             <button type="submit">CREAR PRODUCTO</button>
-            <a href="/products/productEdit">¿Quieres editar un producto existente? <b>Click Aquí</b></a>
+            <a href="/products">¿Quieres editar un producto existente? Para acceder a nuetra lista de productos, <b>Haz Click Aquí</b></a>
         </div>
 
     </form>

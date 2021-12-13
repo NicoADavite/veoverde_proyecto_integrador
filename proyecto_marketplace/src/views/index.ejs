@@ -21,11 +21,11 @@
             <div class="products">
 
                 <!-- for(){} para mostrar los productos de manera dinámica -->
-                <% for(let i= 0; i < product.length; i++){ %> 
+                <% products.forEach(product => { %> 
 
-                <article class="<%= product[i].class %>  product-article">
+                <article class="product-article">
                     <figure class="product-article-img">
-                        <img src="images/<%= product[i].img %>" alt="<%= product[i].title %>">
+                        <img src="images/products/<%= product.image %>" alt="<%= product.name %>">
                     </figure>
                     <div class="product-article-discount">
                         <p class="discount-discount">10% OFF </p>
@@ -33,8 +33,8 @@
                         <p class="discount-p"> 100 o MÁS</p>
                     </div> 
                     <div class="product-article-details">
-                        <h4 class="product-article-description"><%= product[i].title %></h4>
-                        <p class="product-article-price">$<%= product[i].price %></p>
+                        <h4 class="product-article-description"><%= product.name %></h4>
+                        <p class="product-article-price">$<%= product.price %></p>
                     </div>                                               
                     <div class="product-article-buttons">
                         <button class="product-article-buy-button">COMPRAR</button>
@@ -42,7 +42,7 @@
                     </div>
                 </article>
 
-                <% } %> 
+                <% }) %> 
 
             </div>
         </section>

@@ -10,15 +10,16 @@ const productsController = require("../controllers/productsController");
 
 
 // ************ Multer ************ 
-/*var storage = multer.diskStorage({
-    destination:function(req,file,cb){
-        cb(null, 'public/images/products')
+const storage = multer.diskStorage({
+    destination: (req,file,cb) => {
+        cb(null, '../public/images/products');
     },
-    filename: function(req,file,cb){
-        cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname))
+    filename: (req,file,cb) => {
+        newFileName = `${Date.now()}_img_${path.extname(file.originalname)}`;
+        cb(null, newFileName);
     }
-})
-var upload = multer({storage: storage})*/
+});
+const upload = multer({ storage });
 
 
 // ************ Route System ************
@@ -34,13 +35,13 @@ router.get("/productCart", productsController.cart);
 // ruta para obtener la vista de el formulario de creacion de un producto (solo administrador)
 router.get("/create", productsController.create);
 // ruta para postear la creacion de un producto (solo administrador)
-router.post("/", productsController.store);
+router.post("/", upload.single("image"), productsController.store);
 
 /*** EDIT ONE PRODUCT ***/ 
 // ruta para obtener la vista de el formulario de edicion de un producto en particular (solo administrador)
 router.get("/edit/:id", productsController.edit);
 // ruta para puttear la edicion de un producto en particular (solo administrador)
-router.put("/:id", productsController.update);
+router.put("/:id", upload.single("image"), productsController.update);
 
 /*** GET ONE PRODUCT ***/ 
 // ruta para obtener la vista del detalle de un producto en particular
