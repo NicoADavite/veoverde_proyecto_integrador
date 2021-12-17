@@ -16,7 +16,7 @@ const productsController = {
     // metodo para obtener la vista del detalle de un producto en particular
     detail: (req, res) => {
         let product = products.find(product => product.id == req.params.id);
-        res.render("./products/productDetail", {product})
+        res.render("./products/productDetail", {product});
     },
 
     // metodo para obtener la vista de carrito de compras
@@ -31,8 +31,13 @@ const productsController = {
 
     // metodo para postear el formulario de creacion del producto
     store: (req, res) => {
-        		
-		let nuevoId = products[products.length - 1].id  + 1;
+        let nuevoId;
+
+		if(products != undefined){
+            nuevoId = products[products.length - 1].id  + 1;
+        } else {
+            nuevoId = 1;
+        };        
 
         let img;
 
@@ -49,7 +54,7 @@ const productsController = {
             image: img,
             category: req.body.category,
             size: req.body.size,
-			price: parseInt(req.body.price)
+			price: req.body.price
 		};
 
 		products.push(newProduct);
@@ -61,7 +66,7 @@ const productsController = {
 
     // metodo para obtener la vista de edicion del producto
     edit: (req, res) => {
-        let id = req.params.id
+        let id = req.params.id;
 		let productToEdit = products.find(product => product.id == id)
         res.render("./products/product-edit-form", {
             product: productToEdit,
@@ -85,16 +90,14 @@ const productsController = {
 			img = 'default-image.png'
 		};
 
-        console.log(req.body);
-
         products[idxProdEleg] = {
-            id: products[idxProdEleg].id,
+            id: products[idxProdEleg].id, // otra posibilidad sería id : req.params.id;
             name: req.body.name,
             description: req.body.description,
             image: img,
             category: req.body.category,
             size: req.body.size,
-            price: parseInt(req.body.price)
+            price: req.body.price
         };
 
         let productsJSON = JSON.stringify(products);
