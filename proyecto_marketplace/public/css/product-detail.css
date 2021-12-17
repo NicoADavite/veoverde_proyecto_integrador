@@ -275,8 +275,50 @@ h6{
     text-align: justify;
     font-weight: lighter;
 }
+/* Botones de Detail */
+.product-article-button{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: center;
+    justify-content: space-around;
+}
+
+.product-article-button button{
+    min-width: 82px;
+    max-width: 100px;
+}
+
+.product-article-edit-button{
+    width: 40%;
+    padding: 4px;
+    background-color: rgb(59, 59, 59);
+    color: white;
+    text-align: center;
+    border-radius: 15px; 
+    box-shadow: 2px 2px 6px rgb(0 0 0 / 40%);
+
+}
 
 
+.fa-edit{
+    padding: 5px;
+}
+.product-article-trash-button{
+    width: 40%;
+    padding: 4px;
+    background-color: rgb(59, 59, 59);
+    color: white;
+    text-align: center;
+    border-radius: 15px; 
+    box-shadow: 2px 2px 6px rgb(0 0 0 / 40%);
+
+}
+
+.fa-trash-alt{
+    padding: 5px;
+}
 
 /* footer */
 

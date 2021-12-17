@@ -4,6 +4,9 @@ const path = require("path");
 const productsFilePath = path.join(__dirname, '../data/products.json');
 let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
+const categoriesFilePath = path.join(__dirname, '../data/categories.json');
+let categories = JSON.parse(fs.readFileSync(categoriesFilePath, 'utf-8'));
+
 const productsController = {
     // metodo para mostrar la vista del listado de productos
     list: (req, res) => {
@@ -13,7 +16,6 @@ const productsController = {
     // metodo para obtener la vista del detalle de un producto en particular
     detail: (req, res) => {
         let product = products.find(product => product.id == req.params.id);
-        console.log(product)
         res.render("./products/productDetail", {product})
     },
 
@@ -24,12 +26,37 @@ const productsController = {
 
     // metodo para obtener la vista de creacion del producto
     create: (req, res) => {
-        res.render("./products/product-create-form");
+        res.render("./products/product-create-form", {categories});
     },
 
     // metodo para postear el formulario de creacion del producto
     store: (req, res) => {
-        res.render("./products/productList");
+        		
+		let nuevoId = products[products.length - 1].id  + 1;
+
+        let img;
+
+		if(req.file != undefined){
+			img = req.file.filename
+		} else {
+			img = 'default-image.png'
+		};
+
+		let newProduct = {
+			id: nuevoId,
+			name: req.body.name,
+            description: req.body.description,
+            image: img,
+            category: req.body.category,
+            size: req.body.size,
+			price: parseInt(req.body.price)
+		};
+
+		products.push(newProduct);
+		let productsJSON = JSON.stringify(products);
+		fs.writeFileSync(productsFilePath, productsJSON);
+	
+        res.redirect("/products");
     },
 
     // metodo para obtener la vista de edicion del producto
@@ -37,18 +64,62 @@ const productsController = {
         let id = req.params.id
 		let productToEdit = products.find(product => product.id == id)
         res.render("./products/product-edit-form", {
-            product: productToEdit
+            product: productToEdit,
+            categories
         });
     },
 
     // metodo para puttear el formulario de edicion del producto
     update: (req, res) => {
-        res.render("./products/productList");
+        let productoElegido = products.find(producto => {
+            return producto.id == req.params.id;
+        });
+
+        let idxProdEleg = products.indexOf(productoElegido);
+
+        let img;
+
+		if(req.file != undefined){
+			img = req.file.filename
+		} else {
+			img = 'default-image.png'
+		};
+
+        console.log(req.body);
+
+        products[idxProdEleg] = {
+            id: products[idxProdEleg].id,
+            name: req.body.name,
+            description: req.body.description,
+            image: img,
+            category: req.body.category,
+            size: req.body.size,
+            price: parseInt(req.body.price)
+        };
+
+        let productsJSON = JSON.stringify(products);
+
+        fs.writeFileSync(productsFilePath, productsJSON);
+
+        res.redirect("/products");
     },
 
     // metodo para eliminar un producto 
     destroy: (req, res) => {
-        res.render("./products/productList");
+
+        let productoElegido = products.find((producto) => {
+			return producto.id == req.params.id;
+		});
+
+		products = products.filter(producto => {
+			return producto != productoElegido;
+		});
+
+		let productsJSON = JSON.stringify(products);
+
+		fs.writeFileSync(productsFilePath, productsJSON);
+
+		res.redirect("/products");
     }
 };
 
