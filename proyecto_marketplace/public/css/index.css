@@ -230,9 +230,9 @@ main,
 .product-article-buttons{
     width: 90%;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
     flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
 }
 
 .product-article-buttons button{
@@ -240,6 +240,18 @@ main,
     max-width: 100px;
 }
 
+.product-article-button{ 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 20px;
+    width: 100%;
+    
+}
+.product-article-button-div{
+    flex-wrap: wrap;
+    max-width: 50%;
+}
 .product-article-buy-button{
     width: 40%;
     padding: 4px;

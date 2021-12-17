@@ -97,7 +97,7 @@ const productsController = {
             image: img,
             category: req.body.category,
             size: req.body.size,
-            price: req.body.price
+            price: parseInt(req.body.price)
         };
 
         let productsJSON = JSON.stringify(products);

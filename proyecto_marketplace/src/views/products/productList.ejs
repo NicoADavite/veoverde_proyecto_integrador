@@ -40,6 +40,17 @@
                         <button class="product-article-buy-button">COMPRAR</button>
                         <a href="/products/<%= product.id %>" class="product-article-view-button"><i class="far fa-eye"></i></a>
                     </div>
+                    <div class="product-article-buttons">
+                        <div>
+                            <a href="/products/edit/<%= product.id %>"><button class="product-article-buy-button">EDITAR<i class="far fa-edit"></i></button></a>
+                        </div>
+
+                        <form action="/products/<%= product.id %>?_method=DELETE" method="POST">
+                            <button  class="product-article-buy-button" type="submit">ELIMINAR<i class="fas fa-trash-alt"></i></button>
+                        </form>
+
+                    </div>
+    
                 </article>
 
                 <% }) %> 

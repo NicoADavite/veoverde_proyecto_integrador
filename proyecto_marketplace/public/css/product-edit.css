@@ -5,7 +5,7 @@
     font-family: "sarabun", sans-serif;
 }
 
-/* Header */
+/* Header */    
 
 header{
     background-color: rgb(175, 214, 175);
@@ -150,14 +150,18 @@ main,
 
 .product-article{
     margin-bottom: 20px;
-    padding: 10px;
+    padding: 30%;
     background-color: rgb(238, 238, 238);
     border: 1px solid rgb(0, 39, 0);
     border-radius: 5px;
     position: relative;
     transition: all 450ms;
+    
 }
 
+/*.product-article label{
+    
+}*/
 .product-article:hover{
     box-shadow: 2px 2px 6px rgb(0 0 0 / 60%);
 }
