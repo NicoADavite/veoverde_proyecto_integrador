@@ -13,7 +13,7 @@
 
     <main>
         <div class= "go-back">
-           <p><a href="/">Inicio</a></p> >> Editar
+           <p><a href="/">Inicio</a> >> Editar </p>
         </div> 
 
 
@@ -30,7 +30,7 @@
                     <article class="product-article">
                         
                         <figure class="product-article-img">
-                            <label for="image" style="justify-content: center;">Imagen</label>
+                            <label for="image">Imagen</label>
                             <img src="/images/products/<%= product.image %>" alt="<%= product.name %>">
                             <div class="img-edit">
                                 <label for="image"></label>
@@ -78,7 +78,7 @@
                         </div>                                               
                         <div class="product-article-button">
                             <button type="submit" class="product-article-edit-button">EDITAR<i class="far fa-edit"></i></button>
-                            <a href="/products/create">¿Quieres crear un nuevo producto? ,<b>Haz Click Aquí</b></a>
+                            <div class="product-article-a-create">¿Quieres crear un nuevo producto?, <a href="/products/create"><b>Haz Click Aquí</b></a> </div>
                         </div>
                     </article>
                 </div>

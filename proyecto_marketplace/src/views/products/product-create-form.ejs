@@ -13,8 +13,10 @@
 
    <main>
     
-    <form action="/products/" method="POST" class="register-form" enctype="multipart/form-data"> 
+    <form action="/products/" method="POST" class="register-form" enctype="multipart/form-data">
+
         <h2>CREA UN PRODUCTO</h2>
+        
         <div class="register-form-input register-form-name">
             <label for="name">Nombre del producto (*)</label>
             <input type="text" name="name" id="name" placeholder="Ej.: Lapiz Plantable" required> 
@@ -40,13 +42,13 @@
             </select>
         </div>
 
-        <div class="register-form-input register-form-size">
+        <div class="register-form-input register-form-password">
             <label for="size">Tamaño</label>
-                <div><input type="radio" name="size" id="size" value="small">Small</div>
-                <div><input type="radio" name="size" id="size" value="medium">Medium</div>
-                <div><input type="radio" name="size" id="size" value="large">Large</div>
-                <div><input type="radio" name="size" id="size" value="jumbo">Jumbo</div>
-                <div><input type="radio" name="size" id="size" value="n/a">No aplica</div>
+            <div><input type="radio" name="size" id="size" value="small">Small</div>
+            <div><input type="radio" name="size" id="size" value="medium">Medium</div>
+            <div><input type="radio" name="size" id="size" value="large">Large</div>
+            <div><input type="radio" name="size" id="size" value="jumbo">Jumbo</div>
+            <div><input type="radio" name="size" id="size" value="n/a">No aplica</div>
         </div>
 
         <div class="register-form-input register-form-price">
@@ -58,7 +60,7 @@
 
         <div class="register-form-submit">
             <button type="submit">CREAR PRODUCTO</button>
-            <a href="/products">¿Quieres editar un producto existente? Para acceder a nuetra lista de productos, <b>Haz Click Aquí</b></a>
+            <div class="product-article-a-edit">¿Quieres editar un producto existente? Para acceder a nuestra lista de productos, <a href="/products/create"><b>Haz Click Aquí</b></a> </div>
         </div>
 
     </form>

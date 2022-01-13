@@ -4,7 +4,7 @@ const path = require("path");
 const productsFilePath = path.join(__dirname, '../data/products.json');
 let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
-const categoriesFilePath = path.join(__dirname, '../data/categories.json');
+const categoriesFilePath = path.join(__dirname, '../data/productCategories.json');
 let categories = JSON.parse(fs.readFileSync(categoriesFilePath, 'utf-8'));
 
 const productsController = {
@@ -85,9 +85,13 @@ const productsController = {
         let img;
 
 		if(req.file != undefined){
-			img = req.file.filename
+			img = req.file.filename;
 		} else {
-			img = 'default-image.png'
+            if(productoElegido.image){
+                img = productoElegido.image;
+            } else {
+                img = 'default-image.png';
+            }			
 		};
 
         products[idxProdEleg] = {

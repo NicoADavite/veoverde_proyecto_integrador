@@ -104,21 +104,20 @@ header nav ul li a:visited{
 
 main{
     background-color:  white;
+    margin-bottom: 15px;
 }
-
-/*main*/
 
 .go-back {
     display: flex;
-    margin: 10px;
+    margin: 15px;
     }
     
-    .go-back a{
-        padding-right: 2px;
-        text-decoration: none;
-        color: teal;
-        font-weight: bold;
-    }
+.go-back a{
+    padding-right: 2px;
+    text-decoration: none;
+    color: teal;
+    font-weight: bold;
+}
 
 
 .desgloce-menu{
@@ -161,12 +160,13 @@ h2{
      background-color: rgb(175, 214, 175);
      }
 .login-button button{
-   margin: 30px 0;
-   border: none;
+    padding: 5px; 
+    border-radius: 10px;
+    margin: 30px 0;
+    border: none;
     background-color: #1F3A3B;
     text-align: center;
     box-shadow: 2px 2px 6px rgb(0 0 0 / 40%);
-    border: none;
     transition: all 450ms;
     color: white;
     font-size: 18px;

@@ -2,6 +2,9 @@
 const express = require('express');
 const path = require('path');
 const methodOverride  = require("method-override");
+const session = require('express-session');
+const cookies = require('cookie-parser');
+const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
 
 // ************ express() - (don't touch) ************
 const app = express(); // Guarda la funcionalidad de express
@@ -12,6 +15,9 @@ app.set('views', path.join(__dirname, '/views')); // Define la ubicación de la 
 
 
 // ************ Middlewares - (don't touch) ************
+app.use(session({ secret: "Esto es un secreto",	resave: false, saveUninitialized: false })); //Nos permite utilizar la funcionalidad de express-session en nuestra aplicacion
+app.use(cookies()); // Nos permite utilizar la funcionalidad de cookie-parser en nuestra aplicacion
+app.use(userLoggedMiddleware); // Nos permite utilizar la funcionalidad de userLoggedMiddleware en nuestra aplicacion
 app.use(express.urlencoded({ extended: false })); // Nos permite guardar la información de los formularios como objetos literales 
 app.use(express.json()); // Nos permite convertir la información de los formularios de objetos literales a formato JSON, en caso de ser necesario
 app.use(express.static(path.join(__dirname, "../public"))); // Define la carpeta public para acceder a los elementos estaticos

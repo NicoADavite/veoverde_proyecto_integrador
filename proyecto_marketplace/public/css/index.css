@@ -105,13 +105,49 @@ main{
 }
 
 main,
-.main-section, 
 .products, 
 .product-article{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.us{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    
+}
+
+.us-figure{
+    display: none;
+}
+
+.us-div{
+    margin: 10px 20px;
+    padding: 20px 15px;
+    border: 1px solid black;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 1.5rem;
+}
+
+
+.us-div h1{
+    margin-bottom: 15px;
+}
+
+.us-div-div{
+}
+
+.us-div p{
+    margin-bottom: 20px;
 }
 
 .our-products{
@@ -576,6 +612,49 @@ a:visited{
 }
 
 @media (min-width: 1280px){
+
+    .us{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 100%;
+    }
+    
+    .us-figure{
+        display: block;
+        width: 45%;
+    }
+    
+    .us-figure img{
+        width: 100%;
+        height: 100%;
+    }
+    
+    .us-div{
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        line-height: 1.5rem;
+        position: relative;
+    }
+    
+    .us-div h1{
+        position: absolute;
+        top: 10px;
+        left: 40%;
+    }
+    
+    .us-div-div{
+        position: absolute;
+        top: 70px;
+    }
+    
+    .us-div p{
+        margin-bottom: 20px;
+    }
 
     .our-products-title h2{
         font-size: 2em;

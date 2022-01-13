@@ -8,83 +8,141 @@
 </head>
 <body>
     
-    <!-- partial del header -->
-    <%- include("../partials/header") %>
+  <!-- partial del header -->
+  <%- include("../partials/header") %>
 
-   <main>
+  <main>
     
-    <form action="/" method="POST" class="register-form"> 
-        <h2>REGISTRARME</h2>
-        <div class="register-form-input register-form-name-surname">
-            <label for="user_name-surname">Nombre y Apellido (*)</label>
-            <input type="text" name="user_name-surname" id="user_name-surname" placeholder="Ej.: Juan Perez" required> 
+    <form action="/users/register" method="POST" enctype="multipart/form-data" class="register-form"> 
+      
+      <h2>REGISTRARME</h2>
+
+      <div class="register-form-input register-form-firstName">
+        <label for="user_firstName">Nombres (*)</label>
+        <input 
+          type="text" 
+          name="firstName" id="user_firstName" 
+          value="<%= locals.oldData ? oldData.firstName : null %>"
+          placeholder="Ej.: Juan Ignacio"
+        >
+        <% if (locals.errors && errors.firstName) { %>
+          <div style="color: red;">
+            <%= errors.firstName.msg %> 
+          </div>
+        <% } %>
+      </div>
+
+      <div class="register-form-input register-form-lastName">
+        <label for="user_lastName">Apellido (*)</label>
+        <input 
+          type="text" 
+          name="lastName" id="user_lastName"
+          value="<%= locals.oldData ? oldData.lastName : null %>"
+          placeholder="Ej.: Perez"
+        >
+        <% if (locals.errors && errors.lastName) { %>
+          <div style="color: red;">
+            <%= errors.lastName.msg %> 
+          </div>
+        <% } %>
+      </div>
+
+      <div class="register-form-input register-form-email">
+        <label for="user_email">E-mail (*)</label>
+        <input 
+          type="text" 
+          name="email" id="user_email"
+          value="<%= locals.oldData ? oldData.email : null %>"
+          placeholder="Ej.: juanperez@gmail.com"
+        >
+        <% if (locals.errors && errors.email) { %>
+          <div style="color: red;">
+            <%= errors.email.msg %> 
+          </div>
+        <% } %>
+      </div>
+
+      <!--
+      <div class="register-form-input register-form-email-confirmation">
+          <label for="user_email-confirmation">Confirmar E-mail (*)</label>
+          <input type="email" name="user_email-confirmation" id="user_email-confirmation" placeholder="Ej.: juanperez@gmail.com" required> 
+      </div>
+
+      
+      <div class="register-form-input register-form-phone-numbrer">
+          <label for="user_phone-number">Teléfono (Opcional)</label>
+          <input type="text" name="user_phone-number" id="user_phone-number" placeholder="Ej.: 011 789-4526" required> 
+      </div>
+
+      -->
+
+      <div class="register-form-input register-form-password">
+        <label for="user_password">Contraseña (*)</label>
+        <input type="password" name="password" id="user_password">
+        <% if (locals.errors && errors.password) { %>
+          <div style="color: red;">
+            <%= errors.password.msg %> 
+          </div>
+        <% } %>
+        <div class="register-form-show-password">
+            <input type="checkbox" onclick="showPassword()">
+            <p>Mostrar Contraseña</p>                   
+            <script>
+            function showPassword() {
+              let x = document.getElementById("user_password");
+              if (x.type === "password") {
+                x.type = "text";
+              } else {
+                x.type = "password";
+              }
+            }
+            </script>
         </div>
+      </div>
 
-        <div class="register-form-input register-form-email">
-            <label for="user_email">E-mail (*)</label>
-            <input type="email" name="user_email" id="user_email" placeholder="Ej.: juanperez@gmail.com" required> 
-        </div>
+       <!--
 
-        <div class="register-form-input register-form-email-confirmation">
-            <label for="user_email-confirmation">Confirmar E-mail (*)</label>
-            <input type="email" name="user_email-confirmation" id="user_email-confirmation" placeholder="Ej.: juanperez@gmail.com" required> 
-        </div>
-
-        <div class="register-form-input register-form-phone-numbrer">
-            <label for="user_phone-number">Teléfono (Opcional)</label>
-            <input type="text" name="user_phone-number" id="user_phone-number" placeholder="Ej.: 011 789-4526" required> 
-        </div>
-
-
-        <div class="register-form-input register-form-password">
-            <label for="user_password">Contraseña (*)</label>
-            <input type="password" name="user_password" id="user_password">
-            <div class="register-form-show-password">
-                <input type="checkbox" onclick="showPassword()">
-                <p>Mostrar Contraseña</p>                   
-                <script>
-                function showPassword() {
-                  let x = document.getElementById("user_password");
-                  if (x.type === "password") {
-                    x.type = "text";
-                  } else {
-                    x.type = "password";
-                  }
+      <div class="register-form-input register-form-password">
+          <label for="user_password-confirmation">Confirmar contraseña (*)</label>
+          <input type="password" name="user_password-confirmation" id="user_password-confirmation">
+          <div class="register-form-show-password">
+              <input type="checkbox" onclick="showPasswordConfirmation()">  
+              <p>Mostrar Contraseña</p>   
+              <script>
+              function showPasswordConfirmation() {
+                let x = document.getElementById("user_password-confirmation");
+                if (x.type === "password") {
+                  x.type = "text";
+                } else {
+                  x.type = "password";
                 }
-                </script>
-            </div>
+              }
+              </script>
+          </div>
+      </div>
 
-        </div>
+      -->
 
-        <div class="register-form-input register-form-password">
-            <label for="user_password-confirmation">Confirmar contraseña (*)</label>
-            <input type="password" name="user_password-confirmation" id="user_password-confirmation">
-            <div class="register-form-show-password">
-                <input type="checkbox" onclick="showPasswordConfirmation()">  
-                <p>Mostrar Contraseña</p>   
-                <script>
-                function showPasswordConfirmation() {
-                  let x = document.getElementById("user_password-confirmation");
-                  if (x.type === "password") {
-                    x.type = "text";
-                  } else {
-                    x.type = "password";
-                  }
-                }
-                </script>
-            </div>
-        </div>
+      <div class="register-form-input register-form-image">
+        <label for="user_image">Imagen de Perfil (*)</label>
+        <input type="file" name="image" id="user_image"> 
+        <% if (locals.errors && errors.image) { %>
+          <div style="color: red;">
+            <%= errors.image.msg %> 
+          </div>
+        <% } %>
+      </div>
 
-        <h5>Todos los campos (*) son obligatorios</h5>
+      <h5>Todos los campos (*) son obligatorios</h5>
 
-        <div class="register-form-submit">
-            <button type="submit">CREAR CUENTA</button>
-            <a href="./login">¿Ya tenés una cuenta? <b>Iniciá sesión</b></a>
-        </div>
+      <div class="register-form-submit">
+          <button type="submit">CREAR CUENTA</button>
+          <a href="/users/login">¿Ya tenés una cuenta? <b>Iniciá sesión</b></a>
+      </div>
 
     </form>
 
-   </main>
+  </main>
 
     <!-- partial del header -->
     <%- include("../partials/footer") %>

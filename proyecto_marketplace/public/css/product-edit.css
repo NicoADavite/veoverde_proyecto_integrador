@@ -150,6 +150,7 @@ main,
 
 .product-article{
     margin-bottom: 20px;
+    width: 100%;
     padding: 30%;
     background-color: rgb(238, 238, 238);
     border: 1px solid rgb(0, 39, 0);
@@ -160,17 +161,19 @@ main,
 }
 
 /*.product-article label{
-    
+  border: 1px solid red;  
 }*/
+
 .product-article:hover{
     box-shadow: 2px 2px 6px rgb(0 0 0 / 60%);
 }
 
+
 .product-article-img{
     padding: 10px;
     margin-bottom: 20px;
-    border-bottom: 3px solid rgb(0, 39, 0) ;
-    transition: all 650ms;    
+    border-bottom: 3px solid rgb(0, 39, 0);
+    transition: all 650ms;   
 }
 
 .product-article:hover .product-article-img img{
@@ -236,11 +239,12 @@ input#user_email{
     margin-bottom: 25px;
 }
 .product-article-button{
-    width: 90%;
+    width: 200%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     margin: center;
+    margin-top: 30px;
     justify-content: space-around;
 }
 
@@ -257,13 +261,20 @@ input#user_email{
     text-align: center;
     border-radius: 15px; 
     box-shadow: 2px 2px 6px rgb(0 0 0 / 40%);
-
 }
-
 
 .fa-edit{
     padding: 5px;
 }
+
+.product-article-a-create{
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    text-decoration-line:none;
+}
+
+/*
 .product-article-trash-button{
     width: 40%;
     padding: 4px;
@@ -279,6 +290,7 @@ input#user_email{
 .fa-trash-alt{
     padding: 5px;
 }
+*/
 
 
 /*Footer*/
@@ -537,7 +549,7 @@ a:visited{
     }
     
     .product-article{
-        width: 48%;
+        width: 100%;
     }
 
 }
@@ -597,7 +609,7 @@ a:visited{
     }
     
     .product-article{
-        width: 24%;
+        width: 100%;
     }
     
 

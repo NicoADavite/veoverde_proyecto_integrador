@@ -1,38 +1,65 @@
 [
-    {
-        "id": 1,
-        "firstName": "Agostina",
-        "lastName": "Macchi Souto",
-        "email": "agosmac@hotmail.com",
-        "password": "Agos*5099",
-        "category": "Admin",
-        "image": "defaul-image.png"
-    },
-    {
-        "id": 2,
-        "firstName": "Agustín",
-        "lastName": " Diaz Arnaudo",
-        "email": "adiazarnaudo@gmail.com",
-        "password": "Agus/3031",
-        "category": "Admin",
-        "image": "defaul-image.png"
-    },
-    {
-        "id": 3,
-        "firstName": "Federico",
-        "lastName": "Bianchi",
-        "email": "bianchi.fed@gmail.com",
-        "password": "Fede&5523",
-        "category": "Admin",
-        "image": "defaul-image.png"
-    },
-    {
-        "id": 4,
-        "firstName": "Nicolás",
-        "lastName": "Alceo Davite",
-        "email": "nicolasalceodavite@gmail.com",
-        "password": "Nico-#55567",
-        "category": "Admin",
-        "image": "defaul-image.png"
-    }
+ {
+  "id": 1,
+  "firstName": "Agostina",
+  "lastName": "Macchi Souto",
+  "email": "agosmac@hotmail.com",
+  "password": "Agos*5099",
+  "image": "defaul-image.png",
+  "category": "Admin"
+ },
+ {
+  "id": 2,
+  "firstName": "Agustín",
+  "lastName": " Diaz Arnaudo",
+  "email": "adiazarnaudo@gmail.com",
+  "password": "Agus/3031",
+  "image": "defaul-image.png",
+  "category": "Admin"
+ },
+ {
+  "id": 3,
+  "firstName": "Federico",
+  "lastName": "Bianchi",
+  "email": "bianchi.fed@gmail.com",
+  "password": "Fede&5523",
+  "image": "defaul-image.png",
+  "category": "Admin"
+ },
+ {
+  "id": 4,
+  "firstName": "Nicolás",
+  "lastName": "Alceo Davite",
+  "email": "nicolasalceodavite@gmail.com",
+  "password": "Nico-#55567",
+  "image": "defaul-image.png",
+  "category": "Admin"
+ },
+ {
+  "id": 5,
+  "firstName": "Roberto",
+  "lastName": "Bolaños",
+  "email": "roberto@gmail.com",
+  "password": "$2a$10$WnvCVpkG6NfwyHaS1OnKwuSvMq0Rs6a.sBmMspmgdvEhW2TcW22ES",
+  "image": "default-user-image.png",
+  "category": "User"
+ },
+ {
+  "id": 6,
+  "firstName": "Emiliano",
+  "lastName": "Braschi",
+  "email": "emibrashi@gmail.com",
+  "password": "$2a$10$eWg04Q47ose0jn9F9ej8q.jYfEPLX22Q.eEVuU.YSd76oMxgSbbmO",
+  "image": "1642087083389_img_.png",
+  "category": "User"
+ },
+ {
+  "id": 7,
+  "firstName": "juan",
+  "lastName": "cruz",
+  "email": "juancruz@gmail.com",
+  "password": "$2a$10$fjd57349oBeWkliMmVYK8u3wVVv3DQNhNiUjq0oTsAmOb0.85InPm",
+  "image": "1642088159574_img_.png",
+  "category": "User"
+ }
 ]
