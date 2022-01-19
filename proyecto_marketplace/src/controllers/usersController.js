@@ -81,7 +81,7 @@ const usersController = {
 						res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
 					}
 
-					return res.redirect("/")
+					return res.redirect("/users/profile")
 
 				} else {
 
@@ -113,9 +113,11 @@ const usersController = {
 		}
     },  
 
-    /*profile: (req, res) => {
-        res.render("./users/profile")
-    },*/
+    profile: (req, res) => {
+        res.render("./users/profile", {
+			user: req.session.userLogged
+		})
+    },
 
 	logout: (req, res) => {
 		res.clearCookie("userEmail");

@@ -29,7 +29,7 @@ router.post("/login", loginValidations, usersController.loginProcess);
 
 /*** GET PROFILE ***/ 
 // ruta para obtener la vista de perfil de usuario
-//router.get("/profile", usersController.profile)
+router.get("/profile", authMiddleware, usersController.profile)
 
 router.get('/logout', usersController.logout);
 

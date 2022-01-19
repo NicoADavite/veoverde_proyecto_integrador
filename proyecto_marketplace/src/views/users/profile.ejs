@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- partial del head -->
+    <%- include("../partials/head") %>
+    <link rel="stylesheet" href="/css/profile.css">
+    <title>Profile | VEOVERDE</title>
+</head>
+<body>
+
+    <!-- partial del header -->
+    <%- include("../partials/header") %>
+
+    <main>
+
+        <div class= "go-back">
+            <p><a href="/">Inicio</a> >> Profile </p>
+        </div> 
+ 
+        <div class="container">
+            <figure class="child profile-picture">
+                <img src="/images/users/<%= user.image %> " alt="Imagen de perfil">
+            </figure>
+            <div class="child profile-details">
+                <div class="titulo">
+                    <h1>Bienvenido, <%= (user.firstName + " " + user.lastName) %></h1>
+                </div>
+                <div class="datos">
+                    <div>
+                        <h2>Datos:</h2>
+                    </div>
+                    <div>
+                        <p>Email: <%= user.email %> </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- partial del header -->
+    <%- include("../partials/footer") %>
+
+</body>
+</html>
