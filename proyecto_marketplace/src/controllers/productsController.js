@@ -26,7 +26,11 @@ const productsController = {
 
     // metodo para obtener la vista de creacion del producto
     create: (req, res) => {
-        res.render("./products/product-create-form", {categories});
+        let userLogged = req.session.userLogged
+        res.render("./products/product-create-form", {
+            categories,
+            userLogged
+        });
     },
 
     // metodo para postear el formulario de creacion del producto
