@@ -19,7 +19,7 @@
 1. Comenzar a hacer: Establecer la base de datos con formato JSON e intentar darle funcionalidad
 2. Hacer Mas: Seguir perfeccionando el estilo de los archivos del marketplace y coordinar las clases de cada vista para que queden de manera uniforme
 3. Continuar Haciendo: Seguir con el trabajo colaborativo y dividido
-4. Hacer Menos: Llegar al siguiente Sprint mas holgados de tiempo, teniendo el foco principal en la funcionalidad
+4. Hacer Menos: Llegar al siguiente Sprint mas holgados de tiempo, teniendo el foco principal en la funcionalidad.
 5. Dejar de Hacer: Demoras en etapas no vinculadas a la funcionalidad de las vistas del proyecto.
 
 // RETROSPECTIVA SPRINT 4:
@@ -29,3 +29,11 @@
 3. Continuar Haciendo: Mantener las pautas de organización.
 4. Hacer Menos: Dilatar los requerimientos.
 5. Dejar de Hacer: Evitar llegar a la fecha límite con actividades para terminar.
+
+// RETROSPECTIVA SPRINT 5:
+
+1. Comenzar a hacer: Generar tiempos para poder retocar CSS y toda la parte visual del proyecto.
+2. Hacer Mas: 
+3. Continuar Haciendo: Repaso general del sprint donde cada uno comparte y explica las tareas realizadas.
+4. Hacer Menos: Dilatar los requerimientos.
+5. Dejar de Hacer: presentar versiones completas y quedar sin tiempo para ver CSS .
