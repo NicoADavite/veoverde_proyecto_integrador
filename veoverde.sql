@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 06-02-2022 a las 05:59:59
+-- Tiempo de generación: 06-02-2022 a las 07:59:19
 -- Versión del servidor: 10.4.22-MariaDB
--- Versión de PHP: 8.1.1
+-- Versión de PHP: 8.0.13
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -32,8 +32,20 @@ CREATE TABLE `products` (
   `name` varchar(45) NOT NULL,
   `description` varchar(1000) NOT NULL,
   `image` varchar(100) NOT NULL,
-  `category_id` int(11) NOT NULL
+  `category_id` int(11) NOT NULL,
+  `price` int(10) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `products`
+--
+
+INSERT INTO `products` (`id`, `name`, `description`, `image`, `category_id`, `price`) VALUES
+(1, 'Calendario Plantable', 'Este calendario tiene su origen en materiales recuperados y fue gracias al reciclaje que logró esta nueva forma y destino. Este año queremos que nos acompañes mes a mes con las fechas más importantes del calendario ambiental. Una buena oportunidad para conocer más, generar conciencia y acción sobre diversos temas que nos invitan a reflexinar sobre nuestros hábitos y costumbres.', 'calendario-plantable-2022.png', 4, 400),
+(2, 'Kits Plantables', 'Diferentes propuestas que invitan a sembrar y crear hábitos más sustentables.', 'veoverde-kits.jpg', 2, 1500),
+(3, 'Lapiz Plantable', 'Lápiz color negro, cuerpo natural cilíndrico y cápsula biodegradable con semillas.', 'veoverde-lapiz-plantable.png', 3, 100),
+(4, 'Sobres Compostables', 'Realizado con materiales biobasados de fuentes renovables. Producto biodegradable de origen vegetal, compostable en 180 días. Impresión con tintas al agua 4 colores', 'veoverde-sobres-compostables.jpg', 6, 30),
+(6, 'Nicolas Alceo Davite', 'sdsdsd', '1644130349140_img_.png', 5, 100);
 
 -- --------------------------------------------------------
 
@@ -43,22 +55,21 @@ CREATE TABLE `products` (
 
 CREATE TABLE `products_categories` (
   `id` int(11) NOT NULL,
-  `name` varchar(45) NOT NULL,
-  `category` varchar(45) NOT NULL
+  `name` varchar(45) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `products_categories`
 --
 
-INSERT INTO `products_categories` (`id`, `name`, `category`) VALUES
-(1, 'Papel', 'Papel'),
-(2, 'Kits', 'Kits'),
-(3, 'Productos de Oficina', 'ProdOficina'),
-(4, 'Calendarios', 'Calendarios'),
-(5, 'Tarjetas Plantables', 'TarjPlantables'),
-(6, 'Bolsas Compostables', 'BolCompostables'),
-(7, 'Otros', 'Otros');
+INSERT INTO `products_categories` (`id`, `name`) VALUES
+(1, 'Papel'),
+(2, 'Kits'),
+(3, 'Productos de Oficina'),
+(4, 'Calendarios'),
+(5, 'Tarjetas Plantables'),
+(6, 'Bolsas Compostables'),
+(7, 'Otros');
 
 -- --------------------------------------------------------
 
@@ -154,7 +165,7 @@ ALTER TABLE `users_categories`
 -- AUTO_INCREMENT de la tabla `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de la tabla `products_categories`
