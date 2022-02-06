@@ -58,14 +58,15 @@
 
                             <div class="register-form-input register-form-phone-numbrer">
                                 <label for="category">Categoría (*)</label>
-                                <select name="category" id="category">
+                                <select name="category_id" id="category">
                                     <option value="">Elige una categoría</option>
                                     <% categories.forEach(category => { %>
-                                        <option value="<%= category.value %>" <%= product.category === category.value ? "selected" : null%> ><%= category.name %></option>
+                                        <option value="<%= category.id %>" <%= product.category_id === category.id ? "selected" : null%> ><%= category.name %></option>
                                     <% }) %>
                                 </select>
                             </div>
-                    
+
+                            <!--
                             <div class="register-form-input register-form-password">
                                 <label for="size">Tamaño</label>
                                 <div><input type="radio" name="size" id="size" value="small">Small</div>
@@ -74,7 +75,7 @@
                                 <div><input type="radio" name="size" id="size" value="jumbo">Jumbo</div>
                                 <div><input type="radio" name="size" id="size" value="n/a">No aplica</div>
                             </div>
-                            
+                            -->
                         </div>                                               
                         <div class="product-article-button">
                             <button type="submit" class="product-article-edit-button">EDITAR<i class="far fa-edit"></i></button>
