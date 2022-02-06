@@ -3,8 +3,8 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 25-01-2022 a las 04:44:14
--- Versión del servidor: 5.7.33
+-- Tiempo de generación: 06-02-2022 a las 05:59:59
+-- Versión del servidor: 10.4.22-MariaDB
 -- Versión de PHP: 8.1.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -43,8 +43,22 @@ CREATE TABLE `products` (
 
 CREATE TABLE `products_categories` (
   `id` int(11) NOT NULL,
-  `name` varchar(45) NOT NULL
+  `name` varchar(45) NOT NULL,
+  `category` varchar(45) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `products_categories`
+--
+
+INSERT INTO `products_categories` (`id`, `name`, `category`) VALUES
+(1, 'Papel', 'Papel'),
+(2, 'Kits', 'Kits'),
+(3, 'Productos de Oficina', 'ProdOficina'),
+(4, 'Calendarios', 'Calendarios'),
+(5, 'Tarjetas Plantables', 'TarjPlantables'),
+(6, 'Bolsas Compostables', 'BolCompostables'),
+(7, 'Otros', 'Otros');
 
 -- --------------------------------------------------------
 
@@ -84,6 +98,14 @@ CREATE TABLE `users_categories` (
   `id` int(10) UNSIGNED NOT NULL,
   `category` varchar(45) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `users_categories`
+--
+
+INSERT INTO `users_categories` (`id`, `category`) VALUES
+(1, 'User'),
+(2, 'Admin');
 
 --
 -- Índices para tablas volcadas
@@ -138,7 +160,7 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT de la tabla `products_categories`
 --
 ALTER TABLE `products_categories`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT de la tabla `products_users`
@@ -156,7 +178,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT de la tabla `users_categories`
 --
 ALTER TABLE `users_categories`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Restricciones para tablas volcadas
