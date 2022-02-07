@@ -13,6 +13,7 @@ const categoriesFilePath = path.join(__dirname, '../data/productCategories.json'
 let categories = JSON.parse(fs.readFileSync(categoriesFilePath, 'utf-8'));
 
 const productsController = {
+    
     // metodo para mostrar la vista del listado de productos
     list: (req, res) => {
         //res.render("./products/productList", {products});
@@ -185,10 +186,6 @@ const productsController = {
                     });                
                 
             })
-        
-
-
-
 
         // let productoElegido = products.find(producto => {
         //     return producto.id == req.params.id;
@@ -227,20 +224,42 @@ const productsController = {
 
     // metodo para eliminar un producto 
     destroy: (req, res) => {
+        db.Products.destroy({
+            where: {
+                id: req.params.id
+            }
+        })
+            .then(result => {
+                res.redirect("/products")
+            })
+            .catch(err => {
+                res.send(err)
+            });
 
-        let productoElegido = products.find((producto) => {
-			return producto.id == req.params.id;
-		});
+        // let productoElegido = products.find((producto) => {
+		// 	return producto.id == req.params.id;
+		// });
+// 
+		// products = products.filter(producto => {
+		// 	return producto != productoElegido;
+		// });
+// 
+		// let productsJSON = JSON.stringify(products);
+// 
+		// fs.writeFileSync(productsFilePath, productsJSON);
+// 
+		// res.redirect("/products");
+    }, 
 
-		products = products.filter(producto => {
-			return producto != productoElegido;
-		});
-
-		let productsJSON = JSON.stringify(products);
-
-		fs.writeFileSync(productsFilePath, productsJSON);
-
-		res.redirect("/products");
+    search: (req, res) =>{
+        db.Products.findAll({
+            where:{
+                name: {[Op.like] : "%" + req.body.name + "%"}
+            }
+        })
+            .then(products => {
+                res.render("./products/productList", { products })
+            })
     }
 };
 

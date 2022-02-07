@@ -3,7 +3,7 @@
 <head>
     <!-- partial del head -->
     <%- include("../partials/head") %>
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="/css/index.css">
     <title>VEOVERDE</title>
 </head>
 <body>
@@ -18,52 +18,65 @@
                 <h2>Nuestros Productos</h2>
             </div>
 
-            <div class="products">
+            <% if(products.length > 0){ %>
 
-                <!-- forEach para mostrar los productos de manera dinámica -->
-                <% products.forEach(product => { %> 
+                <div class="products">
 
-                <article class="product-article">
-                    <figure class="product-article-img">
-                        <img src="/images/products/<%= product.image %>" alt="<%= product.name %>">
-                    </figure>
-                    <div class="product-article-discount">
-                        <p class="discount-discount">10% OFF </p>
-                        <p class="discount-p">COMPRANDO</p>
-                        <p class="discount-p"> 100 o MÁS</p>
-                    </div> 
-                    <div class="product-article-details">
-                        <h4 class="product-article-description"><%= product.name %></h4>
-                        <p class="product-article-price">$<%= product.price %></p>
-                    </div>
-                    <div class="product-article-buttons">
-                        <button class="product-article-buy-button">COMPRAR</button>
-                        <a href="/products/<%= product.id %>" class="product-article-view-button"><i class="far fa-eye"></i></a>
-                    </div>   
-                    <% if(locals.userLogged && userLogged.category == "User") { %> 
+                    <!-- forEach para mostrar los productos de manera dinámica -->
+                    <% products.forEach(product => { %> 
+    
+                    <article class="product-article">
+                        <figure class="product-article-img">
+                            <img src="/images/products/<%= product.image %>" alt="<%= product.name %>">
+                        </figure>
+                        <div class="product-article-discount">
+                            <p class="discount-discount">10% OFF </p>
+                            <p class="discount-p">COMPRANDO</p>
+                            <p class="discount-p"> 100 o MÁS</p>
+                        </div> 
+                        <div class="product-article-details">
+                            <h4 class="product-article-description"><%= product.name %></h4>
+                            <p class="product-article-price">$<%= product.price %></p>
+                        </div>
                         <div class="product-article-buttons">
                             <button class="product-article-buy-button">COMPRAR</button>
                             <a href="/products/<%= product.id %>" class="product-article-view-button"><i class="far fa-eye"></i></a>
-                        </div>                        
-                    <% } else if (locals.userLogged && userLogged.category == "Admin") { %>
-                        <div class="product-article-buttons">
-                            <div>
-                                <a href="/products/edit/<%= product.id %>"><button class="product-article-buy-button">EDITAR<i class="far fa-edit"></i></button></a>
-                            </div>
-
-                            <form action="/products/<%= product.id %>?_method=DELETE" method="POST">
-                                <button  class="product-article-buy-button" type="submit">ELIMINAR<i class="fas fa-trash-alt"></i></button>
-                            </form>
-                        </div>
-                    <% } %>                                      
-                   
-                    
+                        </div>   
+                        <% if(locals.userLogged && userLogged.category == "User") { %> 
+                            <div class="product-article-buttons">
+                                <button class="product-article-buy-button">COMPRAR</button>
+                                <a href="/products/<%= product.id %>" class="product-article-view-button"><i class="far fa-eye"></i></a>
+                            </div>                        
+                        <% } else if (locals.userLogged && userLogged.category == "Admin") { %>
+                            <div class="product-article-buttons">
+                                <div>
+                                    <a href="/products/edit/<%= product.id %>"><button class="product-article-buy-button">EDITAR<i class="far fa-edit"></i></button></a>
+                                </div>
     
-                </article>
+                                <form action="/products/<%= product.id %>?_method=DELETE" method="POST">
+                                    <button  class="product-article-buy-button" type="submit">ELIMINAR<i class="fas fa-trash-alt"></i></button>
+                                </form>
+                            </div>
+                        <% } %>                                      
+                       
+                        
+        
+                    </article>
+    
+                    <% }) %> 
+    
+                </div>
 
-                <% }) %> 
+            <% } else { %>
 
-            </div>
+                <p>
+                    Disculpanos, no encontramos resultados para tu búsqueda
+                </p>
+                <a href="/products"><button>VOLVER  A LISTA DE PRODUCTOS</button></a>
+
+            <% } %> 
+ 
+
         </section>
 
     </main>

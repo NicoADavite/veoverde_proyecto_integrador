@@ -31,6 +31,9 @@ router.get("/", productsController.list);
 // ruta para obtener la vista del carrito de compras
 router.get("/productCart", productsController.cart);
 
+// ruta para obtener los resultados del search
+router.post("/search", productsController.search);
+
 /*** CREATE ONE PRODUCT ***/ 
 // ruta para obtener la vista de el formulario de creacion de un producto (solo administrador)
 router.get("/create", productsController.create);
