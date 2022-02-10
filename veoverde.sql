@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 07-02-2022 a las 03:40:36
+-- Tiempo de generación: 10-02-2022 a las 02:21:20
 -- Versión del servidor: 10.4.22-MariaDB
 -- Versión de PHP: 8.0.13
 
@@ -103,11 +103,12 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `firstName`, `lastName`, `email`, `password`, `image`, `category_id`) VALUES
-(2, 'Agostina', 'Macchi Souto', 'agosmac@hotmail.com', '$2a$10$OQt1wl3pSOsGEULKkn1GrujN78tuhSwYCQ.i0EuOcfeWF9NPYF8s6', '1644200084296_img_.png', 1),
-(3, 'Agustín', 'Diaz Arnaudo', 'adiazarnaudo@gmail.com', '$2a$10$I9h.6X2xDHTwqWhUG4zMvepTznUvVYZLQSMmEN96l5ef/IwPP7iI6', '1644200238028_img_.png', 1),
-(4, 'Federico', 'Bianchi', 'bianchi.fed@gmail.com', '$2a$10$Pb68dybNmUxvT8PSAA6I/eZeHnnxzorvIwXJPXete.lZOBhBDaoa2', '1644200283820_img_.png', 1),
-(5, 'Nicolás', 'Alceo Davite', 'nicolasalceodavite@gmail.com', '$2a$10$qIP27UERBz22DXq.ul30XO9Ch.COCqLys/b0KkC2xMQtCAHSfmLza', '1644200327458_img_.png', 1),
-(6, 'Profe', 'DH', 'profeDH@gmail.com', '$2a$10$gImw6tHbidCcbRinKnpP/u.QL2dxW0PUQmJWfoBXeTklihPG7oiM6', '1644200474589_img_.png', 1);
+(2, 'Agostina', 'Macchi Souto', 'agosmac@hotmail.com', '$2a$10$OQt1wl3pSOsGEULKkn1GrujN78tuhSwYCQ.i0EuOcfeWF9NPYF8s6', 'admin-image.png', 2),
+(3, 'Agustín', 'Diaz Arnaudo', 'adiazarnaudo@gmail.com', '$2a$10$I9h.6X2xDHTwqWhUG4zMvepTznUvVYZLQSMmEN96l5ef/IwPP7iI6', 'admin-image.png', 2),
+(4, 'Federico', 'Bianchi', 'bianchi.fed@gmail.com', '$2a$10$Pb68dybNmUxvT8PSAA6I/eZeHnnxzorvIwXJPXete.lZOBhBDaoa2', 'admin-image.png', 2),
+(5, 'Nicolás', 'Alceo Davite', 'nicolasalceodavite@gmail.com', '$2a$10$qIP27UERBz22DXq.ul30XO9Ch.COCqLys/b0KkC2xMQtCAHSfmLza', 'admin-image.png', 2),
+(6, 'Profe', 'DH', 'profeDH@gmail.com', '$2a$10$gImw6tHbidCcbRinKnpP/u.QL2dxW0PUQmJWfoBXeTklihPG7oiM6', 'admin-image.png', 2),
+(7, 'Pepito', 'Martinez', 'pepi@gmail.com', '$2a$10$lZQBsNsDFqyvd9vhoHNhM.V1njyA9UHq45hAdTwviGGdDg7duxNyK', '1644440452490_img_.png', 1);
 
 -- --------------------------------------------------------
 
@@ -175,7 +176,7 @@ ALTER TABLE `users_categories`
 -- AUTO_INCREMENT de la tabla `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT de la tabla `products_categories`
@@ -193,7 +194,7 @@ ALTER TABLE `products_users`
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de la tabla `users_categories`

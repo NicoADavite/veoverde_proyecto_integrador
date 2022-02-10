@@ -42,12 +42,7 @@
                             <button class="product-article-buy-button">COMPRAR</button>
                             <a href="/products/<%= product.id %>" class="product-article-view-button"><i class="far fa-eye"></i></a>
                         </div>   
-                        <% if(locals.userLogged && userLogged.category == "User") { %> 
-                            <div class="product-article-buttons">
-                                <button class="product-article-buy-button">COMPRAR</button>
-                                <a href="/products/<%= product.id %>" class="product-article-view-button"><i class="far fa-eye"></i></a>
-                            </div>                        
-                        <% } else if (locals.userLogged && userLogged.category == "Admin") { %>
+                        <% if (locals.userLogged && userLogged.category_id == "2") { %>
                             <div class="product-article-buttons">
                                 <div>
                                     <a href="/products/edit/<%= product.id %>"><button class="product-article-buy-button">EDITAR<i class="far fa-edit"></i></button></a>

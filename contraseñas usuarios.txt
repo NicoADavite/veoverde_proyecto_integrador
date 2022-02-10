@@ -1,4 +1,4 @@
-
+admins
  {
   "id": 1,
   "email": "agosmac@hotmail.com",
@@ -24,3 +24,7 @@
  id: 5,
 profeDH@gmail.com,
 profe1234
+
+usuarios
+pepi@gmail.com
+pepi1234

@@ -56,15 +56,17 @@
 
 
                 </form>
+                <% if (locals.userLogged && userLogged.category_id == "2"){ %>
+                    <div class="product-article-button">
+                        <a href="/products/edit/<%= product.id %>" style="text-decoration: none;" ><button class="product-article-edit-button">EDITAR<i class="far fa-edit" style="color: white"></i></a></button>
+    
+                        <form action="/products/<%= product.id %>?_method=DELETE" method="POST">                        
+                            <button  class="product-article-trash-button" type="submit">ELIMINAR<i class="fas fa-trash-alt"></i></button>
+                        </form>
+                        
+                    </div>
+                <% } %> 
 
-                <div class="product-article-button">
-                    <a href="/products/edit/<%= product.id %>"><button class="product-article-edit-button">EDITAR<i class="far fa-edit"></i></a></button>
-
-                    <form action="/products/<%= product.id %>?_method=DELETE" method="POST">                        
-                        <button  class="product-article-trash-button" type="submit">ELIMINAR<i class="fas fa-trash-alt"></i></button>
-                    </form>
-                    
-                </div>
 
            </article>
        </section>

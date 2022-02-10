@@ -9,10 +9,12 @@ const path = require('path');
 const productsController = require("../controllers/productsController");
 
 
+const adminMiddleware = require('../middlewares/adminMiddleware');
+
 // ************ Multer ************ 
 const storage = multer.diskStorage({
     destination: (req,file,cb) => {
-        cb(null, '../public/images/products');
+        cb(null, 'public/images/products');
     },
     filename: (req,file,cb) => {
         newFileName = `${Date.now()}_img_${path.extname(file.originalname)}`;
@@ -36,13 +38,13 @@ router.post("/search", productsController.search);
 
 /*** CREATE ONE PRODUCT ***/ 
 // ruta para obtener la vista de el formulario de creacion de un producto (solo administrador)
-router.get("/create", productsController.create);
+router.get("/create", adminMiddleware, productsController.create);
 // ruta para postear la creacion de un producto (solo administrador)
 router.post("/", upload.single("image"), productsController.store);
 
 /*** EDIT ONE PRODUCT ***/ 
 // ruta para obtener la vista de el formulario de edicion de un producto en particular (solo administrador)
-router.get("/edit/:id", productsController.edit);
+router.get("/edit/:id", adminMiddleware, productsController.edit);
 // ruta para puttear la edicion de un producto en particular (solo administrador)
 router.put("/:id", upload.single("image"), productsController.update);
 
@@ -53,9 +55,7 @@ router.get("/:id", productsController.detail);
 
 /*** DELETE ONE PRODUCT***/ 
 // ruta para eliminar un producto en particular (solo administrador)
-router.delete("/:id", productsController.destroy);
-
-
+router.delete("/:id", adminMiddleware, productsController.destroy);
 
 
 module.exports = router;
