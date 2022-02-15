@@ -41,13 +41,29 @@
                     </div>
                 <% } %>
             </div>
+
+            <div class="login-form-show-password" style="margin-bottom: 15px;">
+                <input type="checkbox" onclick="showPassword()">  
+                <p style="display: inline;">Mostrar Contraseña</p>   
+                <script>
+                function showPassword() {
+                  let x = document.getElementById("password");
+                  if (x.type === "password") {
+                    x.type = "text";
+                  } else {
+                    x.type = "password";
+                  }
+                }
+                </script>
+            </div>
+
             <!-- FALTA DEFINIR FUNCIONALIDAD
             <div class="login-forgot-password">
                 <button>¿Olvidaste la contraseña?</button>
             </div>
             -->
             
-            <div class= "div-login-form">
+            <div class= "div-login-form" style="border: 1px solid darkorange; width: 15%; margin: auto;padding: 5px; border-radius: 10px; ">
                 <input type="checkbox"  name="remember_user">  Recordar mi usuario
             </div>
 

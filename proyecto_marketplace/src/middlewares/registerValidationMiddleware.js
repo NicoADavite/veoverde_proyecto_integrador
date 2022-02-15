@@ -10,6 +10,15 @@ module.exports = [
 	body("password")
         .notEmpty().withMessage("Tienes que escribir una contraseña").bail()
         .isLength({ min : 8}).withMessage("La contraseña debe tener al menos 8 caracteres"),
+	body("repassword")
+        .notEmpty().withMessage("Tienes que escribir una contraseña").bail()
+        .isLength({ min : 8}).withMessage("La contraseña debe tener al menos 8 caracteres"),
+	body('repassword').custom((value, { req }) => {
+		if (value !== req.body.password) {
+		  throw new Error('Las contraseñas que escribiste no coinciden');
+		}
+		return true;
+	  }),
     body("image").custom((value, { req }) => {
 
 		let file = req.file;

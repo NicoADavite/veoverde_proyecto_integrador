@@ -1,30 +1,23 @@
-admins
- {
-  "id": 1,
+ADMINISTRADORES (users con category_id == 2)
+
   "email": "agosmac@hotmail.com",
   "password": "Agos*5099",
  },
- {
-  "id": 2,
+
   "email": "adiazarnaudo@gmail.com",
   "password": "Agus/3031",
 
- {
-  "id": 3,
   "email": "bianchi.fed@gmail.com",
   "password": "Fede&5523"
- },
- {
-  "id": 4,
+
   "email": "nicolasalceodavite@gmail.com",
   "password": "Nico-#55567",
-  "image": "defaul-image.png",
- }, 
 
- id: 5,
-profeDH@gmail.com,
-profe1234
+  "email": "profeDH@gmail.com",
+  "password": "profe1234",
 
-usuarios
-pepi@gmail.com
-pepi1234
+USUARIOS CONSUMIDORES (users con category_id == 1)
+
+  "email": "pepi@gmail.com",
+  "password": "pepi1234",
+

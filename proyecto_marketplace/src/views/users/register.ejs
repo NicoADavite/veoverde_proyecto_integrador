@@ -100,11 +100,14 @@
         </div>
       </div>
 
-       <!--
-
-      <div class="register-form-input register-form-password">
+      <div class="register-form-input register-form-re-password">
           <label for="user_password-confirmation">Confirmar contraseña (*)</label>
-          <input type="password" name="user_password-confirmation" id="user_password-confirmation">
+          <input type="password" name="repassword" id="user_password-confirmation">
+          <% if (locals.errors && errors.repassword) { %>
+            <div style="color: red;">
+              <%= errors.repassword.msg %> 
+            </div>
+          <% } %>
           <div class="register-form-show-password">
               <input type="checkbox" onclick="showPasswordConfirmation()">  
               <p>Mostrar Contraseña</p>   
@@ -120,8 +123,6 @@
               </script>
           </div>
       </div>
-
-      -->
 
       <div class="register-form-input register-form-image">
         <label for="user_image">Imagen de Perfil (*)</label>
