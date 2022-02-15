@@ -6,11 +6,14 @@ const db = require("../database/models/index");
 const sequelize = db.sequelize;
 const Op = db.Sequelize.Op;
 
-const productsFilePath = path.join(__dirname, '../data/products.json');
-let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
-const categoriesFilePath = path.join(__dirname, '../data/productCategories.json');
-let categories = JSON.parse(fs.readFileSync(categoriesFilePath, 'utf-8'));
+// Esto lo usabamos antes de tener sequelize
+
+//const productsFilePath = path.join(__dirname, '../data/products.json');
+//let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+
+// const categoriesFilePath = path.join(__dirname, '../data/productCategories.json');
+// let categories = JSON.parse(fs.readFileSync(categoriesFilePath, 'utf-8'));
 
 const productsController = {
     
@@ -47,12 +50,12 @@ const productsController = {
 
     // metodo para obtener la vista de creacion del producto
     create: (req, res) => {
-        let userLogged = req.session.userLogged
+        // let userLogged = req.session.userLogged
         db.ProductCategories.findAll()
             .then(categories => {
                 res.render("./products/product-create-form", {
-                    categories,
-                    userLogged
+                    categories/*,
+                    userLogged*/
             })
             .catch(err => {
                 res.send(err)

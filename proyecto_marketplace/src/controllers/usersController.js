@@ -3,7 +3,7 @@ const fs = require("fs");
 const path = require("path");
 const bcryptjs = require('bcryptjs');
 const {	validationResult } = require('express-validator');
-const User = require("../models/User")
+// const User = require("../models/User")
 
 const db = require("../database/models/index");
 const sequelize = db.sequelize;
@@ -62,6 +62,9 @@ const usersController = {
 					image: img,
 					category_id: 1
 				})
+					.then(result => {
+						return res.redirect('/users/login');
+					})
 				
 				// let userToCreate = {
 				// 	...req.body,
@@ -72,7 +75,7 @@ const usersController = {
 		// 
 				// let userCreated = User.create(userToCreate);
 		
-				return res.redirect('/users/login');
+				
 
 			})
 

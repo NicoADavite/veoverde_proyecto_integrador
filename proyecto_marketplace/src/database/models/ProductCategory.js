@@ -20,7 +20,7 @@ module.exports = (sequelize, DataTypes) => {
         timestamps: false
     };
 
-    const ProductCategory = sequelize.define(alias, cols, config)
+    const ProductCategory = sequelize.define(alias, cols, config);
 
     //Movie.associate = (models) => {
 //

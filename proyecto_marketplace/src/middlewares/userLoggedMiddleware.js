@@ -6,6 +6,7 @@ function userLoggedMiddleware(req, res, next) {
 	res.locals.isLogged = false;
 
 	let emailInCookie = req.cookies.userEmail;
+	
 	db.Users.findOne({
 		where: {
 			email: {[Op.like] : emailInCookie }
