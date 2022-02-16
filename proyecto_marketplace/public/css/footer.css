@@ -11,6 +11,7 @@ footer{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 .footer-nav-redes{
@@ -19,13 +20,14 @@ footer{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
 }
 
 .footer-nav-redes h2{
     width: 100%;
     margin-bottom: 10px;
+    text-align: center;
 }
 
 .footer-red{  
@@ -63,12 +65,15 @@ footer{
     color: white;  
 }
 
+/*
 .footer-nav-nosotros{
     margin-bottom: 30px;
 }
+*/
 
 .footer-nav-nosotros h2{    
     margin-bottom: 10px;
+    text-align: center;
 }
 
 .footer-nav-nosotros div{
@@ -104,6 +109,7 @@ footer{
     font-size: 1.05rem;
     margin-bottom: 15px;
     width: 100%;
+    text-align: center;
 }
 
 .footer-email-newsletter input{
@@ -297,7 +303,7 @@ a:visited{
 
     .footer-nav-nosotros{
         width: 32%;
-        margin-top: 10px;
+    /*    margin-top: 10px; */
     }
 
     .footer-nav-nosotros h2{
