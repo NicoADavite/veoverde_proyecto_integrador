@@ -108,7 +108,8 @@ header nav ul li a:hover{
 }
 
 header nav ul li a:visited{
-    color:initial;
+    color: initial;
+    color: white;
 }
 
 /* Descomentarlo si se necesita usar para algo
