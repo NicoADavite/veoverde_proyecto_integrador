@@ -1,8 +1,8 @@
 
 - mejorar el header a partir de 768 en adelante. Ejemplos:
-  * darle un max-width a la barra de busqueda
-  * sacar el burguer menu de 768 en adelante.
-  * mover el logo a la izquierda y poner la barra de busqueda entre medio del logo y el carrito
+  * (HECHO) darle un max-width a la barra de busqueda
+  * (HECHO) sacar el burguer menu de 768 en adelante.
+  * (HECHO) mover el logo a la izquierda y poner la barra de busqueda entre medio del logo y el carrito
 
 - Agregar un carrusel con imagenes e información de la empresa
 

@@ -118,18 +118,26 @@ header nav ul li a:visited{
 */
 
 @media (min-width: 768px){
+    header{
+        position: relative;
+    }
+    
     .burguer-menu{
         display: none;
     }
     
     .header-logo{ 
-        width: 50%;
+        width: 25%;
         justify-content: flex-start;
         padding-left: 25px;
     }
     
-    .header-search-form input{
-        max-width: 50%;
+    .header-search-form {
+        width: 40%;
+        max-width: 100%;
+        position: absolute;
+        top: 1px;
+        left: 35vw;
     }
 
     header nav{
