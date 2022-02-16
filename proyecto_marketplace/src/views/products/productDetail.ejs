@@ -15,18 +15,18 @@
        <section>  
         <article class="first-product">
                 <div>
-                    <h2 class=" product-title"><%= product.name %></h2>
+                    <h2 class="product-title"><%= product.name %></h2>
                 </div>
                 
                 <div class="calendario-plantable-2022">
-                <img src="/images/products/<%= product.image %>" alt="<%= product.name %>">
-                </div>
+                    <img src="/images/products/<%= product.image %>" alt="<%= product.name %>">
+                    <div class="product-article-discount">
+                        <p class="discount-discount">10% OFF </p>
+                        <p class="discount-p">COMPRANDO</p>
+                        <p class="discount-p"> 100 o MÁS</p>
+                    </div>
+                </div>               
                 
-                <div class="product-article-discount">
-                    <p class="discount-discount">10% OFF </p>
-                    <p class="discount-p">COMPRANDO</p>
-                    <p class="discount-p"> 100 o MÁS</p>
-                </div>
 
                 <div>
                     <h6><%= product.description %></h6>
@@ -43,19 +43,20 @@
                 </div>
 
                 
-                <form action="" metod="POST">
+                <form action="/" metod="POST">
                     
 
                     <div class="buy-form-submit">
                         <div class="quantity">
                             <input type="text" placeholder="Cantidad">
                         </div>
-                        <button type="submit"><a href="/productCart" style="text-decoration:none">Comprar</a></button>
+                        <button type="submit"><a href="/products/productCart" style="text-decoration:none">Comprar</a></button>
                                                 
                     </div>
 
 
                 </form>
+
                 <% if (locals.userLogged && userLogged.category_id == "2"){ %>
                     <div class="product-article-button">
                         <a href="/products/edit/<%= product.id %>" style="text-decoration: none;" ><button class="product-article-edit-button">EDITAR<i class="far fa-edit" style="color: white"></i></a></button>

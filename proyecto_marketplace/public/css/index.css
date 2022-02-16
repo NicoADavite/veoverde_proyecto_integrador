@@ -231,6 +231,10 @@ main,
     
 @media (min-width: 768px){
 
+    .product-article{
+        width: 50%;
+        max-width: 400px;
+    }
 }
 
 @media (min-width: 1280px){

@@ -8,16 +8,16 @@
 /* Header */
 
 header{
-    background-color: rgb(175, 214, 175);
     padding-top: 5px;
+    background-image: url("/images/pinos.png");
+    opacity: 80%;
 }
 
 .top-header{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;  
-    background-color: rgb(175, 214, 175);
+    align-items: center;
     margin-bottom: 10px;
 }
 
@@ -29,8 +29,9 @@ header{
 }
 
 .burguer-menu button{
+    color: white;
     border: none;
-    background-color: rgb(175, 214, 175);
+    background: none;
 }
 
 
@@ -66,17 +67,17 @@ header{
 
 .shopping-cart i{
     font-size: 22px;
+    color: white;
 }
 
 .shopping-cart a:visited{
-    color: initial;
+    color: white;
 }
 
 .header-search-form{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(175, 214, 175);
     text-align: center;
     padding: 10px;
 }
@@ -103,7 +104,7 @@ header nav{
 }
 
 header nav ul li a:hover{
-    color: #1F3A3B;;
+    color: white;
 }
 
 header nav ul li a:visited{

@@ -6,13 +6,13 @@
 
 - Agregar un carrusel con imagenes e información de la empresa
 
-- mejorar el footer para que breakpoints entre 768 y 1280 px (que aparezca las redes y la ubicacion en el mismo renglon y el newsletter abajo)
+- (seguir viendo)mejorar el footer para que breakpoints entre 768 y 1280 px (que aparezca las redes y la ubicacion en el mismo renglon y el newsletter abajo)
 
 - (HECHO)arreglar el link del footer para que tenga un target blank.
 
 - achicar el min-height o min-width de los productos(sobre todo para version de 1280 en adelante)
 
-- quizas agregar un max width a los articulos en versiones de 1280 en adelante.
+- quizas agregar un max width a los articulos en versiones de 768 en adelante.
 
 - arreglar un poco el product detail (quizás ponerle un max-width a la imagen en las distintas versiones de los media queries). Tambien se podria mostrar la imagen a la izquierda y el resto de la informacion a la derecha en versiones de tablet en adelante. Ver de organizar los botones de editar y eliminar
 

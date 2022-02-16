@@ -20,9 +20,8 @@ section{
     margin: 0px auto;
 }
 .first-product{
-    max-width:100%;
+    max-width:95%;
     margin: 20px auto;
-    position: relative;
     display: flex;
     padding: 20px 15px;
     justify-content: space-between;
@@ -41,7 +40,8 @@ section{
 }
 
 .calendario-plantable-2022{
-    width: 100%;
+    width: 85%;
+    position: relative;
 }
 .first-product img{
     width:100%;
@@ -52,8 +52,8 @@ section{
 
 .product-article-discount{
     position: absolute;
-    left: 15px;
-    top: 68px;
+    left: 0px;
+    top: 0px;
     width: 120px;
     padding: 5px;
     background-color: rgb(59, 59, 59);
@@ -229,17 +229,22 @@ a:visited{
         flex-direction: column;
         flex-wrap: wrap;
         justify-content: space-around;
-        align-items: stretch;
     }
 
     .product-title{
         font-size: 1.7em;
         text-align: center;
     }
+
+    .calendario-plantable-2022{
+        max-width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px;
+    }
     
     .product-article-discount{
-        top: 77px;
-        left: 15px;
         opacity: 80%;
         width: 30%
     }
@@ -278,8 +283,6 @@ a:visited{
     }
 
     .product-article-discount{
-        top: 82px;
-        left: 15px;
         opacity: 80%;
         width: 30%
     }
