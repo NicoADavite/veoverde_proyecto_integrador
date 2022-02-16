@@ -73,9 +73,12 @@ header{
 }
 
 .header-search-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: rgb(175, 214, 175);
     text-align: center;
-    padding-bottom: 10px;
+    padding: 10px;
 }
 
 .header-search-form input{
@@ -115,6 +118,19 @@ header nav ul li a:visited{
 */
 
 @media (min-width: 768px){
+    .burguer-menu{
+        display: none;
+    }
+    
+    .header-logo{ 
+        width: 50%;
+        justify-content: flex-start;
+        padding-left: 25px;
+    }
+    
+    .header-search-form input{
+        max-width: 50%;
+    }
 
     header nav{
         display: flex;
