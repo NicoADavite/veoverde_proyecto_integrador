@@ -75,7 +75,7 @@
 
         <div class="register-form-input register-form-price">
             <label for="price">Precio (*)</label>
-            <input type="text" name="price" id="price" value="<%= (locals.oldData && oldData.price) ? oldData.price : null %> ">
+            <input type="number" step="any" name="price" id="price" value="<%= (locals.oldData && oldData.price) ? oldData.price : null %>">
         </div>
         <% if(locals.errors && errors.price){ %> 
             <div class="errores">

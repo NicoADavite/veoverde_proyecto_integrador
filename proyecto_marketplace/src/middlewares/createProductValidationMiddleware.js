@@ -26,5 +26,5 @@ module.exports = [
         .notEmpty().withMessage("Tienes que elegir una categoria"),
 	body("price")
         .notEmpty().withMessage("Tienes que escribir un precio para el producto").bail()
-        .isDecimal({force_decimal: true}).withMessage("Solo puedes ingresar numeros y el caracter '.' ")
+        .isDecimal({force_decimal: false}).withMessage("Solo puedes ingresar numeros y el caracter '.' ")
 ]
