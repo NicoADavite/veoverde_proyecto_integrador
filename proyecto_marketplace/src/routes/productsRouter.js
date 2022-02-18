@@ -9,19 +9,10 @@ const path = require('path');
 const productsController = require("../controllers/productsController");
 
 
+// ************ Middlewares ************ 
+const upload = require('../middlewares/productMulterMiddleware');
+const productCreateValidationMiddleware = require("../middlewares/createProductValidationMiddleware");
 const adminMiddleware = require('../middlewares/adminMiddleware');
-
-// ************ Multer ************ 
-const storage = multer.diskStorage({
-    destination: (req,file,cb) => {
-        cb(null, 'public/images/products');
-    },
-    filename: (req,file,cb) => {
-        newFileName = `${Date.now()}_img_${path.extname(file.originalname)}`;
-        cb(null, newFileName);
-    }
-});
-const upload = multer({ storage });
 
 
 // ************ Route System ************
@@ -40,7 +31,7 @@ router.post("/search", productsController.search);
 // ruta para obtener la vista de el formulario de creacion de un producto (solo administrador)
 router.get("/create", adminMiddleware, productsController.create);
 // ruta para postear la creacion de un producto (solo administrador)
-router.post("/", upload.single("image"), productsController.store);
+router.post("/", upload.single("image"), productCreateValidationMiddleware, productsController.store);
 
 /*** EDIT ONE PRODUCT ***/ 
 // ruta para obtener la vista de el formulario de edicion de un producto en particular (solo administrador)

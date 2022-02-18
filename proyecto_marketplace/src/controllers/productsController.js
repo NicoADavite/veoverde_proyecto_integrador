@@ -2,6 +2,8 @@ const fs = require('fs');
 const { resolve } = require('path');
 const path = require("path");
 
+const {	validationResult } = require('express-validator');
+
 const db = require("../database/models/index");
 const sequelize = db.sequelize;
 const Op = db.Sequelize.Op;
@@ -56,15 +58,34 @@ const productsController = {
                 res.render("./products/product-create-form", {
                     categories/*,
                     userLogged*/
+                })
             })
             .catch(err => {
                 res.send(err)
-            })
-        })
+            })        
     },
 
     // metodo para postear el formulario de creacion del producto
     store: (req, res) => {
+
+        let errors = validationResult(req);
+
+		if (errors.errors.length > 0) {
+
+            db.ProductCategories.findAll()
+            .then(categories => {
+                return res.render('./products/product-create-form', {
+                    categories,
+                    errors: errors.mapped(),
+                    oldData: req.body
+                });
+            })
+            .catch(err => {
+                res.send(err)
+            })  
+
+			
+		}
 
         let img;
 
