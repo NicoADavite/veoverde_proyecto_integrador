@@ -1,4 +1,6 @@
-window.onload(() => {
+window.addEventListener("load", function() {
+
+    console.log("estoy andando")
 
     // form
     let registerForm = document.querySelector("#register-form");
@@ -41,7 +43,7 @@ window.onload(() => {
             errores.lastName = "El apellido debe tener al menos 2 caracteres"
         }
 
-        let emailRegex = /^\w+([.-]?\w+)@\w+([.-]?\w+)(.\w{2,3,4})+$/;
+        const emailRegex = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
         if(emailInput.value == ""){
             errores.email = "Este campo debe estar completo"
         } else if(!(emailRegex.test(emailInput.value))){
@@ -71,6 +73,8 @@ window.onload(() => {
             erroresRePassword.innerHTML = (errores.rePassword) ? errores.rePassword : "";
         } else {
             registerForm.submit();
-    })
+    
+        }   
+     })
 
 })
