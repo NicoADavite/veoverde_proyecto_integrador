@@ -18,14 +18,18 @@ window.addEventListener("load", function() {
     let rePasswordInput = document.querySelector("#user_password-confirmation");
     let imageInput = document.querySelector("#user_image");
 
-    // Divs de errores
+    // Variables para manejar la validación de la imagen
+    let allowedExtensions = /(.jpg|.jpeg|.png|.gif)$/i;
+    let acceptedExtensions = [".jpg", ".jpeg", ".png", ".gif"]
+
+
+    // Divs de errores del front
     let erroresFirstName = document.querySelector("#errores-firstName");
     let erroresLastName = document.querySelector("#errores-lastName");
     let erroresEmail = document.querySelector("#errores-email");
     let erroresPassword = document.querySelector("#errores-password");
     let erroresRePassword = document.querySelector("#errores-rePassword");
     let erroresImage = document.querySelector("#errores-image");
-
 
     // Botón de envío del form
     let sendFormButton = document.querySelector("#form-submit-button");
@@ -41,17 +45,40 @@ window.addEventListener("load", function() {
 
     firstNameInput.addEventListener("focus", () => {
         if(firstNameInput.value == "" ){
-            erroresFirstName.innerHTML = "Este campo debe estar completo"
+            if(document.querySelector("#error-back-firstName")){
+                document.querySelector("#error-back-firstName").style.display = "none"
+            } 
+
+            firstNameInput.classList.remove("is-valid");
+            firstNameInput.classList.add("is-invalid");
+
+            erroresFirstName.innerHTML = "Este campo debe estar completo";
+            erroresFirstName.classList.add("error-invalid");            
         }
     })
 
     firstNameInput.addEventListener("input", () => {
         if(firstNameInput.value == "" ){
-            erroresFirstName.innerHTML = "Este campo debe estar completo"
+            firstNameInput.classList.remove("is-valid");
+            firstNameInput.classList.add("is-invalid");
+
+            erroresFirstName.innerHTML = "Este campo debe estar completo";
+            erroresFirstName.classList.add("error-invalid"); 
+            
         } else if(firstNameInput.value.length < 2){
-            erroresFirstName.innerHTML = "El nombre debe tener al menos 2 caracteres"
+            firstNameInput.classList.remove("is-valid");
+            firstNameInput.classList.add("is-invalid");
+
+            erroresFirstName.innerHTML = "El nombre debe tener al menos 2 caracteres";
+            erroresFirstName.classList.add("error-invalid"); 
+
         } else {
-            erroresFirstName.innerHTML = ""
+            firstNameInput.classList.remove("is-invalid");
+            firstNameInput.classList.add("is-valid");
+
+            erroresFirstName.innerHTML = "";
+            erroresFirstName.classList.remove("error-invalid");
+
         }
     })
 
@@ -59,17 +86,37 @@ window.addEventListener("load", function() {
 
     lastNameInput.addEventListener("focus", () => {
         if(lastNameInput.value == "" ){
-            erroresLastName.innerHTML = "Este campo debe estar completo"
+            if(document.querySelector("#error-back-lastName")){
+                document.querySelector("#error-back-lastName").style.display = "none"
+            } 
+
+            lastNameInput.classList.remove("is-valid");
+            lastNameInput.classList.add("is-invalid");
+
+            erroresLastName.innerHTML = "Este campo debe estar completo";
+            erroresLastName.classList.add("error-invalid");
         }
     })
 
     lastNameInput.addEventListener("input", () => {
         if(lastNameInput.value == "" ){
-            erroresLastName.innerHTML = "Este campo debe estar completo"
+            lastNameInput.classList.remove("is-valid");
+            lastNameInput.classList.add("is-invalid");
+
+            erroresLastName.innerHTML = "Este campo debe estar completo";
+            erroresLastName.classList.add("error-invalid");
         } else if(lastNameInput.value.length < 2){
-            erroresLastName.innerHTML = "El apellido debe tener al menos 2 caracteres"
+            lastNameInput.classList.remove("is-valid");
+            lastNameInput.classList.add("is-invalid");
+
+            erroresLastName.innerHTML = "El apellido debe tener al menos 2 caracteres";
+            erroresLastName.classList.add("error-invalid");
         } else {
-            erroresLastName.innerHTML = ""
+            lastNameInput.classList.remove("is-invalid");
+            lastNameInput.classList.add("is-valid");
+
+            erroresLastName.innerHTML = "";
+            erroresLastName.classList.remove("error-invalid");
         }
     })
 
@@ -77,55 +124,178 @@ window.addEventListener("load", function() {
 
     emailInput.addEventListener("focus", () => {
         if(emailInput.value == "" ){
-            erroresEmail.innerHTML = "Este campo debe estar completo"
+            if(document.querySelector("#error-back-email")){
+                document.querySelector("#error-back-email").style.display = "none"
+            } 
+
+            emailInput.classList.remove("is-valid");
+            emailInput.classList.add("is-invalid");
+
+            erroresEmail.innerHTML = "Este campo debe estar completo";
+            erroresEmail.classList.add("error-invalid");
         }
     })
 
     emailInput.addEventListener("input", () => {
         if(emailInput.value == "" ){
-            erroresEmail.innerHTML = "Este campo debe estar completo"
+            emailInput.classList.remove("is-valid");
+            emailInput.classList.add("is-invalid");
+
+            erroresEmail.innerHTML = "Este campo debe estar completo";
+            erroresEmail.classList.add("error-invalid");
         } else if(!(emailRegex.test(emailInput.value))){
-            erroresEmail.innerHTML = "Debes ingrear un formato de correo valido"
+            emailInput.classList.remove("is-valid");
+            emailInput.classList.add("is-invalid");
+
+            erroresEmail.innerHTML = "Debes ingrear un formato de correo valido";
+            erroresEmail.classList.add("error-invalid");
         } else {
-            erroresEmail.innerHTML = ""
+            emailInput.classList.remove("is-invalid");
+            emailInput.classList.add("is-valid");
+
+            erroresEmail.innerHTML = "";
+            erroresEmail.classList.remove("error-invalid");
         }
     })
 
     // Validaciones on-time para la contraseña
     passwordInput.addEventListener("focus", () => {
         if(passwordInput.value == "" ){
-            erroresPassword.innerHTML = "Este campo debe estar completo"
+            if(document.querySelector("#error-back-password")){
+                document.querySelector("#error-back-password").style.display = "none"
+            } 
+
+            passwordInput.classList.remove("is-valid");
+            passwordInput.classList.add("is-invalid");
+
+            erroresPassword.innerHTML = "Este campo debe estar completo";            
+            erroresPassword.classList.add("error-invalid");
         }
     })
 
     passwordInput.addEventListener("input", () => {
-        if(passwordInput.value == "" ){
-            erroresPassword.innerHTML = "Este campo debe estar completo"
-        } else if(passwordInput.value.length < 8){
-            erroresPassword.innerHTML = "La contraseña debe tener al menos 8 caracteres"
-        } else if(!(strongRegex.test(passwordInput.value))){
-            erroresPassword.innerHTML = "La contraseña debe contener al menos una minúscula, una mayúscula, un número y uno de estos carateres especiales !@#$%^&*"
-        } else {
-            erroresPassword.innerHTML = ""
+        if(passwordInput.value == "" ){            
+            passwordInput.classList.remove("is-valid");
+            passwordInput.classList.add("is-invalid");
+
+            erroresPassword.innerHTML = "Este campo debe estar completo";            
+            erroresPassword.classList.add("error-invalid");
+        } else if(passwordInput.value.length < 8){            
+            passwordInput.classList.remove("is-valid");
+            passwordInput.classList.add("is-invalid");
+
+            erroresPassword.innerHTML = "La contraseña debe tener al menos 8 caracteres";            
+            erroresPassword.classList.add("error-invalid");
+        } else if(!(strongRegex.test(passwordInput.value))){            
+            passwordInput.classList.remove("is-valid");
+            passwordInput.classList.add("is-invalid");
+
+            erroresPassword.innerHTML = "La contraseña debe contener al menos una minúscula, una mayúscula, un número y uno de estos carateres especiales !@#$%^&*";
+            erroresPassword.classList.add("error-invalid");
+        } else if(passwordInput.value != rePasswordInput.value){
+            passwordInput.classList.remove("is-invalid");
+            passwordInput.classList.add("is-valid");
+            erroresPassword.innerHTML = "";            
+            erroresPassword.classList.remove("error-invalid");
+
+            rePasswordInput.classList.remove("is-valid");
+            rePasswordInput.classList.add("is-invalid");
+            erroresRePassword.innerHTML = "Las contraseñas no coinciden";            
+            erroresRePassword.classList.add("error-invalid");
+        } else if(passwordInput.value == rePasswordInput.value){
+            passwordInput.classList.remove("is-invalid");
+            passwordInput.classList.add("is-valid");
+            erroresPassword.innerHTML = "";            
+            erroresPassword.classList.remove("error-invalid");
+
+            rePasswordInput.classList.remove("is-invalid");
+            rePasswordInput.classList.add("is-valid");
+            erroresRePassword.innerHTML = "";            
+            erroresRePassword.classList.remove("error-invalid");
+        } else {            
+            passwordInput.classList.remove("is-invalid");
+            passwordInput.classList.add("is-valid");
+
+            erroresPassword.innerHTML = "";            
+            erroresPassword.classList.remove("error-invalid");
         }
     })
 
     // Validaciones on-time para la confirmacion de la contraseña
     rePasswordInput.addEventListener("focus", () => {
         if(rePasswordInput.value == "" ){
-            erroresRePassword.innerHTML = "Este campo debe estar completo"
+            if(document.querySelector("#error-back-repassword")){
+                document.querySelector("#error-back-repassword").style.display = "none"
+            } 
+            
+            rePasswordInput.classList.remove("is-valid");
+            rePasswordInput.classList.add("is-invalid");
+
+            erroresRePassword.innerHTML = "Este campo debe estar completo";
+            erroresRePassword.classList.add("error-invalid");
         }
     })
     
     rePasswordInput.addEventListener("input", () => {
-        if(rePasswordInput.value == "" ){
-            erroresRePassword.innerHTML = "Este campo debe estar completo"
-        } else if(rePasswordInput.value.length < 8){
-            erroresRePassword.innerHTML = "La contraseña debe tener al menos 8 caracteres"
-        } else if(!(strongRegex.test(rePasswordInput.value))){
-            erroresRePassword.innerHTML = "La contraseña debe contener al menos una minúscula, una mayúscula, un número y uno de estos carateres especiales !@#$%^&*"
+        if(rePasswordInput.value == "" ){                        
+            rePasswordInput.classList.remove("is-valid");
+            rePasswordInput.classList.add("is-invalid");
+
+            erroresRePassword.innerHTML = "Este campo debe estar completo";
+            erroresRePassword.classList.add("error-invalid");            
+        } else if(rePasswordInput.value.length < 8){                                    
+            rePasswordInput.classList.remove("is-valid");
+            rePasswordInput.classList.add("is-invalid");
+
+            erroresRePassword.innerHTML = "La contraseña debe tener al menos 8 caracteres";            
+            erroresRePassword.classList.add("error-invalid"); 
+        } else if(!(strongRegex.test(rePasswordInput.value))){                                                
+            rePasswordInput.classList.remove("is-valid");
+            rePasswordInput.classList.add("is-invalid");
+
+            erroresRePassword.innerHTML = "La contraseña debe contener al menos una minúscula, una mayúscula, un número y uno de estos carateres especiales !@#$%^&*";
+            erroresRePassword.classList.add("error-invalid"); 
+        } else if(rePasswordInput.value != passwordInput.value){
+            rePasswordInput.classList.remove("is-valid");
+            rePasswordInput.classList.add("is-invalid");
+
+            erroresRePassword.innerHTML = "Las contraseñas no coinciden";            
+            erroresRePassword.classList.add("error-invalid");
+        } else {                                                
+            rePasswordInput.classList.remove("is-invalid");
+            rePasswordInput.classList.add("is-valid");
+
+            erroresRePassword.innerHTML = "";
+            erroresRePassword.classList.remove("error-invalid");          
+        }
+    })
+
+    // Validaciones on-time para la confirmacion de la imagen
+    imageInput.addEventListener("change", () => {
+        if(document.querySelector("#error-back-repassword")){
+            document.querySelector("#error-back-repassword").style.display = "none"
+        }
+
+        if(imageInput.value != ""){
+            if(!allowedExtensions.exec(imageInput.value)){
+                imageInput.classList.remove("is-valid");
+                imageInput.classList.add("is-invalid");
+
+                erroresImage.innerHTML = `Las extensiones de archivo permitidas son ${acceptedExtensions.join(', ')}`;            
+                erroresImage.classList.add("error-invalid");
+            } else {
+                imageInput.classList.remove("is-invalid");
+                imageInput.classList.add("is-valid");
+    
+                erroresImage.innerHTML = "";
+                erroresImage.classList.remove("error-invalid");
+            }
         } else {
-            erroresRePassword.innerHTML = ""
+            imageInput.classList.remove("is-invalid");
+            imageInput.classList.add("is-valid");
+
+            erroresImage.innerHTML = "";
+            erroresImage.classList.remove("error-invalid");  
         }
     })
 
@@ -177,20 +347,52 @@ window.addEventListener("load", function() {
             errores.rePassword = "La contraseña debe tener al menos 8 caracteres"
         } else if (!(strongRegex.test(rePasswordInput.value))){
             errores.rePassword = "La contraseña debe contener al menos una minúscula, una mayúscula, un número y uno de estos carateres especiales !@#$%^&*";
+        } else if(rePasswordInput.value != passwordInput.value){
+            errores.rePassword = "Las contraseñas no coinciden";
         }
 
         // la validacion de la imagen te la debo rey
+        if(imageInput.value != ""){
+            if(!allowedExtensions.exec(imageInput.value)){
+                errores.image = `Las extensiones de archivo permitidas son ${acceptedExtensions.join(', ')}`;
+            }
+        }
 
-        // Preguntamos si el objeto errores tiene una o mas propiedas: Si es true, agregaremos los errores correspondientes a cada campo / Si es false se envia el formulario al back-end 
+
+        // Preguntamos si el objeto errores tiene una o mas propiedas: Si es true, agregaremos los errores y estilos correspondientes a cada campo / Si es false se envia el formulario al back-end 
         if(Object.keys(errores).length >= 1){
-            erroresFirstName.innerHTML = (errores.firstName) ? errores.firstName : "";
-            erroresLastName.innerHTML = (errores.lastName) ? errores.lastName : "";
-            erroresEmail.innerHTML = (errores.email) ? errores.email : "";
-            erroresPassword.innerHTML = (errores.password) ? errores.password : "";
-            erroresRePassword.innerHTML = (errores.rePassword) ? errores.rePassword : "";
+            if(errores.firstName){
+                firstNameInput.classList.add("is-invalid");
+                erroresFirstName.innerHTML = errores.firstName;
+                erroresFirstName.classList.add("error-invalid");                
+            }
+            if(errores.lastName){
+                lastNameInput.classList.add("is-invalid");
+                erroresLastName.innerHTML = errores.lastName;
+                erroresLastName.classList.add("error-invalid"); 
+            }
+            if(errores.email){
+                emailInput.classList.add("is-invalid");
+                erroresEmail.innerHTML = errores.email;
+                erroresEmail.classList.add("error-invalid"); 
+            }
+            if(errores.password){
+                passwordInput.classList.add("is-invalid");
+                erroresPassword.innerHTML = errores.password;
+                erroresPassword.classList.add("error-invalid"); 
+            }
+            if(errores.rePassword){
+                rePasswordInput.classList.add("is-invalid");
+                erroresRePassword.innerHTML = errores.rePassword;
+                erroresRePassword.classList.add("error-invalid"); 
+            }
+            if(errores.image){
+                imageInput.classList.add("is-invalid");
+                erroresImage.innerHTML = errores.image;
+                erroresImage.classList.add("error-invalid"); 
+            }
         } else {
-            registerForm.submit();
-    
+            registerForm.submit();    
         }   
      })
 

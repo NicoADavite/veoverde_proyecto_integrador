@@ -26,11 +26,11 @@
           value="<%= locals.oldData ? oldData.firstName : null %>"
           placeholder="Ej.: Juan Ignacio"
         >
-        <div id="errores-firstName" style="color: red;">
+        <div id="errores-firstName">
 
         </div>
         <% if (locals.errors && errors.firstName) { %>
-          <div style="color: red;">
+          <div id="error-back-firstName" style="color: red;">
             <%= errors.firstName.msg %> 
           </div>
         <% } %>        
@@ -44,11 +44,11 @@
           value="<%= locals.oldData ? oldData.lastName : null %>"
           placeholder="Ej.: Perez"
         >
-        <div id="errores-lastName" style="color: red;">
+        <div id="errores-lastName">
 
         </div>
         <% if (locals.errors && errors.lastName) { %>
-          <div style="color: red;">
+          <div id="error-back-lastName" style="color: red;">
             <%= errors.lastName.msg %> 
           </div>
         <% } %>
@@ -62,11 +62,11 @@
           value="<%= locals.oldData ? oldData.email : null %>"
           placeholder="Ej.: juanperez@gmail.com"
         >
-        <div id="errores-email" style="color: red;">
+        <div id="errores-email">
 
         </div>
         <% if (locals.errors && errors.email) { %>
-          <div style="color: red;">
+          <div id="error-back-email" style="color: red;">
             <%= errors.email.msg %> 
           </div>
         <% } %>
@@ -89,11 +89,11 @@
       <div class="register-form-input register-form-password">
         <label for="user_password">Contraseña (*)</label>
         <input type="password" name="password" id="user_password">
-        <div id="errores-password" style="color: red;">
+        <div id="errores-password">
 
         </div>
         <% if (locals.errors && errors.password) { %>
-          <div style="color: red;">
+          <div id="error-back-password" style="color: red;">
             <%= errors.password.msg %> 
           </div>
         <% } %>
@@ -116,11 +116,11 @@
       <div class="register-form-input register-form-re-password">
           <label for="user_password-confirmation">Confirmar contraseña (*)</label>
           <input type="password" name="repassword" id="user_password-confirmation">
-          <div id="errores-rePassword" style="color: red;">
+          <div id="errores-rePassword">
 
           </div>
           <% if (locals.errors && errors.repassword) { %>
-            <div style="color: red;">
+            <div id="error-back-repassword" style="color: red;">
               <%= errors.repassword.msg %> 
             </div>
           <% } %>
@@ -142,12 +142,12 @@
 
       <div class="register-form-input register-form-image">
         <label for="user_image">Imagen de Perfil</label>
-        <input type="file" name="image" id="user_image">
-        <div id="errores-rePassword" style="color: red;">
+        <input type="file" name="image" id="user_image" accept="image/*">
+        <div id="errores-image">
 
         </div>
         <% if (locals.errors && errors.image) { %>
-          <div style="color: red;">
+          <div id="error-back-image" style="color: red;">
             <%= errors.image.msg %> 
           </div>
         <% } %>

@@ -36,7 +36,7 @@ main{
 .register-form-input input{
     padding: 4px;
     border-radius: 4px; 
-    box-shadow: 2px 2px 6px rgb(0 0 0 / 20%);
+    /*box-shadow: 2px 2px 6px rgb(0 0 0 / 20%);*/
 }
 
 .register-form-show-password{
@@ -91,6 +91,26 @@ main{
     padding: 20px;
     text-align: center;
     text-decoration-line:none;
+}
+
+.is-invalid{
+    outline: none;
+    border-style: hidden;
+    box-shadow: 0px 0px 2px 0.5px rgb(235 2 2);
+}
+
+.is-valid{
+    outline: none;
+    border-style: hidden;
+    box-shadow: 0px 0px 2px 0.4px rgb(20, 197, 20);
+}
+
+.error-valid{
+    color: rgb(20, 197, 20);
+}
+
+.error-invalid{
+    color: rgb(235, 2, 2)
 }
 
 /* media */ 
