@@ -23,25 +23,54 @@ window.onload(() => {
     // boton de envio de form
     let sendFormButton = document.querySelector("#form-submit-button");
     
-    registerForm.addEventListener("submit", (e) => {
+    registerForm.addEventListener("submit", (event) => {
         
-        e.preventDefault();
+        event.preventDefault();
 
         let errores = {};
 
         if(firstNameInput.value == "" ){
-            errores.firsName = "Este campo debe estar completo"
+            errores.firstName = "Este campo debe estar completo"
         } else if(firstNameInput.value.length < 2){
-            errores.firsName = "El nombre debe tener al menos 2 caracteres"
+            errores.firstName = "El nombre debe tener al menos 2 caracteres"
         }
 
         if(lastNameInput.value == ""){
             errores.lastName = "Este campo debe estar completo"
-        } else if(){
-            
+        } else if(lastNameInput.value.length < 2){
+            errores.lastName = "El apellido debe tener al menos 2 caracteres"
         }
 
+        let emailRegex = /^\w+([.-]?\w+)@\w+([.-]?\w+)(.\w{2,3,4})+$/;
+        if(emailInput.value == ""){
+            errores.email = "Este campo debe estar completo"
+        } else if(!(emailRegex.test(emailInput.value))){
+            errores.email = "Debes ingrear un formato de correo valido";
+        }
 
+        if(passwordInput.value == ""){
+            errores.password = "Este campo debe estar completo"
+        } else if(passwordInput.value.length < 8){
+            errores.password = "La contraseña debe tener al menos 8 caracteres"
+        }
+
+        
+        if(rePasswordInput.value == ""){
+            errores.rePassword = "Este campo debe estar completo"
+        } else if(rePasswordInput.value.length < 8){
+            errores.rePassword = "La contraseña debe tener al menos 8 caracteres"
+        }
+
+        // la validacion de la imagen te la debo rey
+
+        if(Object.keys(errores).length >= 1){
+            erroresFirstName.innerHTML = (errores.firstName) ? errores.firstName : "";
+            erroresLastName.innerHTML = (errores.lastName) ? errores.lastName : "";
+            erroresEmail.innerHTML = (errores.email) ? errores.email : "";
+            erroresPassword.innerHTML = (errores.password) ? errores.password : "";
+            erroresRePassword.innerHTML = (errores.rePassword) ? errores.rePassword : "";
+        } else {
+            registerForm.submit();
     })
 
 })

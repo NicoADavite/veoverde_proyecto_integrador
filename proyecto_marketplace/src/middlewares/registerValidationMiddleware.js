@@ -10,7 +10,7 @@ module.exports = [
 		.isLength({ min: 2 }).withMessage("El apellido debe tener al menos 2 caracteres"),
 	body("email")
 		.notEmpty().withMessage("Tienes que escribir un email").bail()
-		.isEmail().withMessage("Debes ingrear un formato de correo valido"),
+		.isEmail().withMessage("Debes ingresar un formato de correo valido"),
 	body("password")
 		.notEmpty().withMessage("Tienes que escribir una contraseña").bail()
 		.isLength({ min: 8 }).withMessage("La contraseña debe tener al menos 8 caracteres"),//.bail()
