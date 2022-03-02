@@ -11,14 +11,17 @@ module.exports = [
     body("image").custom((value, { req }) => {
 
 		let file = req.file;
-        
-		let acceptedExtensions = ['.jpg', '.jpeg', '.png', '.gif'];
-		
-		let fileExtension = path.extname(file.originalname);
 
-		if (!acceptedExtensions.includes(fileExtension)) {
-			throw new Error(`Las extensiones de archivo permitidas son ${acceptedExtensions.join(', ')}`);
-		}		
+        if(file){
+
+            let acceptedExtensions = ['.jpg', '.jpeg', '.png', '.gif'];
+		
+		    let fileExtension = path.extname(file.originalname);
+
+		    if (!acceptedExtensions.includes(fileExtension)) {
+		    	throw new Error(`Las extensiones de archivo permitidas son ${acceptedExtensions.join(', ')}`);
+		    }
+        }
 
 		return true;
 	}),        

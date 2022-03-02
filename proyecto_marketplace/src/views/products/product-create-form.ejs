@@ -19,10 +19,10 @@
         
         <div class="register-form-input register-form-name">
             <label for="name">Nombre del producto (*)</label>
-            <input type="text" name="name" id="name" value="<%= (locals.oldData && oldData.name ? oldData.name : null) %>" placeholder="Ej.: Lapiz Plantable" required> 
+            <input type="text" name="name" id="name" value="<%= (locals.oldData ? oldData.name : null) %>" placeholder="Ej.: Lapiz Plantable"> 
         </div>
         <% if(locals.errors && errors.name){ %> 
-            <div class="errores">
+            <div class="errores" style="color: red;">
                 <%= errors.name.msg %> 
             </div>
         <% } %> 
@@ -30,20 +30,20 @@
 
         <div class="register-form-input register-form-description">
             <label for="description">Descripción (*)</label>
-            <input type="textarea" name="description" id="description" value="<%= (locals.oldData && oldData.description ? oldData.description : null) %>" placeholder="Lápiz color negro, cuerpo natural cilíndrico y cápsula biodegradable con semillas." required> 
+            <input type="textarea" name="description" id="description" value="<%= (locals.oldData ? oldData.description : null) %>" placeholder="Lápiz color negro, cuerpo natural cilíndrico y cápsula biodegradable con semillas."> 
         </div>
         <% if(locals.errors && errors.description){ %> 
-            <div class="errores">
+            <div class="errores" style="color: red;">
                 <%= errors.description.msg %> 
             </div>
         <% } %> 
 
         <div class="register-form-input register-form-image">
             <label for="image">Imagen (*)</label>
-            <input type="file" name="image" id="image" required> 
+            <input type="file" name="image" id="image"> 
         </div>
         <% if(locals.errors && errors.image){ %> 
-            <div class="errores">
+            <div class="errores" style="color: red;">
                 <%= errors.image.msg %> 
             </div>
         <% } %> 
@@ -58,7 +58,7 @@
             </select>
         </div>
         <% if(locals.errors && errors.category_id){ %> 
-            <div class="errores">
+            <div class="errores" style="color: red;">
                 <%= errors.category_id.msg %> 
             </div>
         <% } %> 
@@ -75,10 +75,10 @@
 
         <div class="register-form-input register-form-price">
             <label for="price">Precio (*)</label>
-            <input type="number" step="any" name="price" id="price" value="<%= (locals.oldData && oldData.price) ? oldData.price : null %>">
+            <input type="number" step="any" name="price" id="price" value="<%= locals.oldData ? oldData.price : null %>">
         </div>
         <% if(locals.errors && errors.price){ %> 
-            <div class="errores">
+            <div class="errores" style="color: red;">
                 <%= errors.price.msg %> 
             </div>
         <% } %> 

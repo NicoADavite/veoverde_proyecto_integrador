@@ -2,7 +2,7 @@ Sprint 7
 
 Validaciones del back-end
 - contraseña (Opcional) → Deberá tener letras mayúsculas, minúsculas, un número y un carácter especial.  isStrongPassword(str [, options])
-- agregar JPEG en archivos válidos de imagen. 
+-  (HECHO) agregar JPEG en archivos válidos de imagen. 
 
 Creación y modificación de productos
 ○ Nombre 
@@ -18,6 +18,9 @@ de talles, colores, etc. que lleguen sean válidos en la base.
 
 - fijarnos de evitar la cargada de imagen de multer si las extensiones no son validas, y si no se puede evitar la cargada capaz eliminarla automaticamente.
 
+
+
+MEJORAS ESTETICAS
 
 - mejorar el header a partir de 768 en adelante. Ejemplos:
   * (HECHO) darle un max-width a la barra de busqueda
