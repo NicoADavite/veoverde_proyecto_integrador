@@ -104,8 +104,8 @@ const usersController = {
 						return res.render("./users/login", {
 							oldData: req.body,
 							errors: {
-								email: {
-									msg : "Las credenciales son invalidas"
+								password: {
+									msg : "La contraseña es incorrecta"
 								}
 							}
 						})
@@ -117,7 +117,7 @@ const usersController = {
 						oldData: req.body,
 						errors: {
 							email: {
-								msg: "Este email no se encuentra en nuestra base de datos"
+								msg: "El email que ingresó no se encuentra registrado"
 							}
 						}
 					})

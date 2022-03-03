@@ -30,7 +30,7 @@
 
         </div>
         <% if (locals.errors && errors.firstName) { %>
-          <div id="error-back-firstName" style="color: red;">
+          <div id="error-back-firstName" class="error-invalid">
             <%= errors.firstName.msg %> 
           </div>
         <% } %>        
@@ -48,7 +48,7 @@
 
         </div>
         <% if (locals.errors && errors.lastName) { %>
-          <div id="error-back-lastName" style="color: red;">
+          <div id="error-back-lastName" class="error-invalid">
             <%= errors.lastName.msg %> 
           </div>
         <% } %>
@@ -66,7 +66,7 @@
 
         </div>
         <% if (locals.errors && errors.email) { %>
-          <div id="error-back-email" style="color: red;">
+          <div id="error-back-email" class="error-invalid">
             <%= errors.email.msg %> 
           </div>
         <% } %>
@@ -93,7 +93,7 @@
 
         </div>
         <% if (locals.errors && errors.password) { %>
-          <div id="error-back-password" style="color: red;">
+          <div id="error-back-password" class="error-invalid">
             <%= errors.password.msg %> 
           </div>
         <% } %>
@@ -120,7 +120,7 @@
 
           </div>
           <% if (locals.errors && errors.repassword) { %>
-            <div id="error-back-repassword" style="color: red;">
+            <div id="error-back-repassword" class="error-invalid">
               <%= errors.repassword.msg %> 
             </div>
           <% } %>
@@ -147,7 +147,7 @@
 
         </div>
         <% if (locals.errors && errors.image) { %>
-          <div id="error-back-image" style="color: red;">
+          <div id="error-back-image" class="error-invalid">
             <%= errors.image.msg %> 
           </div>
         <% } %>

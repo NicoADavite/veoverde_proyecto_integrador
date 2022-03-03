@@ -18,11 +18,6 @@ window.addEventListener("load", function() {
     let rePasswordInput = document.querySelector("#user_password-confirmation");
     let imageInput = document.querySelector("#user_image");
 
-    // Variables para manejar la validación de la imagen
-    let allowedExtensions = /(.jpg|.jpeg|.png|.gif)$/i;
-    let acceptedExtensions = [".jpg", ".jpeg", ".png", ".gif"]
-
-
     // Divs de errores del front
     let erroresFirstName = document.querySelector("#errores-firstName");
     let erroresLastName = document.querySelector("#errores-lastName");
@@ -34,21 +29,25 @@ window.addEventListener("load", function() {
     // Botón de envío del form
     let sendFormButton = document.querySelector("#form-submit-button");
 
-    // Declaramos las expresiones regulares
+    // Declaramos las expresiones regulares para la validacion del email y la contraseña
     const emailRegex = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
     const strongRegex = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})");
 
+    // Variables para manejar la validación de la imagen
+    let allowedExtensions = /(.jpg|.jpeg|.png|.gif)$/i;
+    let acceptedExtensions = [".jpg", ".jpeg", ".png", ".gif"]
 
     // DEFINIMOS LAS VALIDACIONES ON-TIME (se muetran a medida que interactuamos con los inputs)
 
     // Validaciones on-time para el nombre
 
     firstNameInput.addEventListener("focus", () => {
-        if(firstNameInput.value == "" ){
-            if(document.querySelector("#error-back-firstName")){
-                document.querySelector("#error-back-firstName").style.display = "none"
-            } 
 
+        if(document.querySelector("#error-back-firstName")){
+            document.querySelector("#error-back-firstName").style.display = "none"
+        }
+
+        if(firstNameInput.value == "" ){
             firstNameInput.classList.remove("is-valid");
             firstNameInput.classList.add("is-invalid");
 
@@ -85,11 +84,12 @@ window.addEventListener("load", function() {
     // Validaciones on-time para el apellido
 
     lastNameInput.addEventListener("focus", () => {
-        if(lastNameInput.value == "" ){
-            if(document.querySelector("#error-back-lastName")){
-                document.querySelector("#error-back-lastName").style.display = "none"
-            } 
 
+        if(document.querySelector("#error-back-lastName")){
+            document.querySelector("#error-back-lastName").style.display = "none"
+        } 
+
+        if(lastNameInput.value == "" ){
             lastNameInput.classList.remove("is-valid");
             lastNameInput.classList.add("is-invalid");
 
@@ -123,11 +123,12 @@ window.addEventListener("load", function() {
     // Validaciones on-time para el email
 
     emailInput.addEventListener("focus", () => {
-        if(emailInput.value == "" ){
-            if(document.querySelector("#error-back-email")){
-                document.querySelector("#error-back-email").style.display = "none"
-            } 
 
+        if(document.querySelector("#error-back-email")){
+            document.querySelector("#error-back-email").style.display = "none"
+        } 
+
+        if(emailInput.value == "" ){
             emailInput.classList.remove("is-valid");
             emailInput.classList.add("is-invalid");
 
@@ -160,11 +161,12 @@ window.addEventListener("load", function() {
 
     // Validaciones on-time para la contraseña
     passwordInput.addEventListener("focus", () => {
-        if(passwordInput.value == "" ){
-            if(document.querySelector("#error-back-password")){
-                document.querySelector("#error-back-password").style.display = "none"
-            } 
 
+        if(document.querySelector("#error-back-password")){
+            document.querySelector("#error-back-password").style.display = "none"
+        } 
+
+        if(passwordInput.value == "" ){
             passwordInput.classList.remove("is-valid");
             passwordInput.classList.add("is-invalid");
 
@@ -223,10 +225,12 @@ window.addEventListener("load", function() {
 
     // Validaciones on-time para la confirmacion de la contraseña
     rePasswordInput.addEventListener("focus", () => {
+
+        if(document.querySelector("#error-back-repassword")){
+            document.querySelector("#error-back-repassword").style.display = "none"
+        } 
+        
         if(rePasswordInput.value == "" ){
-            if(document.querySelector("#error-back-repassword")){
-                document.querySelector("#error-back-repassword").style.display = "none"
-            } 
             
             rePasswordInput.classList.remove("is-valid");
             rePasswordInput.classList.add("is-invalid");
@@ -351,7 +355,7 @@ window.addEventListener("load", function() {
             errores.rePassword = "Las contraseñas no coinciden";
         }
 
-        // la validacion de la imagen te la debo rey
+        // le agregamos al objeto errores la propiedad image (cuyo valor será dinamico) si cumple alguna de estas condicones
         if(imageInput.value != ""){
             if(!allowedExtensions.exec(imageInput.value)){
                 errores.image = `Las extensiones de archivo permitidas son ${acceptedExtensions.join(', ')}`;
@@ -394,6 +398,6 @@ window.addEventListener("load", function() {
         } else {
             registerForm.submit();    
         }   
-     })
+    })
 
 })
