@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 10-02-2022 a las 02:21:20
+-- Tiempo de generación: 07-03-2022 a las 04:09:10
 -- Versión del servidor: 10.4.22-MariaDB
--- Versión de PHP: 8.0.13
+-- Versión de PHP: 8.1.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -108,7 +108,8 @@ INSERT INTO `users` (`id`, `firstName`, `lastName`, `email`, `password`, `image`
 (4, 'Federico', 'Bianchi', 'bianchi.fed@gmail.com', '$2a$10$Pb68dybNmUxvT8PSAA6I/eZeHnnxzorvIwXJPXete.lZOBhBDaoa2', 'admin-image.png', 2),
 (5, 'Nicolás', 'Alceo Davite', 'nicolasalceodavite@gmail.com', '$2a$10$qIP27UERBz22DXq.ul30XO9Ch.COCqLys/b0KkC2xMQtCAHSfmLza', 'admin-image.png', 2),
 (6, 'Profe', 'DH', 'profeDH@gmail.com', '$2a$10$gImw6tHbidCcbRinKnpP/u.QL2dxW0PUQmJWfoBXeTklihPG7oiM6', 'admin-image.png', 2),
-(7, 'Pepito', 'Martinez', 'pepi@gmail.com', '$2a$10$lZQBsNsDFqyvd9vhoHNhM.V1njyA9UHq45hAdTwviGGdDg7duxNyK', '1644440452490_img_.png', 1);
+(7, 'Pepito', 'Martinez', 'pepi@gmail.com', '$2a$10$lZQBsNsDFqyvd9vhoHNhM.V1njyA9UHq45hAdTwviGGdDg7duxNyK', '1644440452490_img_.png', 1),
+(9, 'Delfi', 'Nitivo', 'delfi@nitivo.com', '$2a$10$7B0JQlO80bumGllDXCyOZeYeJs2JaccqVczXCAbtbiEdOCGp9pfJ2', 'default-user-image.png', 2);
 
 -- --------------------------------------------------------
 
@@ -194,7 +195,7 @@ ALTER TABLE `products_users`
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT de la tabla `users_categories`
