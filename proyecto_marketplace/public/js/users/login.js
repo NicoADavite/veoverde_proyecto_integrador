@@ -41,7 +41,7 @@ window.addEventListener("load", () => {
     emailInput.addEventListener("focus", () => {
 
         if(errorBackEmail){
-            errorBackEmail.style.display = "none"
+            errorBackEmail.style.display = "none";
         }
 
         if(emailInput.value == ""){
@@ -92,7 +92,7 @@ window.addEventListener("load", () => {
     passwordInput.addEventListener("focus", () => {
 
         if(errorBackPassword){
-            errorBackPassword.style.display = "none"
+            errorBackPassword.style.display = "none";
         }
 
         if(passwordInput.value == ""){
