@@ -37,34 +37,80 @@
                                 <input type="file" name="image" id="image">
                             </div>
                         </figure> 
+                        <% if(locals.errors && errors.image){ %>
+                            <div class="errores" style="color: red;">
+                               <%= errors.image.msg %> 
+                            </div>
+                        <% } %> 
  
 
                         <div class="product-article-details">
                             
                             <div class="product-title-edit">
                                 <label for="name">Nombre</label>
-                                <input type="text" name="name" id="name" value="<%= product.name %>"> 
+                                <% if(locals.oldData && (oldData.name || oldData.name == "")){ %>
+                                    <input type="text" name="name" id="name" value="<%= locals.oldData ? oldData.name : null %>">
+                                <% } else { %>
+                                    <input type="text" name="name" id="name" value="<%= product.name %>">
+                                <% } %> 
                             </div>
+                            <% if(locals.errors && errors.name){ %>
+                                <div class="errores" style="color: red;">
+                                   <%= errors.name.msg %> 
+                                </div>
+                            <% } %>
 
                             <div class="product-description-edit">
                                 <label for="description">Descripción</label>
-                                <textarea name="description" id="description" cols="20" rows="10"><%= product.description%></textarea> 
+                                <% if (locals.oldData && (oldData.description || oldData.description == "")){ %> 
+                                    <textarea name="description" id="description" cols="20" rows="10"><%= locals.oldData && oldData.description ? oldData.description : null %></textarea>
+                                <% } else { %>
+                                    <textarea name="description" id="description" cols="20" rows="10"><%= product.description %></textarea>
+                                <% } %>                                 
                             </div>
+                            <% if(locals.errors && errors.description){ %>
+                                <div class="errores" style="color: red;">
+                                   <%= errors.description.msg %> 
+                                </div>
+                            <% } %>
 
                             <div class="price-edit">
                                 <label for="price">Precio</label>
-                                <input type="number" name="price" id="price" value="<%= product.price %>">
+                                <% if(locals.oldData && (oldData.price || oldData.price == "")){ %>
+                                    <input type="number" name="price" id="price" value="<%= locals.oldData ? oldData.price : null %>">
+                                <% } else{ %>
+                                    <input type="number" name="price" id="price" value="<%= product.price %>">
+                                <% } %>                                
                             </div>
+                            <% if(locals.errors && errors.price){ %>
+                                <div class="errores" style="color: red;">
+                                   <%= errors.price.msg %> 
+                                </div>
+                            <% } %>
 
                             <div class="register-form-input register-form-phone-numbrer">
                                 <label for="category">Categoría (*)</label>
-                                <select name="category_id" id="category">
-                                    <option value="">Elige una categoría</option>
-                                    <% categories.forEach(category => { %>
-                                        <option value="<%= category.id %>" <%= product.category_id === category.id ? "selected" : null%> ><%= category.name %></option>
-                                    <% }) %>
-                                </select>
+                                <% if(locals.oldData && (oldData.category_id || oldData.category_id == "")){ %>
+                                    <select name="category_id" id="category">
+                                        <option value="">Elige una categoría</option>
+                                        <% categories.forEach(category => { %>
+                                            <option value="<%= category.id %>" <%= (locals.oldData && oldData.category_id == category.id) ? "selected" : null%> ><%= category.name %></option>
+                                        <% }) %>
+                                    </select>
+                                <% } else { %>
+                                    <select name="category_id" id="category">
+                                        <option value="">Elige una categoría</option>
+                                        <% categories.forEach(category => { %>
+                                            <option value="<%= category.id %>" <%= product.category_id === category.id ? "selected" : null%> ><%= category.name %></option>
+                                        <% }) %>
+                                    </select>
+                                <% } %>
                             </div>
+                            <% if(locals.errors && errors.category_id){ %>
+                                <div class="errores" style="color: red;">
+                                   <%= errors.category_id.msg %> 
+                                </div>
+                            <% } %>
 
                             <!--
                             <div class="register-form-input register-form-password">
