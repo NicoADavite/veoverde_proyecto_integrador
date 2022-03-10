@@ -5,6 +5,7 @@
    <%- include("../partials/head") %>
    <link rel="stylesheet" href="/css/product-edit.css">
    <title>Edicion de Producto | VEOVERDE</title>
+   <script src="/js/products/edit-product.js"></script>
 </head>
 <body>
 
@@ -23,7 +24,7 @@
                 <h2>Edición del Producto: <%= product.name %> </h2>
             </div>
 
-            <form action="/products/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+            <form id="edit-product-form" action="/products/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
 
           
                 <div class="products">
@@ -34,11 +35,14 @@
                             <img src="/images/products/<%= product.image %>" alt="<%= product.name %>">
                             <div class="img-edit">
                                 <label for="image"></label>
-                                <input type="file" name="image" id="image">
+                                <input type="file" name="image" id="image" accept="image/*">
                             </div>
-                        </figure> 
+                        </figure>
+                        <div id="errores-image">
+            
+                        </div> 
                         <% if(locals.errors && errors.image){ %>
-                            <div class="errores" style="color: red;">
+                            <div id="error-back-image" class="error-invalid">
                                <%= errors.image.msg %> 
                             </div>
                         <% } %> 
@@ -54,11 +58,15 @@
                                     <input type="text" name="name" id="name" value="<%= product.name %>">
                                 <% } %> 
                             </div>
+                            <div id="errores-name">
+            
+                            </div>
                             <% if(locals.errors && errors.name){ %>
-                                <div class="errores" style="color: red;">
+                                <div id="error-back-name" class="error-invalid">
                                    <%= errors.name.msg %> 
                                 </div>
                             <% } %>
+                        
 
                             <div class="product-description-edit">
                                 <label for="description">Descripción</label>
@@ -68,8 +76,11 @@
                                     <textarea name="description" id="description" cols="20" rows="10"><%= product.description %></textarea>
                                 <% } %>                                 
                             </div>
+                            <div id="errores-description">
+            
+                            </div>
                             <% if(locals.errors && errors.description){ %>
-                                <div class="errores" style="color: red;">
+                                <div id="error-back-description" class="error-invalid">
                                    <%= errors.description.msg %> 
                                 </div>
                             <% } %>
@@ -82,13 +93,16 @@
                                     <input type="number" name="price" id="price" value="<%= product.price %>">
                                 <% } %>                                
                             </div>
+                            <div id="errores-price">
+            
+                            </div>
                             <% if(locals.errors && errors.price){ %>
-                                <div class="errores" style="color: red;">
+                                <div id="error-back-price" class="error-invalid">
                                    <%= errors.price.msg %> 
                                 </div>
                             <% } %>
 
-                            <div class="register-form-input register-form-phone-numbrer">
+                            <div class="register-form-input register-form-phone-number">
                                 <label for="category">Categoría (*)</label>
                                 <% if(locals.oldData && (oldData.category_id || oldData.category_id == "")){ %>
                                     <select name="category_id" id="category">
@@ -106,8 +120,11 @@
                                     </select>
                                 <% } %>
                             </div>
+                            <div id="errores-category">
+            
+                            </div>
                             <% if(locals.errors && errors.category_id){ %>
-                                <div class="errores" style="color: red;">
+                                <div id="error-back-category" class="error-invalid">
                                    <%= errors.category_id.msg %> 
                                 </div>
                             <% } %>
@@ -124,7 +141,7 @@
                             -->
                         </div>                                               
                         <div class="product-article-button">
-                            <button type="submit" class="product-article-edit-button">EDITAR<i class="far fa-edit"></i></button>
+                            <button type="submit" id="form-submit-button" class="product-article-edit-button">EDITAR<i class="far fa-edit"></i></button>
                             <div class="product-article-a-create">¿Quieres crear un nuevo producto?, <a href="/products/create"><b>Haz Click Aquí</b></a> </div>
                         </div>
                     </article>

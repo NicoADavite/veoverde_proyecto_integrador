@@ -104,6 +104,7 @@ header nav{
 }
 
 header nav ul li a:hover{
+    color: initial;
     color: white;
 }
 

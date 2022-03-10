@@ -31,7 +31,7 @@
         </ul>
         <ul>
             <% if(locals.isLogged) { %>
-                <li>Hola, <%= (locals.userLogged.firstName + " " + locals.userLogged.lastName) %></li>
+                <li><a href="#">Hola, <%= (locals.userLogged.firstName + " " + locals.userLogged.lastName) %></a></li>
                 <li><a href="/users/profile"><img src="/images/users/<%= userLogged.image %>" style="width: 15px; border-radius: 10px;" alt="">  Mi perfil</a></li>
                 <li><a href="/users/logout">Cerrar Sesion</a></li>                
             <% } else { %>
