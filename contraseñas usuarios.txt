@@ -16,6 +16,11 @@ ADMINISTRADORES (users con category_id == 2)
   "email": "profeDH@gmail.com",
   "password": "profe1234",
 
+  "email": "delfi@nitivo.com",
+  "password": "Delfi*2022",
+
+
+
 USUARIOS CONSUMIDORES (users con category_id == 1)
 
   "email": "pepi@gmail.com",

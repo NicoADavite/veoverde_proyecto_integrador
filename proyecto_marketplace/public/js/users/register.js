@@ -274,7 +274,7 @@ window.addEventListener("load", function() {
         }
     })
 
-    // Validaciones on-time para la confirmacion de la imagen
+    // Validaciones on-time para la imagen
     imageInput.addEventListener("change", () => {
         if(document.querySelector("#error-back-repassword")){
             document.querySelector("#error-back-repassword").style.display = "none"

@@ -39,106 +39,218 @@ window.addEventListener("load", () => {
 
     // DEFINIMOS LAS VALIDACIONES ON-TIME (se muetran a medida que interactuamos con los inputs)
 
-    /* Validaciones on-time para el email
-    if(errorBackEmail){
-        emailInput.classList.add("is-invalid");
+    // Validaciones on-time para el Nombre del Producto
+    if(errorBackName){
+        nameInput.classList.add("is-invalid");
     }
 
-    emailInput.addEventListener("focus", () => {
+    nameInput.addEventListener("focus", () => {
 
-        if(errorBackEmail){
-            errorBackEmail.style.display = "none";
+        if(errorBackName){
+            errorBackName.style.display = "none";
         }
 
-        if(emailInput.value == ""){
-            emailInput.classList.remove("is-valid");
-            emailInput.classList.add("is-invalid");
+        if(nameInput.value == ""){
+            nameInput.classList.remove("is-valid");
+            nameInput.classList.add("is-invalid");
 
-            erroresEmail.classList.add("error-invalid");
-            erroresEmail.innerHTML = "Este campo debe estar completo";
+            erroresName.classList.add("error-invalid");
+            erroresName.innerHTML = "Este campo debe estar completo";
+        } else if(nameInput.value.length < 5){
+            nameInput.classList.remove("is-valid");
+            nameInput.classList.add("is-invalid");
+
+            erroresName.classList.add("error-invalid");
+            erroresName.innerHTML = "El nombre debe tener al menos 5 caracteres";
         } else {
-            if((emailRegex.test(emailInput.value))){
-                emailInput.classList.remove("is-invalid");
-                emailInput.classList.add("is-valid");
-            }            
+            nameInput.classList.remove("is-invalid");
+            nameInput.classList.add("is-valid");
         }
 
     })
 
-    emailInput.addEventListener("input", () => {
+    nameInput.addEventListener("input", () => {
 
-        if(emailInput.value == ""){
-            emailInput.classList.remove("is-valid");
-            emailInput.classList.add("is-invalid");
+        if(nameInput.value == ""){
+            nameInput.classList.remove("is-valid");
+            nameInput.classList.add("is-invalid");
 
-            erroresEmail.classList.add("error-invalid");
-            erroresEmail.innerHTML = "Este campo debe estar completo";
-        } else if(!(emailRegex.test(emailInput.value))){
-            emailInput.classList.remove("is-valid");
-            emailInput.classList.add("is-invalid");
+            erroresName.classList.add("error-invalid");
+            erroresName.innerHTML = "Este campo debe estar completo";
+        } else if(nameInput.value.length < 5){
+            nameInput.classList.remove("is-valid");
+            nameInput.classList.add("is-invalid");
 
-            erroresEmail.classList.add("error-invalid");
-            erroresEmail.innerHTML = "Debes ingrear un formato de correo valido";
+            erroresName.classList.add("error-invalid");
+            erroresName.innerHTML = "El nombre debe tener al menos 5 caracteres";
         } else{
-            emailInput.classList.remove("is-invalid");
-            emailInput.classList.add("is-valid");
+            nameInput.classList.remove("is-invalid");
+            nameInput.classList.add("is-valid");
 
-            erroresEmail.classList.remove("error-invalid");
-            erroresEmail.innerHTML = "";
+            erroresName.classList.remove("error-invalid");
+            erroresName.innerHTML = "";
         }
 
     })
 
-    // Validaciones on-time para la contraseña
+    // Validaciones on-time para la descripcion
 
-    if(errorBackPassword){
-        passwordInput.classList.add("is-invalid");
+    if(errorBackDescription){
+        descriptionInput.classList.add("is-invalid");
     }
 
-    passwordInput.addEventListener("focus", () => {
+    descriptionInput.addEventListener("focus", () => {
 
-        if(errorBackPassword){
-            errorBackPassword.style.display = "none";
+        if(errorBackDescription){
+            errorBackDescription.style.display = "none";
         }
 
-        if(passwordInput.value == ""){
-            passwordInput.classList.remove("is-valid");
-            passwordInput.classList.add("is-invalid");
+        if(descriptionInput.value == ""){
+            descriptionInput.classList.remove("is-valid");
+            descriptionInput.classList.add("is-invalid");
 
-            erroresPassword.classList.add("error-invalid");
-            erroresPassword.innerHTML = "Este campo debe estar completo";
+            erroresDescription.classList.add("error-invalid");
+            erroresDescription.innerHTML = "Este campo debe estar completo";
         } 
 
     })
 
-    passwordInput.addEventListener("input", () => {
+    descriptionInput.addEventListener("input", () => {
 
-        if(passwordInput.value == ""){
-            passwordInput.classList.remove("is-valid");
-            passwordInput.classList.add("is-invalid");
+        if(descriptionInput.value == ""){
+            descriptionInput.classList.remove("is-valid");
+            descriptionInput.classList.add("is-invalid");
 
-            erroresPassword.classList.add("error-invalid");
-            erroresPassword.innerHTML = "Este campo debe estar completo";
-        } else if(passwordInput.value.length < 8){
-            passwordInput.classList.remove("is-valid");
-            passwordInput.classList.add("is-invalid");
+            erroresDescription.classList.add("error-invalid");
+            erroresDescription.innerHTML = "Este campo debe estar completo";
+        } else if(descriptionInput.value.length < 20){
+            descriptionInput.classList.remove("is-valid");
+            descriptionInput.classList.add("is-invalid");
 
-            erroresPassword.classList.add("error-invalid");
-            erroresPassword.innerHTML = "La contraseña debe tener al menos 8 caracteres";
-        } else if(!(strongRegex.test(passwordInput.value))){
-            passwordInput.classList.remove("is-valid");
-            passwordInput.classList.add("is-invalid");
-
-            erroresPassword.classList.add("error-invalid");
-            erroresPassword.innerHTML = "La contraseña debe contener al menos una minúscula, una mayúscula, un número y uno de estos carateres especiales !@#$%^&*";
+            erroresDescription.classList.add("error-invalid");
+            erroresDescription.innerHTML = "La descripción debe tener al menos 20 caracteres";
         } else {
-            passwordInput.classList.remove("is-invalid");
-            passwordInput.classList.add("is-valid");
+            descriptionInput.classList.remove("is-invalid");
+            descriptionInput.classList.add("is-valid");
 
-            erroresPassword.classList.remove("error-invalid");
-            erroresPassword.innerHTML = "";
+            erroresDescription.classList.remove("error-invalid");
+            erroresDescription.innerHTML = "";
         }
-    })*/
+    })
+
+
+    // Validaciones on-time para la imagen
+    imageInput.addEventListener("change", () => {
+        if(errorBackImage){
+            errorBackImage.style.display = "none"
+        }
+
+        if(imageInput.value != ""){
+            if(!allowedExtensions.exec(imageInput.value)){
+                imageInput.classList.remove("is-valid");
+                imageInput.classList.add("is-invalid");
+
+                erroresImage.innerHTML = `Las extensiones de archivo permitidas son ${acceptedExtensions.join(', ')}`;            
+                erroresImage.classList.add("error-invalid");
+            } else {
+                imageInput.classList.remove("is-invalid");
+                imageInput.classList.add("is-valid");
+    
+                erroresImage.innerHTML = "";
+                erroresImage.classList.remove("error-invalid");
+            }
+        } else {
+            imageInput.classList.remove("is-invalid");
+            imageInput.classList.add("is-valid");
+
+            erroresImage.innerHTML = "";
+            erroresImage.classList.remove("error-invalid");  
+        }
+    })
+
+    // Validaciones on-time para la categoria
+
+    if(errorBackCategory){
+        categoryInput.classList.add("is-invalid");
+    }
+
+    categoryInput.addEventListener("focus", () => {
+
+        if(errorBackCategory){
+            errorBackCategory.style.display = "none";
+        }
+
+        if(categoryInput.value == ""){
+            categoryInput.classList.remove("is-valid");
+            categoryInput.classList.add("is-invalid");
+
+            erroresCategory.classList.add("error-invalid");
+            erroresCategory.innerHTML = "Este campo debe estar completo";
+        } 
+
+    })
+
+    categoryInput.addEventListener("input", () => {
+
+        if(categoryInput.value == ""){
+            categoryInput.classList.remove("is-valid");
+            categoryInput.classList.add("is-invalid");
+
+            erroresCategory.classList.add("error-invalid");
+            erroresCategory.innerHTML = "Este campo debe estar completo";
+        } else {
+            categoryInput.classList.remove("is-invalid");
+            categoryInput.classList.add("is-valid");
+
+            erroresCategory.classList.remove("error-invalid");
+            erroresCategory.innerHTML = "";
+        }
+    })
+
+
+    // Validaciones on-time para el precio
+
+    if(errorBackPrice){
+        priceInput.classList.add("is-invalid");
+    }
+
+    priceInput.addEventListener("focus", () => {
+
+        if(errorBackPrice){
+            errorBackPrice.style.display = "none";
+        }
+
+        if(priceInput.value == ""){
+            priceInput.classList.remove("is-valid");
+            priceInput.classList.add("is-invalid");
+
+            erroresPrice.classList.add("error-invalid");
+            erroresPrice.innerHTML = "Este campo debe estar completo";
+        } 
+
+    })
+
+    priceInput.addEventListener("input", () => {
+
+        if(priceInput.value == ""){
+            priceInput.classList.remove("is-valid");
+            priceInput.classList.add("is-invalid");
+
+            erroresPrice.classList.add("error-invalid");
+            erroresPrice.innerHTML = "Este campo debe estar completo";
+        } else {
+            priceInput.classList.remove("is-invalid");
+            priceInput.classList.add("is-valid");
+
+            erroresPrice.classList.remove("error-invalid");
+            erroresPrice.innerHTML = "";
+        }
+    })
+
+
+
+
+
 
     // VALIDACIONES OFF-TIME (Se muestran una vez que se intente enviar el formulario)
 
@@ -153,14 +265,14 @@ window.addEventListener("load", () => {
         // le agregamos al objeto errores la propiedad name (cuyo valor será dinamico) si cumple alguna de estas condicones
         if(nameInput.value == ""){
             errores.name = "Este campo debe estar completo";
-        } else if(nameInput.value.length <5){
+        } else if(nameInput.value.length < 5){
             errores.name = "El nombre debe tener al menos 5 caracteres";
         }
 
          // le agregamos al objeto errores la propiedad description (cuyo valor será dinamico) si cumple alguna de estas condicones
          if(descriptionInput.value == ""){
             errores.description = "Este campo debe estar completo";
-        } else if(descriptionInput.value.length <20){
+        } else if(descriptionInput.value.length < 20){
             errores.description = "La descripción debe tener al menos 20 caracteres";
         }
 
