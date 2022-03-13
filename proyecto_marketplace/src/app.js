@@ -29,10 +29,13 @@ const mainRouter = require("./routes/mainRouter"); // Requiere el modulo: mainRo
 const usersRouter = require("./routes/usersRouter"); // Requiere el modulo: usersRouter
 const productsRouter = require("./routes/productsRouter"); // Requiere el modulo: productsRouter
 
+const apiProductRouter = require("./routes/api/apiProductsRouter"); // Requiere el modulo: apiProductsRouter
+
 app.use("/", mainRouter); // define al mainRouter como enrutador para todos aquellas solicitudes con el prefijo "/"
 app.use("/users", usersRouter); // define al usersRouter como enrutador para todos aquellas solicitudes con el prefijo "/users"
 app.use("/products", productsRouter); // define al productsRouter como enrutador para todos aquellas solicitudes con el prefijo "/products"
 
+app.use("/api/products", apiProductRouter); // define al apiProductsRouter como enrutador para todos aquellas solicitudes con el prefijo "/api/products"
 
 // ************ app.listen to lift the server on port 3000 ************
 app.listen(3000, ()=>{

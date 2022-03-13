@@ -189,7 +189,28 @@ main,
     flex-wrap: wrap;
     max-width: 50%;
 }
-.product-article-buy-button{
+
+.product-article-cart-button{
+    width: 40%;
+    padding: 4px;
+    background-color: rgb(59, 59, 59);
+    color: white;
+    text-align: center;
+    border-radius: 15px; 
+    box-shadow: 2px 2px 6px rgb(0 0 0 / 40%);
+}
+
+.product-article-edit-button{
+    width: 40%;
+    padding: 4px;
+    background-color: rgb(59, 59, 59);
+    color: white;
+    text-align: center;
+    border-radius: 15px; 
+    box-shadow: 2px 2px 6px rgb(0 0 0 / 40%);
+}
+
+.product-article-delete-button{
     width: 40%;
     padding: 4px;
     background-color: rgb(59, 59, 59);

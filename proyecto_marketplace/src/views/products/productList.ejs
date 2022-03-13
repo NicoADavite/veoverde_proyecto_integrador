@@ -5,6 +5,7 @@
     <%- include("../partials/head") %>
     <link rel="stylesheet" href="/css/index.css">
     <title>VEOVERDE</title>
+    <script src="/js/products/productList.js"></script>
 </head>
 <body>
 
@@ -39,17 +40,17 @@
                             <p class="product-article-price">$<%= product.price %></p>
                         </div>
                         <div class="product-article-buttons">
-                            <button class="product-article-buy-button">COMPRAR</button>
+                            <button class="product-article-cart-button" value="<%= product.id %>"><i class="fas fa-cart-plus"></i></button>
                             <a href="/products/<%= product.id %>" class="product-article-view-button"><i class="far fa-eye"></i></a>
                         </div>   
                         <% if (locals.userLogged && userLogged.category_id == "2") { %>
                             <div class="product-article-buttons">
                                 <div>
-                                    <a href="/products/edit/<%= product.id %>"><button class="product-article-buy-button">EDITAR<i class="far fa-edit"></i></button></a>
+                                    <a href="/products/edit/<%= product.id %>"><button class="product-article-edit-button">EDITAR<i class="far fa-edit"></i></button></a>
                                 </div>
     
                                 <form action="/products/<%= product.id %>?_method=DELETE" method="POST">
-                                    <button  class="product-article-buy-button" type="submit">ELIMINAR<i class="fas fa-trash-alt"></i></button>
+                                    <button  class="product-article-delete-button" type="submit">ELIMINAR<i class="fas fa-trash-alt"></i></button>
                                 </form>
                             </div>
                         <% } %>                                      
