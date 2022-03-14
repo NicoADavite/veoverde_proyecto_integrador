@@ -38,6 +38,6 @@ app.use("/products", productsRouter); // define al productsRouter como enrutador
 app.use("/api/products", apiProductRouter); // define al apiProductsRouter como enrutador para todos aquellas solicitudes con el prefijo "/api/products"
 
 // ************ app.listen to lift the server on port 3000 ************
-app.listen(3000, ()=>{
+app.listen(process.env.PORT || 3000, ()=>{
     console.log('Servidor funcionando 3000'); //
 });
