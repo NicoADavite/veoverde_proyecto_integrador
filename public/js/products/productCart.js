@@ -2,19 +2,17 @@ window.addEventListener("load", () => {
 
     const main = document.querySelector("main")
     
-    let cartProductsString = localStorage.getItem("cartProducts");
+    let cartProductsJSON = localStorage.getItem("cartProducts");
 
-    if(cartProductsString !== null){
+    if(cartProductsJSON !== null){
 
-        let cartProductsArray = cartProductsString.split(',');
+        let cartProducts = JSON.parse(cartProductsJSON);
 
-        let cartProducts = Array.from(new Set(cartProductsArray));
-
-        cartProducts.forEach(id => {
-            fetch(`https://veoverde.herokuapp.com/api/products/${id}/`)
+        cartProducts.forEach(cartProduct => {
+            fetch(`https://veoverde.herokuapp.com/api/products/${cartProduct.id}/`)
                 .then(response => response.json())
                 .then(product => {
-                    let cartProduct = product.data;
+                    let cartProductData = product.data;
 
                     const cartProductDiv = document.createElement("div");
                     cartProductDiv.setAttribute("class", "main-shopping-cart");
@@ -25,12 +23,12 @@ window.addEventListener("load", () => {
                     cartProductDiv.appendChild(cartProductDescription);
 
                     const cartProductImg = document.createElement("img");
-                    cartProductImg.setAttribute("src", `/images/products/${cartProduct.image}`);
+                    cartProductImg.setAttribute("src", `/images/products/${cartProductData.image}`);
                     cartProductDescription.appendChild(cartProductImg);
 
                     const cartProductName = document.createElement("p");
                     cartProductName.setAttribute("class", "product-description");
-                    cartProductName.innerText = `${cartProduct.name}`;
+                    cartProductName.innerText = `${cartProductData.name}`;
                     cartProductDescription.appendChild(cartProductName);
 
                     const cartProductQty = document.createElement("p");
@@ -40,7 +38,7 @@ window.addEventListener("load", () => {
 
                     const cartProductPrice = document.createElement("p");
                     cartProductPrice.setAttribute("class", "product-price");
-                    cartProductPrice.innerText = `$${cartProduct.price}`;
+                    cartProductPrice.innerText = `$${cartProductData.price}`;
                     cartProductDescription.appendChild(cartProductPrice);
                     
                     const cartProductOptions = document.createElement("ul");

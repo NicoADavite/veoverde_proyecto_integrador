@@ -5,6 +5,7 @@
     <%- include("../partials/head") %>
     <link rel="stylesheet" href="/css/product-detail.css">
     <title>Detalle del Producto | VEOVERDE</title>
+    <script src="/js/products/productDetail.js"></script>
 </head>
 <body>
 
@@ -43,17 +44,17 @@
                 </div>
 
                 
-                <form action="/" metod="POST">
-                    
-
+                <form id="cart-form" action="/products/productCart" metod="GET">
+                
                     <div class="buy-form-submit">
                         <div class="quantity">
-                            <input type="text" placeholder="Cantidad">
+                            <label for="qty" class="count">Cantidad</label>
+                            <button class="menos" type="button"><i class="fas fa-minus"></i></button>
+                            <input type="text" id="qty" value="1">
+                            <button class="mas" type="button"><i class="fas fa-plus"></i></button>
                         </div>
-                        <button type="submit"><a href="/products/productCart" style="text-decoration:none">Comprar</a></button>
-                                                
+                        <button type="submit" id="cart-button" value="<%= product.id %>"><i class="fas fa-cart-plus"></i></button> 
                     </div>
-
 
                 </form>
 
