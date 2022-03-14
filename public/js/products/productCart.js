@@ -1,3 +1,26 @@
+function deleteFromCart(id) {
+  
+    let cartProducts = localStorage.getItem('pelisFavoritas');
+    if(pelisFavoritas !== null) {
+      let arr = pelisFavoritas.split(',');
+      let arrFiltrado = arr.filter(pelicula => {
+        return pelicula != id
+      })
+      if(arrFiltrado.length >= 1){
+        localStorage.setItem('pelisFavoritas', arrFiltrado);  
+        location.reload()
+      } else {
+        localStorage.removeItem('pelisFavoritas');
+        location.reload()
+      }
+    } else {
+      localStorage.removeItem('pelisFavoritas');
+      console.log(localStorage.pelisFavoritas);
+    }
+    
+  }
+
+
 window.addEventListener("load", () => {
 
     const main = document.querySelector("main")
@@ -33,22 +56,27 @@ window.addEventListener("load", () => {
 
                     const cartProductQty = document.createElement("p");
                     cartProductQty.setAttribute("class", "quantity-product");
-                    cartProductQty.innerText = `1`;
+                    cartProductQty.innerText = `${cartProduct.qty}`;
                     cartProductDescription.appendChild(cartProductQty);
 
                     const cartProductPrice = document.createElement("p");
                     cartProductPrice.setAttribute("class", "product-price");
                     cartProductPrice.innerText = `$${cartProductData.price}`;
                     cartProductDescription.appendChild(cartProductPrice);
+
+                    const cartProductSubTotal = document.createElement("p");
+                    cartProductSubTotal.setAttribute("class", "product-subtotal");
+                    cartProductSubTotal.innerText = `$${cartProductData.price * cartProduct.qty }`;
+                    cartProductDescription.appendChild(cartProductSubTotal);
                     
                     const cartProductOptions = document.createElement("ul");
                     cartProductOptions.setAttribute("class", "shopping-cart-options");
                     cartProductDiv.appendChild(cartProductOptions);
 
                     const cartProductDelete = document.createElement("li");
-                    cartProductDelete.innerHTML = '<a href="#">Eliminar</a>';
+                    cartProductDelete.innerHTML = `<button onclick="deleteFromCart(${cartProductData.id})"><i class="fa-solid fa-trash-can"></i></button>`;
                     cartProductOptions.appendChild(cartProductDelete);   
-                
+                    
                 })
         })
 
