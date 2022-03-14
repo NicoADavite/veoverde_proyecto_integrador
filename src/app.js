@@ -5,6 +5,7 @@ const methodOverride  = require("method-override");
 const session = require('express-session');
 const cookies = require('cookie-parser');
 const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
+// require('dotenv').config();
 
 // ************ express() - (don't touch) ************
 const app = express(); // Guarda la funcionalidad de express
@@ -38,6 +39,9 @@ app.use("/products", productsRouter); // define al productsRouter como enrutador
 app.use("/api/products", apiProductRouter); // define al apiProductsRouter como enrutador para todos aquellas solicitudes con el prefijo "/api/products"
 
 // ************ app.listen to lift the server on port 3000 ************
-app.listen(process.env.PORT || 3000, ()=>{
-    console.log('Servidor funcionando 3000'); //
+
+let port = process.env.PORT || 3000;
+
+app.listen(port, ()=>{
+    console.log(`Servidor funcionando ${port}`); //
 });
