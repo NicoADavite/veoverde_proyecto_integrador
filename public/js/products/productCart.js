@@ -11,7 +11,7 @@ window.addEventListener("load", () => {
         let cartProducts = Array.from(new Set(cartProductsArray));
 
         cartProducts.forEach(id => {
-            fetch(`http://localhost:3000/api/products/${id}/`)
+            fetch(`https://veoverde.herokuapp.com/api/products/${id}/`)
                 .then(response => response.json())
                 .then(product => {
                     let cartProduct = product.data;
