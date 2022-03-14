@@ -1,1 +1,1 @@
-web: node ./proyecto_marketplace/src/app.js
+web: node ./src/app.js
