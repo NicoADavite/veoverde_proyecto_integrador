@@ -8,6 +8,15 @@ window.addEventListener("load", () => {
     const qtyInput = document.querySelector("#qty")
     const cartButton = document.querySelector("#cart-button");
 
+    minusButton.addEventListener("click", () => {
+        if(qtyInput.value >= 2){
+            qtyInput.value = parseInt(qtyInput.value) - 1;
+        }        
+    })
+
+    plusButton.addEventListener("click", () => {
+        qtyInput.value = parseInt(qtyInput.value) + 1;     
+    })
 
     cartForm.addEventListener("submit", (e) => {
 
@@ -20,8 +29,6 @@ window.addEventListener("load", () => {
             let productAlreadyInCart = cartProducts.filter(cartProduct => {
                 return parseInt(cartProduct.id) == parseInt(cartButton.value)
             })
-
-            console.log(productAlreadyInCart)
 
             if(productAlreadyInCart.length > 0){
                 cartProducts.forEach(cartProduct => {

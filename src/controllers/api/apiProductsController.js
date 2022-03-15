@@ -1,8 +1,7 @@
+const res = require('express/lib/response');
 const fs = require('fs');
 const { resolve } = require('path');
 const path = require("path");
-
-const {	validationResult } = require('express-validator');
 
 const db = require("../../database/models/index");
 const sequelize = db.sequelize;
@@ -13,13 +12,48 @@ const apiProductsController = {
 
     // metodo para llamar a la api de lista de productos
     list: (req, res) => {
+
+        // let productsPromise = db.Products.findAll();
+
+        // let productCategoriesPromise = db.ProductCategories.findAll();
+
+        // Promise.all([productsPromise, productCategoriesPromise])
+        //     .then(([products, productCategories]) => {
+
+        //         const categories = Object.create()
+
+        //         categories.
+
+
+
+        //         productCategories.map(productCategory => {
+        //             return productCategory.name
+        //         })                
+                
+        //         let response = {
+        //             meta: {
+        //                 status: 200,
+        //                 url: "/api/products"
+        //             },
+        //             count: products.length,
+        //             countByCategory: {
+        //                 ...productCategories.name
+        //             }
+        //         }
+        //         res.json(response);
+
+        //     })
+        //     .catch(err => {
+        //         res.send(err)
+        //     })
+
     
         db.Products.findAll()
             .then(products => {
                 let response = {
                     meta: {
                         status: 200,
-                        total: products.length,
+                        count: products.length,
                         url: "/api/products"
                     },
                     data: products
