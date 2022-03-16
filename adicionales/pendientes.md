@@ -54,7 +54,9 @@ MEJORAS ESTETICAS
 
 - darle funcionalidad al burguer menu en version mobile y 481.
 
-backend
+- Sacar carrito de compras de la lista de productos y solo dejarlo en detalle de producto
+
+BACKEND
 - (HECHO) Agregar validaciones para los productos
 
 - Editar las clases del formulario de creación y edición del producto 

@@ -59,7 +59,7 @@ const apiUsersController = {
                     firstName: user.firstName,
                     lastName: user.lastName,
                     email: user.email,
-                    profile_img: user.image
+                    profile_img: `/images/users/${user.image}`
                 }
 
                 let response = {
