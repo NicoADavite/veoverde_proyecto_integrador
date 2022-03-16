@@ -99,7 +99,7 @@ window.addEventListener("load", () => {
                   cartProductDiv.appendChild(cartProductDescription);
 
                   const cartProductImg = document.createElement("img");
-                  cartProductImg.setAttribute("src", `/images/products/${cartProductData.image}`);
+                  cartProductImg.setAttribute("src", cartProductData.imageURL);
                   cartProductDescription.appendChild(cartProductImg);
 
                   const cartProductName = document.createElement("p");
