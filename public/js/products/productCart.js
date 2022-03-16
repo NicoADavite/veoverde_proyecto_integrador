@@ -20,6 +20,24 @@ function deleteFromCart(id) {
     
 }
 
+function editLocalStorage(id, qty){
+
+  let cartProducts = JSON.parse(localStorage.getItem("cartProducts"));    
+
+  cartProducts.forEach(cartProduct => {
+
+      if(parseInt(cartProduct.id) == parseInt(id)){
+          
+          cartProduct.qty = parseInt(qty); 
+
+      }
+  })
+
+  localStorage.setItem("cartProducts", JSON.stringify(cartProducts)); 
+  console.log(localStorage.cartProducts);
+
+}
+
 window.addEventListener("load", () => {
 
     const main = document.querySelector("main");
@@ -48,6 +66,12 @@ window.addEventListener("load", () => {
         cartCheckOut.setAttribute("class", "check-out");
         cartCheckOut.innerHTML = "<button>COMPRAR</button>";
         main.appendChild(cartCheckOut);
+        cartCheckOut.addEventListener("click", () => {
+          alert("Genial ya hiciste la compra! Te mandamos un email con los detalles de la compra!");
+          location.href= "/";
+          localStorage.removeItem("cartProducts");
+
+        })
 
         const cartKeepBuying = document.createElement("div");
         cartKeepBuying.style.display = "none";
@@ -100,6 +124,7 @@ window.addEventListener("load", () => {
                     let cantidadActual = parseInt(cartProductQtyNumber.innerText);
                     if(cantidadActual > 1){
                       cartProductQtyNumber.innerText = `${cantidadActual - 1}`;
+                      editLocalStorage(cartProduct.id, cartProductQtyNumber.innerText);
                       cartProductSubTotalNumber.innerText =  `${cartProductData.price * parseInt(cartProductQtyNumber.innerText) }`;
                       cartTotalAmountNumber.innerText = `${parseInt(cartTotalAmountNumber.innerText) - parseInt(cartProductData.price)}`;
                     }                 
@@ -113,6 +138,7 @@ window.addEventListener("load", () => {
                   cartProductQtyPlus.addEventListener("click", () => {
                     let cantidadActual = parseInt(cartProductQtyNumber.innerText)
                     cartProductQtyNumber.innerText = `${cantidadActual + 1}`;
+                    editLocalStorage(cartProduct.id, cartProductQtyNumber.innerText);
                     cartProductSubTotalNumber.innerText =  `${cartProductData.price * parseInt(cartProductQtyNumber.innerText) }`;
                     cartTotalAmountNumber.innerText = `${parseInt(cartTotalAmountNumber.innerText) + parseInt(cartProductData.price)}`;
                   })

@@ -27,11 +27,15 @@ window.addEventListener("load", () => {
             let cartProducts = JSON.parse(localStorage.getItem("cartProducts"));
 
             let productAlreadyInCart = cartProducts.filter(cartProduct => {
-                return parseInt(cartProduct.id) == parseInt(cartButton.value)
+
+                return parseInt(cartProduct.id) == parseInt(cartButton.value);
+                
             })
 
             if(productAlreadyInCart.length > 0){
+
                 cartProducts.forEach(cartProduct => {
+
                     if(parseInt(cartProduct.id) == parseInt(cartButton.value)){
 
                         cartProduct.qty = parseInt(cartProduct.qty) + parseInt(qtyInput.value);
@@ -54,8 +58,7 @@ window.addEventListener("load", () => {
                 localStorage.setItem("cartProducts", JSON.stringify(cartProducts));
                 console.log(localStorage.cartProducts);
 
-            }      
-            
+            }               
 
         } else {
 
@@ -72,11 +75,8 @@ window.addEventListener("load", () => {
 
             console.log(localStorage.cartProducts);
 
-
         }
 
-    })
-
-    
+    })    
     
 })
