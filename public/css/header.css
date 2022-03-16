@@ -5,10 +5,6 @@
     font-family: 'Sarabun', sans-serif;
 }
 
-a:link{
-    color: white;
-}
-
 /* Header */
 
 header{
@@ -113,6 +109,11 @@ header nav ul li a:hover{
 }
 
 header nav ul li a:visited{
+    color: initial;
+    color: white;
+}
+
+header nav ul li a:link{
     color: initial;
     color: white;
 }
