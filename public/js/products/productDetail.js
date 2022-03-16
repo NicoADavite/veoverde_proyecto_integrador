@@ -2,11 +2,27 @@ window.addEventListener("load", () => {
 
     // Capturo los elementos del DOM con los que voy a interactuar
 
+    const descriptionH2 = document.querySelector(".description-h2");
+    const descriptionP = document.querySelector(".description-p");
+
     const cartForm = document.querySelector("#cart-form");
     const minusButton = document.querySelector(".menos");
     const plusButton = document.querySelector(".mas");
     const qtyInput = document.querySelector("#qty")
     const cartButton = document.querySelector("#cart-button");
+
+    descriptionH2.addEventListener("mouseover", () => {
+        descriptionH2.classList.toggle("change-description-color")
+    })
+
+    descriptionH2.addEventListener("mouseleave", () => {
+        descriptionH2.classList.toggle("change-description-color")
+    })
+
+
+    descriptionH2.addEventListener("click", () => {
+        descriptionP.classList.toggle("show")
+    })
 
     minusButton.addEventListener("click", () => {
         if(qtyInput.value >= 2){

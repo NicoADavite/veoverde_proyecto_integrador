@@ -19,6 +19,7 @@ main{
 section{
     margin: 0px auto;
 }
+
 .first-product{
     max-width:95%;
     margin: 20px auto;
@@ -32,17 +33,22 @@ section{
     box-shadow: 2px 2px 6px rgb(0 0 0 / 60%);
 }
 
+.product-title-div{
+    margin: 0px auto 10px; 
+}
+
 .product-title{
-    font-size: 20px;
     text-align: justify;
     margin-top: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .calendario-plantable-2022{
     width: 85%;
     position: relative;
+    margin: auto;
 }
+
 .first-product img{
     width:100%;
     height: 70%;
@@ -72,74 +78,46 @@ section{
 .discount-p{
      font-size: 12px;
      text-align: center;
- }
-
-h3{
-    font-size: 30px;
-    font-weight: lighter;
-    margin-top: 20px;
 }
 
-.payment-shipping{
+
+.price-buttons-ul{
     display: flex;
     flex-direction: column;
-    font-size: 10px;
-    text-align: center;
-    color: rgb(175, 214, 175); 
-    margin-top: 2%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
 }
 
-h4{
-   margin-top: 5px; 
+.price-div{
+    margin: 15px auto 0px;
 }
+
+.price{
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#cart-form{
+}
+
 
 .quantity{
     text-align: center;
     padding-bottom: 10px;
-    border-radius: 4px;
     margin-bottom: 5px;
     margin-top: 20px;
     box-sizing: border-box;
 }
 
-.quantity label {
-    display: block;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: large;
-    margin-bottom: 10px;
-}
-
 .quantity input{
-    width: 50%;
+    width: 20%;
+    padding: 10px;
+    margin: 0px 8px;
+    border-radius: 1000px;
+    border-style: solid;
     text-align: center;
-}
-
-.menos, 
-.mas,
-#cart-button {
-    color: white;
-    max-width: 40px;
-}
-
-#cart-button{
-    display: block;
-    margin: auto
-}
-
-#cart-button:hover{    
-    background-color: rgb(175, 214, 175);
-    color: black;
-}
-
-.buy{
-    margin-bottom: 12px;
-    display: flex;
-    flex-direction: column;
-}
-
-.buy-form-input label{
-    margin-bottom: 3px;
 }
 
 .buy-form-submit{
@@ -153,48 +131,76 @@ h4{
 
 .buy-form-submit button{
     width: 50%;
-    padding: 4px; 
-    background-color: #1F3A3B;
+    padding: 7px; 
+    background-color: rgb(109, 184, 109);
     color:rgb(255, 255, 255);
     text-align: center;
     border-radius: 15px; 
     box-shadow: 2px 2px 6px rgb(0 0 0 / 40%);
     margin-bottom: 10px;
     border: none;
-    transition: all 450ms 
+    transition: all 450ms; 
 }
+
+.menos, 
+.mas,
+#cart-button {
+    color: white;
+    max-width: 40px;
+}
+
+#cart-button{
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+}
+
+#cart-button:hover{    
+    background-color: rgb(175, 214, 175);
+    color: black;
+}
+
 
 .buy-form-submit button:hover{
     background-color: rgb(175, 214, 175);
     color: black;
 }
 
-.description{
-    list-style: none;
-    font-size: 12px;
-}
-
-.description li{
-    margin: 5px;
-}
-.description i{
-    font-size: 7px;
+.payment-shipping{
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
     text-align: center;
-    padding: 1px;
+    color: rgb(175, 214, 175); 
+    margin-top: 2%;
 }
 
-h5{
-    margin: 15px 20px;
-    text-align: justify;
+.payment-shipping ul{
+    list-style: none;
 }
 
-h6{
-    margin: 15px 20px;
-    font-size: 12px;
-    font-style: italic;
-    text-align: justify;
-    font-weight: lighter;
+.description-div{
+    padding: 5%;
+    margin-top: 15px;
 }
+
+.description-h2{
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.description-p{
+    display: none;
+}
+
+.change-description-color{
+    color: rgb(94, 92, 92)
+}
+
+.show{
+    display: block;
+}
+
 
 /* Botones de Detail */
 .product-article-button{
@@ -256,12 +262,11 @@ a:visited{
     }
 
     .product-title{
-        font-size: 1.7em;
         text-align: center;
     }
 
     .calendario-plantable-2022{
-        max-width: 50%;
+        max-width: 60%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -271,11 +276,6 @@ a:visited{
     .product-article-discount{
         opacity: 80%;
         width: 30%
-    }
-
-    h3{
-        font-size: 3em;
-        text-align: center
     }
 
     .payment-shipping{
@@ -294,6 +294,18 @@ a:visited{
 }
 
 @media (min-width: 768px){
+
+    .product-details{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .calendario-plantable-2022{
+        max-width: 50%;
+    }
   
     .first-product{
         margin: 20px;
@@ -302,18 +314,12 @@ a:visited{
     }
 
     .product-title{
-        font-size: 2em;
         text-align: center;
     }
 
     .product-article-discount{
         opacity: 80%;
         width: 30%
-    }
-
-    h3{
-        font-size: 4em;
-        text-align: center
     }
 
     .payment-shipping{
@@ -329,25 +335,23 @@ a:visited{
         width: 170px;
     }
 
-    
-    h6{
-        margin-top:5px;
-    }
-
 }
 
 
 @media (min-width: 1280px){
 
+    .calendario-plantable-2022{
+        max-width: 30%;
+    }
+
     .product-title{
-        font-size: 2em;
     }
     
     .first-product{
-        flex-direction: row;
+        flex-direction: column;
         flex-wrap: wrap;
         justify-content: space-around;
-        align-items: stretch;
+        align-items: center;
     }
 }
     

@@ -24,12 +24,12 @@
         <ul>
            <!-- <li><a href="#">Ofertas  <i class="fas fa-tags"></i></a></li> -->
             <li><a href="/products">Lista de Productos <i class="fas fa-store"></i></a></li>
-            <li><a href="https://dashboard-veoverde.herokuapp.com/">Dashboard <i class="fas fa-store"></i></a></li>
-
+            <li><a href="/#us">Nosotros <i class="fas fa-question-circle"></i></a></li>
+            
             <% if (locals.userLogged && userLogged.category_id == "2"){ %>
                 <li><a href="/products/create">Crear Producto <i class="fas fa-dollar-sign"></i></a></li>
+                <li><a href="https://dashboard-veoverde.herokuapp.com/" target="_blank">Dashboard <i class="fas fa-store"></i></a></li>
             <% } %>            
-            <li><a href="/#us">Nosotros <i class="fas fa-question-circle"></i></a></li>
         </ul>
         <ul>
             <% if(locals.isLogged) { %>

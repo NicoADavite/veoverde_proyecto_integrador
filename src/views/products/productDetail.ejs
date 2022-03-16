@@ -15,59 +15,69 @@
     <main>
        <section>  
         <article class="first-product">
-                <div>
+
+                <div class="product-title-div">
                     <h2 class="product-title"><%= product.name %></h2>
                 </div>
-                
-                <div class="calendario-plantable-2022">
-                    <img src="/images/products/<%= product.image %>" alt="<%= product.name %>">
-                    <div class="product-article-discount">
-                        <p class="discount-discount">10% OFF </p>
-                        <p class="discount-p">COMPRANDO</p>
-                        <p class="discount-p"> 100 o MÁS</p>
-                    </div>
-                </div>               
-                
 
-                <div>
-                    <h6><%= product.description %></h6>
-                </div>
-                
-                <div>
-                    <h3>$<%= product.price %></h3>
-                </div>
+                <div class="product-details">
 
-                <div class="payment-shipping">
-                    <h4><i class="fas fa-credit-card"></i>    medios de pago</h4>
-                
-                    <h4><i class="fas fa-truck-loading"></i>    formas de entrega</h4>
-                </div>
-
-                
-                <form id="cart-form" action="/products/productCart" metod="GET">
-                
-                    <div class="buy-form-submit">
-                        <div class="quantity">
-                            <label for="qty" class="count">Cantidad</label>
-                            <button class="menos" type="button"><i class="fas fa-minus"></i></button>
-                            <input type="text" id="qty" value="1">
-                            <button class="mas" type="button"><i class="fas fa-plus"></i></button>
-                            <button type="submit" id="cart-button" value="<%= product.id %>"><i class="fas fa-cart-plus"></i></button> 
+                    <div class="calendario-plantable-2022">
+                        <img src="/images/products/<%= product.image %>" alt="<%= product.name %>">
+                        <div class="product-article-discount">
+                            <p class="discount-discount">10% OFF </p>
+                            <p class="discount-p">COMPRANDO</p>
+                            <p class="discount-p"> 100 o MÁS</p>
                         </div>
                     </div>
+                    
+                    <div class="price-buttons-ul">
 
-                </form>
-
-                <% if (locals.userLogged && userLogged.category_id == "2"){ %>
-                    <div class="product-article-button">
-                        <a href="/products/edit/<%= product.id %>" style="text-decoration: none;" ><button class="product-article-edit-button">EDITAR<i class="far fa-edit" style="color: white"></i></a></button>
+                        <div class="price-div">
+                            <p class="price">$<%= product.price %></p>
+                        </div>
     
-                        <form action="/products/<%= product.id %>?_method=DELETE" method="POST">                        
-                            <button  class="product-article-trash-button" type="submit">ELIMINAR<i class="fas fa-trash-alt"></i></button>
+                        <form id="cart-form" action="/products/productCart" metod="GET">
+                        
+                            <div class="buy-form-submit">
+                                <div class="quantity">
+                                    <button class="menos" type="button"><i class="fas fa-minus"></i></button>
+                                    <input type="text" id="qty" value="1">
+                                    <button class="mas" type="button"><i class="fas fa-plus"></i></button>
+                                    <button type="submit" id="cart-button" value="<%= product.id %>"><i class="fas fa-cart-plus"></i></button> 
+                                </div>
+                            </div>
+        
                         </form>
+
+                        <% if (locals.userLogged && userLogged.category_id == "2"){ %>
+                            <div class="product-article-button">
+                                <a href="/products/edit/<%= product.id %>" style="text-decoration: none;" ><button class="product-article-edit-button">EDITAR<i class="far fa-edit" style="color: white"></i></a></button>
+            
+                                <form action="/products/<%= product.id %>?_method=DELETE" method="POST">                        
+                                    <button  class="product-article-trash-button" type="submit">ELIMINAR<i class="fas fa-trash-alt"></i></button>
+                                </form>
+                                
+                            </div>
+                        <% } %> 
+        
+                        <div class="payment-shipping">
+                            <ul>
+                                <li><i class="fas fa-credit-card"></i>    medios de pago</li>
+                                <li><i class="fas fa-truck-loading"></i>    formas de entrega</li>
+                            </ul>
+                        </div>
                         
                     </div>
-                <% } %> 
+                    
+    
+                    <div class="description-div">
+                        <h2 class="description-h2">Descripción <i class="fas fa-angle-down"></i></h2>
+                        <p class="description-p"><%= product.description %></p>
+                    </div>    
+                                       
+                </div>
+                
 
 
            </article>

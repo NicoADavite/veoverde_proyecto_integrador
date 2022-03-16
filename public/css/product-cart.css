@@ -45,9 +45,12 @@ main{
     flex-wrap: wrap;
     justify-content: center;
     width: 90%;
+    padding: 20px;
     border: 1px solid silver;
+    border-radius: 15px;
+    box-shadow: 2px 2px 6px rgb(0 0 0 / 30%);    
     margin: 20px 20px;
-
+    transition: all 250ms;
 }
 
 .main-shopping-cart:hover{
@@ -65,7 +68,8 @@ transform: scale(1.02);
 .product-description {
     width: 30%;
     padding: 16px;
-    align-self: center
+    align-self: center;
+    text-align: center;
 }
 
 .quantity-product {

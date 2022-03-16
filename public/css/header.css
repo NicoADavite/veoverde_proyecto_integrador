@@ -5,6 +5,10 @@
     font-family: 'Sarabun', sans-serif;
 }
 
+a:link{
+    color: white;
+}
+
 /* Header */
 
 header{

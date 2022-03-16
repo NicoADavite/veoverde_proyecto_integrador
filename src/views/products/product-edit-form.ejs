@@ -88,9 +88,9 @@
                             <div class="price-edit">
                                 <label for="price">Precio</label>
                                 <% if(locals.oldData && (oldData.price || oldData.price == "")){ %>
-                                    <input type="number" name="price" id="price" value="<%= locals.oldData ? oldData.price : null %>">
+                                    <input type="number" step="any" name="price" id="price" value="<%= locals.oldData ? oldData.price : null %>">
                                 <% } else{ %>
-                                    <input type="number" name="price" id="price" value="<%= product.price %>">
+                                    <input type="number" step="any" name="price" id="price" value="<%= product.price %>">
                                 <% } %>                                
                             </div>
                             <div id="errores-price">
