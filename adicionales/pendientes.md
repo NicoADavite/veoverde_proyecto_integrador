@@ -68,3 +68,17 @@ BACKEND
 SPRINT 8
 - ver que onda el tema de la url de la profile picture en la api de /api/users/:id (apiUsersController 62:21)
 
+-revisar countByCategory cualquier cosa cambiar por esto:
+
+[
+  {papel: papel.length},
+  {kits: kits.length},
+  {productosDeOficina: productosDeOficina.length},
+  {calendarios: calendarios.length},
+  {tarjetasPlantables: tarjetasPlantables.length},
+  {bolsasCompostables: bolsasCompostables.length},
+  {otros: otros.length}
+]
+
+
+

@@ -36,7 +36,17 @@ module.exports = (sequelize, DataTypes) => {
         timestamps: false
     };
 
-    const Product = sequelize.define(alias, cols, config)
+    const Product = sequelize.define(alias, cols, config);
+
+    Product.associate = (models) => {
+
+        Product.belongsTo(models.ProductCategories, {
+            as: "category",
+            foreignKey: "category_id"
+        })
+
+        
+    }
 
     //Movie.associate = (models) => {
 //
