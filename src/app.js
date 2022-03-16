@@ -45,7 +45,7 @@ app.use("/api/users", apiUsersRouter); // define al apiUsersRouter como enrutado
 
 // ************ app.listen to lift the server on port 3000 ************
 
-let port = process.env.PORT || 3000;
+let port = process.env.PORT || 3001;
 
 app.listen(port, ()=>{
     console.log(`Servidor funcionando ${port}`); //
