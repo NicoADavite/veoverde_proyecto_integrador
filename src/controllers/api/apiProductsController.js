@@ -71,7 +71,7 @@ const apiProductsController = {
                             otros: otros.length
                         }
                     },
-                    data: productsUpdated
+                    products: productsUpdated
                 }
 
                 res.json(response);                
@@ -119,7 +119,37 @@ const apiProductsController = {
                 res.send(err)
             })
     
-    }
+    },
+
+    // metodo para llamar a la api de ultimo producto en la base de datos
+
+    lastProduct: (req, res) => {
+
+        db.Products.findAll({
+            include: ["category"],
+            order: [
+                ["id", "DESC"],
+            ],
+            limit: 1
+        })
+            .then(product => {
+
+                let response = {
+                    meta: {
+                        status: 200,
+                        length: product.length,
+                        url: "/api/products/lastproduct"
+                    },
+                    data: product
+                }
+                res.json(response);
+
+            })
+            .catch(err => {
+                res.send(err)
+            })
+
+    } 
 
 }
 

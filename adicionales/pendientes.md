@@ -64,6 +64,8 @@ BACKEND
 
 - (HECHO) El "Hola, xxxxx" que vaya en blanquito (CSS)
 
+- Crear vista de error 404 Not Found
+
 
 SPRINT 8
 - ver que onda el tema de la url de la profile picture en la api de /api/users/:id (apiUsersController 62:21)

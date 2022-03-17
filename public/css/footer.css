@@ -189,7 +189,7 @@ footer{
     color: initial;
 }
 
-.footer-bottom .footer-copyright a:hover{
+.footer-bottom .footer-copyright a:link{
     text-decoration: none;
     color: #1F3A3B;
 }
@@ -218,6 +218,7 @@ footer{
     position: relative;
     left: 0.5px;
 }
+
 a:visited{
     color: initial;
 
