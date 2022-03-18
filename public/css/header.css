@@ -34,10 +34,25 @@ header{
     background: none;
 }
 
-
 .burguer-menu i{
     font-size: 24px;
 }
+
+.contenido{
+    display: none;
+}
+/* clases para el burguer menu */
+
+.burguer-menu-opened{
+    position: fixed;
+    width: 20vw;
+    height: 100vh;
+}
+
+.show{
+    display: flex;
+}
+
 
 .header-logo{ 
     width: 60%;

@@ -1,0 +1,54 @@
+.burguer-menu{
+  display: none;
+}
+
+.burguer-menu-input:checked  ~ ul{
+  display:block;
+}
+
+.burguer-menu-input {
+  display: none;
+}
+
+.burguer-menu-label {
+  box-sizing: border-box;
+  display: inline-block;
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  font-weight: bold;
+  text-align: center;
+  user-select: none;
+}
+
+/* Estilo del boton cuando se pasa el mouse por encima*/
+.burguer-menu-label:hover{
+  background: grey;
+}
+
+/* Estilo del boton cuando el menú está expandido*/
+.burguer-menu-input:checked ~ .burguer-menu-label {
+  background: lightgrey; 
+}
+
+.burguer-menu{
+  margin-top:0;
+  padding: 0;
+  width: 200px;  
+}
+
+.burguer-menu li {
+  display: block;
+  background: lightgrey;
+  margin: 0;
+  padding: 10px;
+  list-style: none;
+  border-bottom: 1px solid grey;
+}
+
+/*Estilo cuando el mouse pasa encima de cada link del menu*/
+.burguer-menu li:hover {
+  filter: brightness(110%);
+}

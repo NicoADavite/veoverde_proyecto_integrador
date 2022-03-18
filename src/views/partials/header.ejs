@@ -2,6 +2,27 @@
     <div class="top-header"> 
         <div class="burguer-menu">
             <button type="menu"><i class="fa-solid fa-seedling"></i></button>
+            <div class="contenido" >
+                <ul>
+                    <li><a href="/products">Lista de Productos </a></li>
+                    <li><a href="/#us">Nosotros <i class="fas fa-question-circle"></i></a></li>
+                    <% if (locals.userLogged && userLogged.category_id == "2"){ %>
+                        <li><a href="/products/create">Crear Producto <i class="fas fa-dollar-sign"></i></a></li>
+                        <li><a href="https://dashboard-veoverde.herokuapp.com/" target="_blank">Dashboard <i class="fas fa-store"></i></a></li>
+                    <% } %>  
+                    <li></li>
+                    <li></li>
+                </ul>
+                <ul>
+                    <% if(locals.isLogged) { %>
+                        <li><a href="/users/profile">Mi perfil</a></li>
+                        <li><a href="/users/logout">Cerrar Sesion</a></li>                
+                    <% } else { %>
+                        <li><a href="/users/register">Creá tu cuenta <i class="far fa-id-card"></i></a></li>
+                        <li><a href="/users/login">Ingresá <i class="fas fa-sign-in-alt"></i></a></li>
+                    <% } %>
+                </ul>
+            </div>
         </div>
         <div class="header-logo">
             <a href="/"><img src="/images/brand-images/veoverde-nombre_Blanco.png" alt="veoverde-nombre"></a>
@@ -43,3 +64,4 @@
         </ul>
     </nav>
 </header>
+<script src="/js/burguer-menu.js"></script>
