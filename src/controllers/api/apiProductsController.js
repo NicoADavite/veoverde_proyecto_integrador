@@ -141,7 +141,7 @@ const apiProductsController = {
                     price: product[0].price,
                     category_id: product[0].category_id,
                     category: product[0].category,
-                    image: `/images/products/${product[0].image}`
+                    image: `https://veoverde.herokuapp.com/images/products/${product[0].image}`
                 }
 
                 let response = {
