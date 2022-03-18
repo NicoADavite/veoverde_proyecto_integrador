@@ -134,13 +134,23 @@ const apiProductsController = {
         })
             .then(product => {
 
+                let productUpdated = {
+                    id: product[0].id,
+                    name: product[0].name,
+                    description: product[0].description,
+                    price: product[0].price,
+                    category_id: product[0].category_id,
+                    category: product[0].category,
+                    image: `/images/products/${product[0].image}`
+                }
+
                 let response = {
                     meta: {
                         status: 200,
                         length: product.length,
                         url: "/api/products/lastproduct"
                     },
-                    data: product
+                    data: productUpdated
                 }
                 res.json(response);
 
