@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <!-- partial del head -->
-    <%- include("./partials/head") %>
+    <%- include("./partials/head-v2") %>
     <link rel="stylesheet" href="css/index.css">
     <title>Home | VEOVERDE</title>
     <script src="/js/products/productList.js"></script>
@@ -10,7 +10,7 @@
 <body>
 
     <!-- partial del header -->
-    <%- include("./partials/header") %>
+    <%- include("./partials/header-v2") %>
 
     <main>
         <section class="us main-section"  id="us">
@@ -59,11 +59,11 @@
                     <figure class="product-article-img">
                         <img src="images/products/<%= product.image %>" alt="<%= product.name %>">
                     </figure>
-                    <!-- <div class="product-article-discount">
+                    <div class="product-article-discount">
                         <p class="discount-discount">10% OFF </p>
                         <p class="discount-p">COMPRANDO</p>
                         <p class="discount-p"> 100 o MÁS</p>
-                    </div>  -->
+                    </div> 
                     <div class="product-article-details">
                         <h4 class="product-article-description"><%= product.name %></h4>
                         <p class="product-article-price">$<%= product.price %></p>

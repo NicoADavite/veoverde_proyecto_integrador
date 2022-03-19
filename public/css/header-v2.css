@@ -1,4 +1,34 @@
 *{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+header.header{
+
+}
+
+nav.nav{
+
+}
+
+a.logo{
+
+}
+
+ul.nav-menu{
+
+}
+
+li.nav-menu-item{
+
+}
+
+a.nav-menu-link{
+
+}
+
+*{
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
@@ -8,7 +38,7 @@
 /* Header */
 
 header{
-    padding: 25px 0px;
+    padding-top: 5px;
     background-image: url("/images/brand-images/pinos.png");
     opacity: 80%;
 }
@@ -19,19 +49,13 @@ header{
     justify-content: space-between;
     align-items: center;
     margin-bottom: 10px;
-    position: relative;
 }
 
 .burguer-menu{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: flex-start;
-}
-
-.burguer-menu-closed{
     width: 15%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .burguer-menu button{
@@ -40,53 +64,25 @@ header{
     background: none;
 }
 
-.burguer-menu button i{
+.burguer-menu i{
     font-size: 24px;
 }
 
-.contenido-closed{
+.contenido{
     display: none;
 }
 /* clases para el burguer menu */
 
 .burguer-menu-opened{
-    width: 50vw;
-    height: 1000px;
     position: fixed;
-    top: 0.1px;
-    z-index: 1000;
-    background-color: rgba(20, 109, 11, 1);
+    width: 20vw;
+    height: 100vh;
 }
 
-.burguer-menu-button{
-    align-self: flex-start;
-    padding: 15px 20px;
-}
-
-.contenido-opened{
+.show{
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: flex-start;
 }
 
-.contenido ul{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: flex-start;
-    list-style: none;
-    margin-top: 20px;
-}
-
-.contenido ul li{
-    padding-left: 15px;
-}
-
-.contenido ul li a{
-    text-decoration: none;
-    color: white;
-}
 
 .header-logo{ 
     width: 60%;
@@ -117,12 +113,10 @@ header{
 .shopping-cart i{
     font-size: 22px;
     color: white;
-    text-shadow: 1.5px 1.5px 0.2px black;
 }
 
 .shopping-cart a:visited{
     color: white;
-    text-shadow: 1.5px 1.5px 0.2px black;
 }
 
 .header-search-form{
@@ -152,11 +146,6 @@ header{
 
 header nav{
     display: none;
-}
-
-header nav ul li a{
-    color: initial;
-    color: white;
 }
 
 header nav ul li a:hover{
@@ -210,7 +199,6 @@ header nav ul li a:link{
     }
     
     header nav ul{
-        list-style: none;
         display: flex;
         justify-content: space-around;
         margin: 5px 10px;
@@ -218,23 +206,22 @@ header nav ul li a:link{
     }
     
     header nav ul li{
-        /* list-style-type: none; */
+        list-style-type: none;
         padding: 7.5px;
     }
 
     header nav ul li a{
         text-decoration: none;
-        text-shadow: 1.5px 1.5px 0.2px black;
-        /* list-style-type: none; */
+        list-style-type: none;
     }
 
 }
 
 
-@media (min-width: 1280px){
-    header nav ul li a{
-        font-size: 20px;
-    }    
-}
+/* Descomentarlo si se necesita usar para algo
 
+@media (min-width: 1280px){
+    
+}
+*/
     

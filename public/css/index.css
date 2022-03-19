@@ -69,18 +69,17 @@ main,
     background-color: rgb(233, 233, 233);
     margin-bottom: 30px;
     text-transform: uppercase;
-    position: sticky;
     top: 0.1px;
     z-index: 100;
-    opacity: 80%;
+    /* opacity: 80%; */
 }
 
 .our-products-title h2{
     font-size: 1.1em;
     text-align: center;
-    position: sticky;
-    top: 1px;
-    opacity: 80%;
+    /* position: sticky;
+    top: 1px; */
+    opacity: 50%;
     padding-top: 10px;
     margin-bottom: 10px;
 }
@@ -91,7 +90,6 @@ main,
     background-color: rgb(238, 238, 238);
     border: 1px solid rgb(0, 39, 0);
     border-radius: 5px;
-    position: relative;
     transition: all 450ms;
 }
 
