@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- partial del head -->
+    <%- include("../partials/head") %>
+    <link rel="stylesheet" href="/css/user-edit-form.css">
+    <title>User Edit Form | VEOVERDE</title>
+    <script src="/js/users/user-edit-form.js"></script>
+</head>
+<body>
+
+    <!-- partial del header -->
+    <%- include("../partials/header") %>
+
+    <main>
+
+        <!-- <div class= "go-back">
+            <p><a href="/">Inicio</a> >> Edición de Usuario </p>
+        </div>  -->
+ 
+        <div class="container">
+            <div class="child profile-details">
+                <div class="datos">
+                    <div class="title">
+                        <h2>EDICION DE DATOS</h2>
+                    </div>
+                    <form action="/users/edit?_method=PUT" method="POST" enctype="multipart/form-data" class="edit-user-form">
+                        <figure class="edit-user-form-div file-div">
+                            <img src="/images/users/<%= user.image %> " alt="Imagen de perfil" class="pre-loaded-image">
+                            <h3 class="image-name"></h3>
+                            <label for="image-file-input">Elige una Imagen</label>
+                            <input type="file" accept="image/*" name="image" id="image-file-input">
+                            <div id="errores-image">
+
+                            </div>
+                        </figure>
+                        <div class="edit-user-form-div">
+                            <label for="firstName">Nombres</label>
+                            <% if(locals.oldData && (oldData.firstName || oldData.firstName == "")){ %>
+                                <input type="text" name="firstName" id="firstName" value="<%= oldData.firstName %>">
+                            <% } else { %>
+                                <input type="text" name="firstName" id="firstName" value="<%= user.firstName %>">
+                            <% } %>
+                            <div id="errores-firstName">
+
+                            </div>
+                            <% if(locals.errors && errors.firstName){ %>
+                                <div id="error-back-firstName" class="error-invalid">
+                                   <%= errors.firstName.msg %> 
+                                </div>
+                            <% } %>
+                        </div>
+
+                        <div class="edit-user-form-div">
+                            <label for="lastName">Apellido</label>
+                            <% if(locals.oldData && (oldData.lastName || oldData.lastName == "")){ %>
+                                <input type="text" name="lastName" id="lastName" value="<%= oldData.lastName %>">                            
+                            <% } else { %>
+                                <input type="text" name="lastName" id="lastName" value="<%= user.lastName %>">                            
+                            <% } %>
+                            <div id="errores-lastName">
+
+                            </div>
+                            <% if(locals.errors && errors.lastName){ %>
+                                <div id="error-back-lastName" class="error-invalid">
+                                   <%= errors.lastName.msg %> 
+                                </div>
+                            <% } %>
+                        </div>
+                        <div class="edit-user-form-div">
+                            <label for="email">Email</label>
+                            <% if(locals.oldData && (oldData.email || oldData.email == "")){ %>
+                                <input type="text" name="email" id="email" value="<%= oldData.email %>">
+                            <% } else { %>
+                                <input type="text" name="email" id="email" value="<%= user.email %>">                                
+                            <% } %>
+                            <div id="errores-email">
+
+                            </div>
+                            <% if(locals.errors && errors.email){ %>
+                                <div id="error-back-email" class="error-invalid">
+                                   <%= errors.email.msg %> 
+                                </div>
+                            <% } %>
+                        </div>
+                        <div class="edit-user-form-div">
+                            <button type="button" class="show-password-button">Cambiar Contraseña <i class="fas fa-angle-down"></i></button>
+                        </div>                        
+                        <div class="edit-user-form-div passwords">
+                            <label for="oldPassword">Contraseña Antigua</label>
+                            <input type="password" name="oldPassword" id="oldPassword" class="password-input">
+                            <div id="errores-oldPassword">
+
+                            </div>
+
+                            <label for="newPassword">Contraseña Nueva</label>
+                            <input type="password" name="newPassword" id="newPassword" class="password-input">
+                            <div id="errores-newPassword">
+
+                            </div>
+
+                            <label for="newPasswordRepeat">Repetir Contraseña Nueva</label>
+                            <input type="password" name="newPasswordRepeat" id="newPasswordRepeat" class="password-input">
+                            <div id="errores-newPasswordRepeat">
+
+                            </div>
+
+                            <div>
+                                <input type="checkbox" class="password-checkbox"> Mostrar Contraseñas
+                            </div>                            
+                        </div>
+                        <div class="edit-user-form-div submit-button-div">
+                            <button type="submit" class="submit-button">Modificar Datos</button>
+                        </div>                        
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- partial del header -->
+    <%- include("../partials/footer") %>
+
+</body>
+</html>

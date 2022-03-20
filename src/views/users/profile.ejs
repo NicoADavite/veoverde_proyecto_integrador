@@ -13,9 +13,9 @@
 
     <main>
 
-        <div class= "go-back">
+        <!-- <div class= "go-back">
             <p><a href="/">Inicio</a> >> Profile </p>
-        </div> 
+        </div>  -->
  
         <div class="container">
             <figure class="child profile-picture">
@@ -23,7 +23,7 @@
             </figure>
             <div class="child profile-details">
                 <div class="titulo">
-                    <h1>Bienvenido, <%= (user.firstName + " " + user.lastName) %></h1>
+                    <h1>Bienvenidx, <%= (user.firstName + " " + user.lastName) %></h1>
                 </div>
                 <div class="datos">
                     <div>
@@ -32,6 +32,9 @@
                     <div>
                         <p>Email: <%= user.email %> </p>
                     </div>
+                </div>
+                <div class="edit-div">
+                    <button class="edit-button"><a href="/users/edit">Editar mis datos de usario</a></button>
                 </div>
             </div>
         </div>

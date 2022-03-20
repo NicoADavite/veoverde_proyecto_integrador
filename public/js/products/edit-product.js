@@ -246,11 +246,7 @@ window.addEventListener("load", () => {
             erroresPrice.innerHTML = "";
         }
     })
-
-
-
-
-
+    
 
     // VALIDACIONES OFF-TIME (Se muestran una vez que se intente enviar el formulario)
 

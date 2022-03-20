@@ -12,16 +12,6 @@ const mainController = {
             .catch(err => {
                 res.send(err)
             })
-    },
-
-    indexv2: (req, res) => {
-        db.Products.findAll()
-            .then(products => {
-                res.render("index-v2", { products })
-            })
-            .catch(err => {
-                res.send(err)
-            })
     }
 }
 

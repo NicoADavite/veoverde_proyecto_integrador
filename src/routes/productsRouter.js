@@ -18,7 +18,7 @@ const adminMiddleware = require('../middlewares/adminMiddleware');
 // ************ Route System ************
 
 /*** GET ALL PRODUCTS ***/ 
-// ruta para obtener la vista de la lista de productos (solo administrador)
+// ruta para obtener la vista de la lista de productos
 router.get("/", productsController.list);
 
 // ruta para obtener la vista del carrito de compras

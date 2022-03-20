@@ -9,6 +9,7 @@ const usersController = require("../controllers/usersController");
 const upload = require('../middlewares/userMulterMiddleware');
 const registerValidations = require('../middlewares/registerValidationMiddleware');
 const loginValidations = require('../middlewares/loginValidationMiddleware');
+const editUserValidations = require('../middlewares/editUserValidationsMiddleware');
 const guestMiddleware = require('../middlewares/guestMiddleware');
 const authMiddleware = require('../middlewares/authMiddleware');
 
@@ -26,11 +27,19 @@ router.get("/login", guestMiddleware, usersController.login);
 // ruta POST para para cargar los datos del login
 router.post("/login", loginValidations, usersController.loginProcess);
 
-
 /*** GET PROFILE ***/ 
 // ruta para obtener la vista de perfil de usuario
 router.get("/profile", authMiddleware, usersController.profile)
 
+// ruta para ejecutar el log out de un usuario
 router.get('/logout', usersController.logout);
+
+
+/*** EDIT ONE USER ***/ 
+// ruta para obtener la vista de el formulario de edicion de un usuario en particular
+router.get("/edit", authMiddleware, usersController.edit);
+
+// ruta para puttear la edicion de un producto en particular
+router.put("/edit", upload.single("image"), editUserValidations, usersController.update);
 
 module.exports = router;
