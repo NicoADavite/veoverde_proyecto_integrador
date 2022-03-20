@@ -56,6 +56,11 @@ window.addEventListener("load", () => {
     // Evento para mostrar u ocultar las contraseñas
     
     passwordsDiv.style.display = "none";
+    passwordInputs.forEach(passwordInput => {
+        passwordInput.value = "";
+        passwordInput.textContent = "";
+        passwordInput.innerText = "";
+    })
 
     showPasswordButton.addEventListener("click", () => {
 
