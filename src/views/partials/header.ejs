@@ -55,7 +55,7 @@
         <ul>
             <% if(locals.isLogged) { %>
                 <li><a href="#">Hola, <%= (locals.userLogged.firstName + " " + locals.userLogged.lastName) %></a></li>
-                <li><a href="/users/profile"><img src="/images/users/<%= userLogged.image %>" style="width: 15px; border-radius: 10px;" alt="">  Mi perfil</a></li>
+                <li><a href="/users/profile"><img src="/images/users/<%= userLogged.image %>" style="width: 17.5px; border-radius: 10px; position: relative; top: 2px; background-color: white;" alt="">  Mi perfil</a></li>
                 <li><a href="/users/logout">Cerrar Sesion</a></li>                
             <% } else { %>
                 <li><a href="/users/register">Creá tu cuenta <i class="far fa-id-card"></i></a></li>

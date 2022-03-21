@@ -198,9 +198,9 @@ header nav ul li a:link{
     
     .header-search-form {
         width: 40%;
-        max-width: 100%;
+        max-width: 316px;
         position: absolute;
-        top: 1px;
+        top: 22.5px;
         left: 35vw;
     }
 
