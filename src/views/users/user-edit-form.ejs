@@ -92,6 +92,11 @@
                             <div id="errores-oldPassword">
 
                             </div>
+                            <% if(locals.errors && errors.oldPassword){ %>
+                                <div id="error-back-email" class="error-invalid">
+                                   <%= errors.oldPassword.msg %> 
+                                </div>
+                            <% } %>
 
                             <label for="newPassword">Contraseña Nueva</label>
                             <input type="password" name="newPassword" id="newPassword" class="password-input">

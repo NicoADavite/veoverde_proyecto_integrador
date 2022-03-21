@@ -21,10 +21,10 @@
 
         <form action="/users/login" method="POST" class="login-form" id="login-form">
 
-            <h2>INICIAR SESION</h2>
+            <h2 class="form-title">INICIAR SESION</h2>
 
-            <div class= "div-login-form" class="login-form-usuario">
-                <label for="user-email">Correo electrónico:</label>
+            <div class= "div-login-form login-form-usuario">
+                <label for="user-email">Correo electrónico</label>
                 <input type="text" id="user-email" name="email" value="<%= locals.oldData && !(locals.errors && errors.email) ? oldData.email : null %>" placeholder="Ej: usuario@gmail.com">
                 <div id="errores-email">
 
@@ -36,8 +36,8 @@
                 <% } %>
             </div>
 
-            <div class= "div-login-form" class="login-form-password">
-                <label for="user-password">Contraseña:</label>
+            <div class= "div-login-form login-form-password">
+                <label for="user-password">Contraseña</label>
                 <input type="password" id="user-password" name="password" >
                 <div id="errores-password">
 
@@ -49,9 +49,9 @@
                 <% } %>
             </div>
 
-            <div class="login-form-show-password" style="margin-bottom: 15px;">
+            <div class="login-form-show-password">
                 <input type="checkbox" onclick="showPassword()">  
-                <p style="display: inline;">Mostrar Contraseña</p>   
+                <p>Mostrar Contraseña</p>   
                 <script>
                 function showPassword() {
                   let x = document.getElementById("user-password");
@@ -70,11 +70,11 @@
             </div>
             -->
             
-            <div class= "div-login-form" style="border: 1px solid darkorange; width: 15%; margin: auto;padding: 5px; border-radius: 10px; ">
+            <div class= "div-remember-user">
                 <input type="checkbox"  name="remember_user">  Recordar mi usuario
             </div>
 
-            <div class="login-button" >
+            <div class="div-login-button" >
                 <button type="submit" id="form-submit-button">INICIAR SESION</button>
             </div>
             <div class="login-not-account">

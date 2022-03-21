@@ -210,6 +210,7 @@ const usersController = {
 						} else {
 							
 							return res.render("./users/user-edit-form", {
+								user,
 								oldData: req.body,
 								errors: {
 									oldPassword: {

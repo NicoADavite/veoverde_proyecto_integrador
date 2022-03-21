@@ -40,18 +40,18 @@ section{
 .product-title{
     text-align: justify;
     margin-top: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
-.calendario-plantable-2022{
+.product-image-div{
     width: 85%;
+    max-width: 275px;
     position: relative;
     margin: auto;
 }
 
 .first-product img{
     width:100%;
-    height: 70%;
     border-radius: 10px;
     border:rgb(255, 255, 255);
 }
@@ -179,37 +179,19 @@ section{
     list-style: none;
 }
 
-.description-div{
-    padding: 5%;
-    margin-top: 15px;
-}
-
-.description-h2{
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.description-p{
-    display: none;
-}
-
-.change-description-color{
-    color: rgb(94, 92, 92)
-}
-
-.show{
-    display: block;
-}
-
-
 /* Botones de Detail */
 .product-article-button{
-    width: 90%;
+    margin-top: 30px;
+    width: 60%;
     display: flex;
     flex-direction: row;
     align-items: center;
     margin: center;
     justify-content: space-around;
+}
+
+.product-article-button a{
+    text-decoration: none;
 }
 
 .product-article-button button{
@@ -225,13 +207,18 @@ section{
     text-align: center;
     border-radius: 15px; 
     box-shadow: 2px 2px 6px rgb(0 0 0 / 40%);
+}
 
+.product-article-edit-button i{
+    font-size: 16px;
+    color: white;
 }
 
 .fa-edit{
     padding: 5px;
 }
 .product-article-trash-button{
+    font-size: 16px;
     width: 40%;
     padding: 4px;
     background-color: rgb(59, 59, 59);
@@ -251,6 +238,28 @@ a:visited{
 
 }
 
+.description-div{
+    padding: 5%;
+    margin-top: 15px;
+}
+
+.description-h2{
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.description-p{
+    display: none;
+}
+
+.change-description-color{
+    color: rgb(94, 92, 92)
+}
+
+.show{
+    display: flex;
+}
+
 /* media */
 
 @media (min-width: 481px){
@@ -265,22 +274,18 @@ a:visited{
         text-align: center;
     }
 
-    .calendario-plantable-2022{
-        max-width: 60%;
+    .product-image-div{
+        max-width: 400px;
         display: flex;
         justify-content: center;
         align-items: center;
         margin-bottom: 10px;
     }
     
-    .product-article-discount{
-        opacity: 80%;
-        width: 30%
-    }
 
-    .payment-shipping{
+    /* .payment-shipping{
         font-size: 0.7em;
-    }
+    } */
 
     .quantity input{
         padding: 4px;
@@ -302,16 +307,17 @@ a:visited{
         justify-content: space-around;
         align-items: center;
     }
-
-    .calendario-plantable-2022{
-        max-width: 50%;
-    }
-  
+    
     .first-product{
         margin: 20px;
         display: flex;
         flex-direction: column;
     }
+
+    .product-image-div{
+        width: 45%;
+        margin: 0px;
+    }  
 
     .product-title{
         text-align: center;
@@ -340,12 +346,19 @@ a:visited{
 
 @media (min-width: 1280px){
 
-    .calendario-plantable-2022{
-        max-width: 30%;
+    .product-image-div{
+        max-width: 48%;
+    }
+    .product-image-div img{
+        max-width: 80%;
     }
 
-    .product-title{
+    .price-buttons-ul{
+        width: 48%;
     }
+/* 
+    .product-title{
+    } */
     
     .first-product{
         flex-direction: column;

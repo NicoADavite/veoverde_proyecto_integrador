@@ -163,16 +163,18 @@ main,
 }
 
 .product-article-buttons{
-    width: 90%;
+    width: 100%;
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-    flex-direction: row;
+    align-items: center;
 }
 
-.product-article-buttons button{
-    min-width: 82px;
-    max-width: 100px;
+.product-article-buttons button,
+.product-article-buttons a{
+    min-width: 50px;
+    max-width: 60px;
 }
 
 .product-article-button{ 
@@ -199,7 +201,8 @@ main,
 }
 
 .product-article-edit-button{
-    width: 40%;
+    font-size: 16px;
+    width: 25%;
     padding: 4px;
     background-color: rgb(59, 59, 59);
     color: white;
@@ -209,7 +212,8 @@ main,
 }
 
 .product-article-delete-button{
-    width: 40%;
+    font-size: 16px;
+    width: 25%;
     padding: 4px;
     background-color: rgb(59, 59, 59);
     color: white;
@@ -251,7 +255,7 @@ main,
 @media (min-width: 768px){
 
     .product-article{
-        width: 50%;
+        width: 48%;
         max-width: 400px;
     }
 }

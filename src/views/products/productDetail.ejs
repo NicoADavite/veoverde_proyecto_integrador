@@ -22,13 +22,13 @@
 
                 <div class="product-details">
 
-                    <div class="calendario-plantable-2022">
+                    <div class="product-image-div">
                         <img src="/images/products/<%= product.image %>" alt="<%= product.name %>">
-                        <div class="product-article-discount">
+                        <!-- <div class="product-article-discount">
                             <p class="discount-discount">10% OFF </p>
                             <p class="discount-p">COMPRANDO</p>
                             <p class="discount-p"> 100 o MÁS</p>
-                        </div>
+                        </div> -->
                     </div>
                     
                     <div class="price-buttons-ul">
@@ -50,33 +50,33 @@
         
                         </form>
 
-                        <% if (locals.userLogged && userLogged.category_id == "2"){ %>
-                            <div class="product-article-button">
-                                <a href="/products/edit/<%= product.id %>" style="text-decoration: none;" ><button class="product-article-edit-button">EDITAR<i class="far fa-edit" style="color: white"></i></a></button>
-            
-                                <form action="/products/<%= product.id %>?_method=DELETE" method="POST">                        
-                                    <button  class="product-article-trash-button" type="submit">ELIMINAR<i class="fas fa-trash-alt"></i></button>
-                                </form>
-                                
-                            </div>
-                        <% } %> 
-        
                         <div class="payment-shipping">
                             <ul>
                                 <li><i class="fas fa-credit-card"></i>    medios de pago</li>
                                 <li><i class="fas fa-truck-loading"></i>    formas de entrega</li>
                             </ul>
                         </div>
+
+                        <% if (locals.userLogged && userLogged.category_id == "2"){ %>
+                            <div class="product-article-button">
+                                <a href="/products/edit/<%= product.id %>"><button class="product-article-edit-button"><i class="far fa-edit"></i></button></a>
+            
+                                <form action="/products/<%= product.id %>?_method=DELETE" method="POST">                        
+                                    <button  class="product-article-trash-button" type="submit"><i class="fas fa-trash-alt"></i></button>
+                                </form>
+                                
+                            </div>
+                        <% } %>     
+
                         
                     </div>
-                    
-    
-                    <div class="description-div">
-                        <h2 class="description-h2">Descripción <i class="fas fa-angle-down"></i></h2>
-                        <p class="description-p"><%= product.description %></p>
-                    </div>    
-                                       
+                                     
                 </div>
+
+                <div class="description-div">
+                    <h2 class="description-h2">Descripción <i class="fas fa-angle-down"></i></h2>
+                    <p class="description-p"><%= product.description %></p>
+                </div>  
                 
 
 

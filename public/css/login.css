@@ -7,8 +7,8 @@ main{
 
 .go-back {
     display: flex;
-    margin: 15px;
-    }
+    margin: 15px 15px 5px;
+}
     
 .go-back a{
     padding-right: 2px;
@@ -16,70 +16,123 @@ main{
     color: teal;
     font-weight: bold;
 }
-
-
-.desgloce-menu{
-    text-align: center;
-
+.go-back a:hover{
+    color: rgb(4, 190, 190);
 }
 
-h2{
+h2.form-title{
     margin-bottom: 20px;
     font-size: 25px;
+    color: rgb(175, 214, 175);
+    transition: all 450ms;
 }
 
 .login-form{
     text-align: center;
-    margin-top: 70px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .div-login-form{
     text-align: inherit;
     padding: 10px;
     font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
 }
+
+.div-login-form label{
+    margin-bottom: 8px;
+}
+
+.div-login-form input{
+    margin-bottom: 8px;
+    padding: 4px;
+    border-radius: 5px;
+}
+
 .login-form-usuario{
-    font-size: 18px;
+    font-size: 20px;
 }
+
 .login-form-password{
     font-size: 20px;
 }
-.login-forgot-password button{
-    font-size: 9px;
-    border: none;
-     background-color: #1F3A3B;
-     text-align: center;
-     
-     box-shadow: 2px 2px 6px rgb(0 0 0 / 40%);
-     transition: all 450ms;
-     color: white;
- }
- .login-forgot-password button:hover {
-     background-color: rgb(175, 214, 175);
-     }
-.login-button button{
+
+.login-form-show-password{
+    margin-bottom: 15px;
+    display: inline;
+}
+.login-form-show-password p{
+    display: inline;
+}
+
+.div-remember-user{
+    border: 1px solid rgba(255, 140, 0, 0.363);
+    margin: 10px auto 5px;
     padding: 5px; 
-    border-radius: 10px;
-    margin: 30px 0;
-    border: none;
+    border-radius: 10px; 
+}
+.div-remember-user input{
+    display: inline;
+}
+
+/* .login-forgot-password button{
+   font-size: 9px;
+   border: none;
     background-color: #1F3A3B;
+    text-align: center;
+    
+    box-shadow: 2px 2px 6px rgb(0 0 0 / 40%);
+    transition: all 450ms;
+    color: white;
+}
+
+.login-forgot-password button:hover {
+    background-color: rgb(175, 214, 175);
+} */
+
+.div-login-button{
+    margin: 10px auto 0px;
+}
+
+.div-login-button button{
+    padding: 5px 10px; 
+    border-radius: 10px;
+    border: none;
+    background-color: #2f5858;
     text-align: center;
     box-shadow: 2px 2px 6px rgb(0 0 0 / 40%);
     transition: all 450ms;
     color: white;
     font-size: 18px;
 }
-.login-button button:hover {
+.div-login-button button:hover {
     background-color: rgb(175, 214, 175);
 }
+
 .login-not-account{
-    font-weight: bold;
     padding: 15px;
 }
 
-
 .login-not-account a{
     text-decoration: none;
+}
+
+.login-not-account a b{
+    font-weight: bold;
+    transition: all 450ms;
+}
+
+.login-not-account a b:hover{
+    color: rgb(152, 184, 152);
 }
 
 .is-invalid{
@@ -99,7 +152,9 @@ h2{
 }
 
 .error-invalid{
-    color: rgb(235, 2, 2)
+    font-size: 14px;
+    color: rgb(235, 2, 2);
+    max-width: 160px;
 }
 
 

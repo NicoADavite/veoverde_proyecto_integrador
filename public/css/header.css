@@ -28,6 +28,7 @@ header{
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: flex-start;
+    transition: all 290ms;
 }
 
 .burguer-menu-closed{
@@ -50,6 +51,7 @@ header{
 /* clases para el burguer menu */
 
 .burguer-menu-opened{
+    padding-top: 20px;
     width: 50vw;
     height: 1000px;
     position: fixed;
@@ -64,6 +66,8 @@ header{
 }
 
 .contenido-opened{
+    width: 100%;
+    padding-top: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -71,6 +75,7 @@ header{
 }
 
 .contenido ul{
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -80,13 +85,23 @@ header{
 }
 
 .contenido ul li{
+    width: 100%;
     padding-left: 15px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border: 1px solid grey;
 }
 
 .contenido ul li a{
     text-decoration: none;
     color: white;
 }
+
+.contenido ul li a:hover{
+    text-decoration: none;
+    color: rgb(202, 201, 201);
+}
+
 
 .header-logo{ 
     width: 60%;

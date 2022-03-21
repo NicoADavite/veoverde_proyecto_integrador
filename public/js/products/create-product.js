@@ -16,6 +16,9 @@ window.addEventListener("load", () => {
     let categoryInput = document.querySelector("#category");
     let priceInput = document.querySelector("#price");
 
+    // h3 de la imagen
+    let imageTitle = document.querySelector("#image-title")
+
     // Divs de errores del front
     let erroresName = document.querySelector("#errores-name");
     let erroresDescription = document.querySelector("#errores-description");
@@ -36,6 +39,7 @@ window.addEventListener("load", () => {
     // Variables para manejar la validación de la imagen
     let allowedExtensions = /(.jpg|.jpeg|.png|.gif)$/i;
     let acceptedExtensions = [".jpg", ".jpeg", ".png", ".gif"]
+    
 
     // DEFINIMOS LAS VALIDACIONES ON-TIME (se muetran a medida que interactuamos con los inputs)
 
@@ -141,6 +145,13 @@ window.addEventListener("load", () => {
 
     // Validaciones on-time para la imagen
     imageInput.addEventListener("change", () => {
+
+        if(imageInput.value != ""){
+            imageTitle.innerText = imageInput.files[0].name;
+        } else {
+            imageTitle.innerText = "";
+        }
+
         if(errorBackImage){
             errorBackImage.style.display = "none"
         }
@@ -246,10 +257,6 @@ window.addEventListener("load", () => {
             erroresPrice.innerHTML = "";
         }
     })
-
-
-
-
 
 
     // VALIDACIONES OFF-TIME (Se muestran una vez que se intente enviar el formulario)

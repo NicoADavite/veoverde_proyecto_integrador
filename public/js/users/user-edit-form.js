@@ -96,6 +96,25 @@ window.addEventListener("load", () => {
         // prevenimos el envio del formulario
         e.preventDefault();
 
+        firstNameInput.classList.remove("is-invalid");
+        lastNameInput.classList.remove("is-invalid");
+        emailInput.classList.remove("is-invalid");
+        oldPasswordInput.classList.remove("is-invalid");
+        newPasswordInput.classList.remove("is-invalid");
+        newPasswordRepeatInput.classList.remove("is-invalid");
+        imageInput.classList.remove("is-invalid");
+
+
+        erroresFirstName.innerHTML = "";
+        erroresLastName.innerHTML = "";
+        erroresEmail.innerHTML = "";
+        erroresOldPassword.innerHTML = "";
+        erroresNewPassword.innerHTML = "";
+        erroresNewPasswordRepeat.innerHTML = "";
+        erroresImage.innerHTML = "";
+
+        
+
         // creamos un objeto vacio llamado errores
         let errores = {};
 
