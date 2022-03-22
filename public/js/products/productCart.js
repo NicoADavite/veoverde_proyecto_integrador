@@ -100,6 +100,7 @@ window.addEventListener("load", () => {
 
                   const cartProductImg = document.createElement("img");
                   cartProductImg.setAttribute("src", cartProductData.imageURL);
+                  cartProductImg.classList.add("cart-product-img");
                   cartProductDescription.appendChild(cartProductImg);
 
                   const cartProductName = document.createElement("p");
@@ -170,7 +171,7 @@ window.addEventListener("load", () => {
                   cartProductDiv.appendChild(cartProductOptions);
 
                   const cartProductDelete = document.createElement("li");
-                  cartProductDelete.innerHTML = `<button onclick="deleteFromCart(${cartProductData.id})"><i class="fa-solid fa-trash-can"></i></button>`;
+                  cartProductDelete.innerHTML = `<button class="delete-product-button" onclick="deleteFromCart(${cartProductData.id})"><i class="fa-solid fa-trash-can"></i></button>`;
                   cartProductOptions.appendChild(cartProductDelete);   
                     
                 })
@@ -183,7 +184,7 @@ window.addEventListener("load", () => {
       const emptyCart = document.createElement("div");
       emptyCart.setAttribute("class", "empty-cart")
       emptyCart.innerHTML = "<h1>El carrito de productos esta vacío</h1>";
-      emptyCart.innerHTML += "<p><a href='/products'>Volver a la lista de productos</a></p>";
+      emptyCart.innerHTML += "<button><a href='/products'>Volver a la lista de productos</a></button>";
       main.appendChild(emptyCart);
 
     }

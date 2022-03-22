@@ -27,7 +27,7 @@
             <form class="edit-product-form" id="edit-product-form" action="/products/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
                         
                 <figure class="product-article-img">
-                    <img src="/images/products/<%= product.image %>" alt="<%= product.name %>">
+                    <img src="/images/products/<%= product.image %>"  class="pre-loaded-image" alt="<%= product.name %>">
                     <h3 class="image-title"></h3>
                     <label for="image">Elige una Imagen</label>
                     <input type="file" name="image" id="image" accept="image/*">

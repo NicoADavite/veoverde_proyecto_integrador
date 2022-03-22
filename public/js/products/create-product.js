@@ -147,7 +147,14 @@ window.addEventListener("load", () => {
     imageInput.addEventListener("change", () => {
 
         if(imageInput.value != ""){
-            imageTitle.innerText = imageInput.files[0].name;
+            if(!allowedExtensions.exec(imageInput.value)){
+                imageTitle.innerText = imageInput.files[0].name;
+                imageTitle.style.color = "red";
+            } else{
+                imageTitle.innerText = imageInput.files[0].name;
+                imageTitle.style.color = "green";
+            }
+            
         } else {
             imageTitle.innerText = "";
         }

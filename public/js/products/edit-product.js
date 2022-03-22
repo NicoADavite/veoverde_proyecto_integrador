@@ -16,6 +16,9 @@ window.addEventListener("load", () => {
     let categoryInput = document.querySelector("#category");
     let priceInput = document.querySelector("#price");
 
+    let imageTitle = document.querySelector(".image-title");
+    let preLoadedImage = document.querySelector(".pre-loaded-image");
+
     // Divs de errores del front
     let erroresName = document.querySelector("#errores-name");
     let erroresDescription = document.querySelector("#errores-description");
@@ -141,8 +144,25 @@ window.addEventListener("load", () => {
 
     // Validaciones on-time  para la imagen
     imageInput.addEventListener("change", () => {
+
+        if(imageInput.value != ""){
+            if(!allowedExtensions.exec(imageInput.value)){
+                imageTitle.innerText = imageInput.files[0].name;
+                imageTitle.style.color = "red";
+                preLoadedImage.classList.add("hide");
+            } else{
+                imageTitle.innerText = imageInput.files[0].name;
+                imageTitle.style.color = "green";
+                preLoadedImage.classList.add("hide");
+            }
+
+        } else {
+            imageTitle.innerText = "";
+            preLoadedImage.classList.remove("hide");
+        }
+
         if(errorBackImage){
-            errorBackImage.style.display = "none"
+            errorBackImage.style.display = "none";
         }
 
         if(imageInput.value != ""){

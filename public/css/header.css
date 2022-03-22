@@ -157,7 +157,7 @@ header{
 
 .header-search-form input{
     width: 87%;
-    padding: 3px;
+    padding: 5px;
     border: 2px solid black;
     border-radius: 3px;
     position: relative;
@@ -165,7 +165,7 @@ header{
 }
 
 .header-search-form button{
-    padding: 3px;
+    padding: 5px;
     border: 2px solid black;
     border-radius: 3px;
     position: relative;
@@ -173,6 +173,10 @@ header{
 }
 
 header nav{
+    display: none;
+}
+
+header nav .hello{
     display: none;
 }
 
@@ -215,15 +219,23 @@ header nav ul li a:link{
     .header-logo{ 
         width: 25%;
         justify-content: flex-start;
-        padding-left: 25px;
+        padding-left: 5px;
     }
     
     .header-search-form {
         width: 40%;
         max-width: 316px;
         position: absolute;
-        top: 22.5px;
-        left: 35vw;
+        top: -6px;
+        left: 53vw;
+    }
+
+    .shopping-cart{
+        justify-content: flex-end;
+    }
+
+    .shopping-cart a{
+        text-align: right;
     }
 
     header nav{
@@ -254,9 +266,21 @@ header nav ul li a:link{
 
 
 @media (min-width: 1280px){
+    header{
+        padding: 20px 5%; 
+    }
+
     header nav ul li a{
         font-size: 20px;
-    }    
+    }
+
+    .header-search-form {
+        left: 34vw;
+    }
+
+    header nav .hello{
+        display: block;
+    }
 }
 
     

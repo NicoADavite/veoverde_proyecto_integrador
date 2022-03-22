@@ -134,6 +134,10 @@ main{
     max-width: 170px;
 }
 
+.hide{
+    display: none;
+}
+
 .is-invalid{
     outline: none;
     border-style: hidden;

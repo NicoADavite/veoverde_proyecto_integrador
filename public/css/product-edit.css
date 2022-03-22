@@ -33,6 +33,10 @@ main{
     text-align: center;
 }
 
+.hide{
+    display: none;
+}
+
 .product-article-img img{
     width: 100%;
     border-radius: 50%;

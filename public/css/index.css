@@ -1,6 +1,7 @@
 /*Main*/
 
 main{
+    min-height: 42vh;
     padding: 20px 5px;
     background-image: url("/images/brand-images/PRODUCTOS ALTA.png");
     background-position-x: -420px;
@@ -82,6 +83,22 @@ main,
     padding: 20px 15px;
     margin: 10px 15px;
     /* background-color: rgb(233, 233, 233); */
+}
+
+.our-products p{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.our-products button{
+    display: block;
+    margin: 20px auto;
+    padding: 7px;
+    border-radius: 10px;
+}
+
+.our-products a{
+    text-decoration: none;
 }
 
 .product-article{

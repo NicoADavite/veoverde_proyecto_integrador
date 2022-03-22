@@ -8,21 +8,10 @@ main{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 20px 0px;
+    background-image: url("/images/brand-images/PRODUCTOS ALTA.png");
+    background-position-x: -420px;    
 }
-
-.go-back {
-    display: flex;
-    margin: 10px;
-    margin-left: 55px;
-    align-self: flex-start;
-}
-
-.go-back a{
-    padding-right: 2px;
-    text-decoration: none;
-    color: teal;
-    font-weight: bold;
-    }
 
 .cart-title {
     font-size: 16px;
@@ -35,7 +24,7 @@ main{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
     margin-top: 15px;
 }
 
@@ -61,43 +50,65 @@ transform: scale(1.02);
 
 .main-shopping-cart img {
     width: 20vw;
+    max-width: 150px;
     margin: 4px;
     border-radius: 15%
 }
 
 .product-description {
-    width: 30%;
+    width: 70%;
     padding: 16px;
+    font-size: 20px;
+    font-weight: bold;
     align-self: center;
     text-align: center;
 }
 
 .quantity-product {
-    width: 10%;
-    padding: 16px;
+    margin-top: 20px;
+    width: 35%;
+    padding: 10px;
     text-align: center;
     align-self: center;
-    
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.quantity-product button{
+    padding: 3px;
+}
+
+.quantity-product-minus{
+    order: -1;
+    margin-right: 4px;
+}
+
+.quantity-product-plus{
+    margin-left: 4px;
 }
 
 .product-price {
-    width: 8%;
+    margin-top: 20px;
+    width: 25%;
     padding: 16px;
-    text-align: right;
+    text-align: center;
     align-self: center;
     font-weight: bold;
 }
 
 .product-subtotal {
-    width: 8%;
+    margin-top: 20px;
+    width: 25%;
     padding: 16px;
-    text-align: right;
+    text-align: center;
     align-self: center;
     font-weight: bold;
 }
 
 .shopping-cart-options {
-    
+    margin-top: 10px;
     list-style-type: none;
     display: flex;
     align-items: center;  
@@ -111,7 +122,8 @@ transform: scale(1.02);
 .shopping-cart-options li button{
     text-decoration: none;
     border: none;
-    background-color: white;
+    background-image: url("/images/brand-images/PRODUCTOS ALTA.png");
+    background-position-x: -420000px; 
     color: teal;
     font-weight: bold;
     font-size:x-large;
@@ -123,10 +135,11 @@ transform: scale(1.02);
 
 .total-amount-cart {
     width: 100%;
-    margin-top: 30px;
+    margin-top: 0px;
+    padding: 20px;
     display: flex;
     justify-content: center;
-    padding: 10px;
+    font-size: 20px;
     font-weight: bold;
     background-color: rgba(122, 212, 95, 0.644);
     order: 1;
@@ -191,15 +204,29 @@ transform: scale(1.02);
 .empty-cart{
     min-height: 39.3vh;
     padding: 20px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .empty-cart h1{
     padding-bottom: 20px;
+    text-align: center;
 }
 
-.empty-cart p a{
+.empty-cart button{
+    display: block;
+    margin: 15px auto;
+    text-align: center;
+    padding: 5px 21px;
+    border-radius: 10px;
+}
+
+.empty-cart button a{
     text-decoration: none;
-    color: rgb(175, 214, 175);
+    text-align: center;
+    text-transform: uppercase;
 }
 
 

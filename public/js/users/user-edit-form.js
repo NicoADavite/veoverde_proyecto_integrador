@@ -45,8 +45,16 @@ window.addEventListener("load", () => {
     
     imageInput.addEventListener("change", () => {
         if(imageInput.value != ""){
-            document.querySelector(".image-name").innerText = imageInput.files[0].name;
-            document.querySelector(".pre-loaded-image").style.display = "none";
+            if(!allowedExtensions.exec(imageInput.value)){
+                document.querySelector(".image-name").innerText = imageInput.files[0].name;
+                document.querySelector(".image-name").style.color = "red";
+                document.querySelector(".pre-loaded-image").style.display = "none";
+            } else {
+                document.querySelector(".image-name").innerText = imageInput.files[0].name;
+                document.querySelector(".image-name").style.color = "green";
+                document.querySelector(".pre-loaded-image").style.display = "none";
+            }
+
         } else {
             document.querySelector(".image-name").innerText = "";
             document.querySelector(".pre-loaded-image").style.display = "block";
