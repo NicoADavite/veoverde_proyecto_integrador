@@ -23,6 +23,7 @@ header{
 }
 
 .burguer-menu{
+    padding: 20px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -61,8 +62,10 @@ header{
 }
 
 .burguer-menu-button{
-    align-self: flex-start;
+    width: 15%;
+    justify-self: flex-start;
     padding: 15px 20px;
+    text-shadow: 1.5px 1.5px 0.2px black;
 }
 
 .contenido-opened{
@@ -124,7 +127,9 @@ header{
 }
 
 .shopping-cart{
+    padding-right: 20px;
     width: 15%;
+    justify-self: flex-end;
     display: flex;
     justify-content: center;
 }
@@ -141,11 +146,13 @@ header{
 }
 
 .header-search-form{
+    width: 98%;
+    margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 10px;
+    padding-top: 12px;
 }
 
 .header-search-form input{

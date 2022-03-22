@@ -99,6 +99,10 @@ main{
     text-decoration-line:none;
 }
 
+.product-article-a-edit a:link{
+    color: black;
+}
+
 .create-form-price input{
     text-align: center;
 }

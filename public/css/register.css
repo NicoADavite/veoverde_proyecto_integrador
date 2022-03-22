@@ -77,13 +77,19 @@ main{
     color: white;
     font-size: 18px;
 }
+
 .register-form-submit button:hover {
     background-color: rgb(175, 214, 175);
-    }
+}
+
 .register-form-submit a{
     margin-top: 7px;
     text-align: center;
     text-decoration: none;
+}
+
+.register-form-submit a:link{
+    color: black;
 }
 
 .product-article-a-edit{

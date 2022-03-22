@@ -1,8 +1,8 @@
 /*main*/
 
 main{
-    background-color:  white;
-    margin-bottom: 15px;
+    background-image: url("/images/brand-images/PRODUCTOS ALTA.png");
+    padding-bottom: 15px;
 }
 
 .go-back {
@@ -23,13 +23,13 @@ main{
 h2.form-title{
     margin-bottom: 20px;
     font-size: 25px;
-    color: rgb(175, 214, 175);
+    color: rgb(78, 119, 78);
     transition: all 450ms;
 }
 
 .login-form{
     text-align: center;
-    margin-top: 30px;
+    padding-top: 30px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -124,6 +124,10 @@ h2.form-title{
 
 .login-not-account a{
     text-decoration: none;
+}
+
+.login-not-account a:link{
+    color: black;
 }
 
 .login-not-account a b{

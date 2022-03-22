@@ -2,6 +2,7 @@
 
 main{
     padding: 20px 5px;
+    background-image: url("/images/brand-images/background.heic");
 }
 
 main,
@@ -27,7 +28,7 @@ main,
 }
 
 .us-div{
-    margin: 10px 20px;
+    margin: 20px 20px;
     padding: 20px 15px;
     width: 100%;
     display: flex;
@@ -47,8 +48,11 @@ main,
 }
 */
 
-.us-div p{
+.us-div-div p{
     margin-bottom: 20px;
+    color: black;
+    text-shadow: 0.5px 0.5px 0.8px rgb(49, 49, 49);
+    text-align: center;
 }
 
 .our-products{
@@ -262,17 +266,23 @@ main,
 
 @media (min-width: 1280px){
 
+    main{
+        background-image: url("/images/brand-images/PRODUCTOS ALTA.png");
+    }
+
     .us{
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-around;
         width: 100%;
+        margin-top: 15px;
+        margin-bottom: 25px;
     }
     
     .us-figure{
         display: block;
-        width: 45%;
+        width: 35%;
     }
     
     .us-figure img{
@@ -284,7 +294,7 @@ main,
         width: 45%;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
         line-height: 1.5rem;
         position: relative;
@@ -296,9 +306,15 @@ main,
         left: 40%;
     }
     
-    .us-div-div{
+    /* .us-div-div{
         position: absolute;
         top: 70px;
+    } */
+
+    .us-div-div p{
+        font-size: 25px;
+        text-align: center;
+        font-style: italic;
     }
     
     .us-div p{
