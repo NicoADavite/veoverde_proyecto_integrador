@@ -13,138 +13,120 @@
     <%- include("../partials/header") %>
 
     <main>
-        <div class= "go-back">
+        <!-- <div class= "go-back">
            <p><a href="/">Inicio</a> >> Editar </p>
-        </div> 
+        </div>  -->
 
 
-        <section class="our-products main-section">
+        <section class="edit-product-section">
 
-            <div class="our-products-title">
-                <h2>Edición del Producto: <%= product.name %> </h2>
+            <div class="edit-product-title">
+                <h2>Edición de Producto</h2>
             </div>
 
-            <form id="edit-product-form" action="/products/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
-
-          
-                <div class="products">
-                    <article class="product-article">
+            <form class="edit-product-form" id="edit-product-form" action="/products/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
                         
-                        <figure class="product-article-img">
-                            <label for="image">Imagen</label>
-                            <img src="/images/products/<%= product.image %>" alt="<%= product.name %>">
-                            <div class="img-edit">
-                                <label for="image"></label>
-                                <input type="file" name="image" id="image" accept="image/*">
-                            </div>
-                        </figure>
-                        <div id="errores-image">
+                <figure class="product-article-img">
+                    <img src="/images/products/<%= product.image %>" alt="<%= product.name %>">
+                    <h3 class="image-title"></h3>
+                    <label for="image">Elige una Imagen</label>
+                    <input type="file" name="image" id="image" accept="image/*">
+                </figure>
+                <div id="errores-image">
             
-                        </div> 
-                        <% if(locals.errors && errors.image){ %>
-                            <div id="error-back-image" class="error-invalid">
-                               <%= errors.image.msg %> 
-                            </div>
-                        <% } %> 
+                </div> 
+                <% if(locals.errors && errors.image){ %>
+                    <div id="error-back-image" class="error-invalid">
+                       <%= errors.image.msg %> 
+                    </div>
+                <% } %> 
  
 
-                        <div class="product-article-details">
-                            
-                            <div class="product-title-edit">
-                                <label for="name">Nombre</label>
-                                <% if(locals.oldData && (oldData.name || oldData.name == "")){ %>
-                                    <input type="text" name="name" id="name" value="<%= locals.oldData ? oldData.name : null %>">
-                                <% } else { %>
-                                    <input type="text" name="name" id="name" value="<%= product.name %>">
-                                <% } %> 
-                            </div>
-                            <div id="errores-name">
-            
-                            </div>
-                            <% if(locals.errors && errors.name){ %>
-                                <div id="error-back-name" class="error-invalid">
-                                   <%= errors.name.msg %> 
-                                </div>
-                            <% } %>
-                        
-
-                            <div class="product-description-edit">
-                                <label for="description">Descripción</label>
-                                <% if (locals.oldData && (oldData.description || oldData.description == "")){ %> 
-                                    <textarea name="description" id="description" cols="20" rows="10"><%= locals.oldData && oldData.description ? oldData.description : null %></textarea>
-                                <% } else { %>
-                                    <textarea name="description" id="description" cols="20" rows="10"><%= product.description %></textarea>
-                                <% } %>                                 
-                            </div>
-                            <div id="errores-description">
-            
-                            </div>
-                            <% if(locals.errors && errors.description){ %>
-                                <div id="error-back-description" class="error-invalid">
-                                   <%= errors.description.msg %> 
-                                </div>
-                            <% } %>
-
-                            <div class="price-edit">
-                                <label for="price">Precio</label>
-                                <% if(locals.oldData && (oldData.price || oldData.price == "")){ %>
-                                    <input type="number" step="any" name="price" id="price" value="<%= locals.oldData ? oldData.price : null %>">
-                                <% } else{ %>
-                                    <input type="number" step="any" name="price" id="price" value="<%= product.price %>">
-                                <% } %>                                
-                            </div>
-                            <div id="errores-price">
-            
-                            </div>
-                            <% if(locals.errors && errors.price){ %>
-                                <div id="error-back-price" class="error-invalid">
-                                   <%= errors.price.msg %> 
-                                </div>
-                            <% } %>
-
-                            <div class="register-form-input register-form-phone-number">
-                                <label for="category">Categoría (*)</label>
-                                <% if(locals.oldData && (oldData.category_id || oldData.category_id == "")){ %>
-                                    <select name="category_id" id="category">
-                                        <option value="">Elige una categoría</option>
-                                        <% categories.forEach(category => { %>
-                                            <option value="<%= category.id %>" <%= (locals.oldData && oldData.category_id == category.id) ? "selected" : null%> ><%= category.name %></option>
-                                        <% }) %>
-                                    </select>
-                                <% } else { %>
-                                    <select name="category_id" id="category">
-                                        <option value="">Elige una categoría</option>
-                                        <% categories.forEach(category => { %>
-                                            <option value="<%= category.id %>" <%= product.category_id === category.id ? "selected" : null%> ><%= category.name %></option>
-                                        <% }) %>
-                                    </select>
-                                <% } %>
-                            </div>
-                            <div id="errores-category">
-            
-                            </div>
-                            <% if(locals.errors && errors.category_id){ %>
-                                <div id="error-back-category" class="error-invalid">
-                                   <%= errors.category_id.msg %> 
-                                </div>
-                            <% } %>
-
-                            <!--
-                            <div class="register-form-input register-form-password">
-                                <label for="size">Tamaño</label>
-                                <div><input type="radio" name="size" id="size" value="small">Small</div>
-                                <div><input type="radio" name="size" id="size" value="medium">Medium</div>
-                                <div><input type="radio" name="size" id="size" value="large">Large</div>
-                                <div><input type="radio" name="size" id="size" value="jumbo">Jumbo</div>
-                                <div><input type="radio" name="size" id="size" value="n/a">No aplica</div>
-                            </div>
-                            -->
-                        </div>                                               
-                        <div class="product-article-button">
-                            <button type="submit" id="form-submit-button" class="product-article-edit-button">EDITAR<i class="far fa-edit"></i></button>
-                            <div class="product-article-a-create">¿Quieres crear un nuevo producto?, <a href="/products/create"><b>Haz Click Aquí</b></a> </div>
+                <div class="product-article-details">
+                    
+                    <div class="product-input product-name">
+                        <label for="name">Nombre (*)</label>
+                        <% if(locals.oldData && (oldData.name || oldData.name == "")){ %>
+                            <input type="text" name="name" id="name" value="<%= locals.oldData ? oldData.name : null %>">
+                        <% } else { %>
+                            <input type="text" name="name" id="name" value="<%= product.name %>">
+                        <% } %> 
+                    </div>
+                    <div id="errores-name">
+                
+                    </div>
+                    <% if(locals.errors && errors.name){ %>
+                        <div id="error-back-name" class="error-invalid">
+                           <%= errors.name.msg %> 
                         </div>
-                    </article>
+                    <% } %>
+                
+                
+                    <div class="product-input product-description">
+                        <label for="description">Descripción (*)</label>
+                        <% if (locals.oldData && (oldData.description || oldData.description == "")){ %> 
+                            <textarea name="description" id="description" cols="20" rows="7"><%= locals.oldData && oldData.description ? oldData.description : null %></textarea>
+                        <% } else { %>
+                            <textarea name="description" id="description" cols="20" rows="7"><%= product.description %></textarea>
+                        <% } %>                                 
+                    </div>
+                    <div id="errores-description">
+                
+                    </div>
+                    <% if(locals.errors && errors.description){ %>
+                        <div id="error-back-description" class="error-invalid">
+                           <%= errors.description.msg %> 
+                        </div>
+                    <% } %>
+                
+                    <div class="product-input product-price">
+                        <label for="price">Precio (*)</label>
+                        <% if(locals.oldData && (oldData.price || oldData.price == "")){ %>
+                            <input type="number" step="any" name="price" id="price" value="<%= locals.oldData ? oldData.price : null %>">
+                        <% } else{ %>
+                            <input type="number" step="any" name="price" id="price" value="<%= product.price %>">
+                        <% } %>                                
+                    </div>
+                    <div id="errores-price">
+                
+                    </div>
+                    <% if(locals.errors && errors.price){ %>
+                        <div id="error-back-price" class="error-invalid">
+                           <%= errors.price.msg %> 
+                        </div>
+                    <% } %>
+                
+                    <div class="product-input product-category">
+                        <label for="category">Categoría (*)</label>
+                        <% if(locals.oldData && (oldData.category_id || oldData.category_id == "")){ %>
+                            <select name="category_id" id="category">
+                                <option value="">Elige una categoría</option>
+                                <% categories.forEach(category => { %>
+                                    <option value="<%= category.id %>" <%= (locals.oldData && oldData.category_id == category.id) ? "selected" : null%> ><%= category.name %></option>
+                                <% }) %>
+                            </select>
+                        <% } else { %>
+                            <select name="category_id" id="category">
+                                <option value="">Elige una categoría</option>
+                                <% categories.forEach(category => { %>
+                                    <option value="<%= category.id %>" <%= product.category_id === category.id ? "selected" : null%> ><%= category.name %></option>
+                                <% }) %>
+                            </select>
+                        <% } %>
+                    </div>
+                    <div id="errores-category">
+                
+                    </div>
+                    <% if(locals.errors && errors.category_id){ %>
+                        <div id="error-back-category" class="error-invalid">
+                           <%= errors.category_id.msg %> 
+                        </div>
+                    <% } %>
+                
+                </div>                                               
+                <div class="product-input edit-button-div">
+                    <button type="submit" id="form-submit-button" class="edit-button">EDITAR <i class="far fa-edit"></i></button>
+                    <div class="create-link">¿Quieres crear un nuevo producto? <a href="/products/create"><b>Click Aquí</b></a> </div>
                 </div>
             </form>
         </section>

@@ -3,18 +3,15 @@ vista desktop
 index:
 - achicar el max-width del header para q no haya tanto espacio entre logos y barra de busqueda.
 - llevar el logo y el carrito mas para los margenes.
-- achicar la imagen del index de la maceta y agrendar la letra del #us
-- ver de poner una imagen de fondo en el main
 
 vista tablet
 - mejorar la navbar del header para que los li aparezcan en una sola linea
 
 vista mobile
--centrar la direccion en el footer
+-poner todo el texto del us en cursiva
+
 
 general
--mejorar los botones de editar y eliminar producto en productList y ProducDetail
-- mejorar la vista de login
 - mejorar la vista de edicon de producto
 - agregar logica de vaciar carrito
 

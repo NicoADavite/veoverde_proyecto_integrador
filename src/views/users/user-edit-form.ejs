@@ -87,6 +87,11 @@
                             <button type="button" class="show-password-button">Cambiar Contraseña <i class="fas fa-angle-down"></i></button>
                         </div>                        
                         <div class="edit-user-form-div passwords">
+
+                            <div class="password-checkbox-div">
+                                <input type="checkbox" class="password-checkbox"> Mostrar Contraseñas
+                            </div>  
+
                             <label for="oldPassword">Contraseña Antigua</label>
                             <input autocomplete="nope" type="password" name="oldPassword" id="oldPassword" class="password-input">
                             <div id="errores-oldPassword">
@@ -109,10 +114,7 @@
                             <div id="errores-newPasswordRepeat">
 
                             </div>
-
-                            <div>
-                                <input type="checkbox" class="password-checkbox"> Mostrar Contraseñas
-                            </div>                            
+                          
                         </div>
                         <div class="edit-user-form-div submit-button-div">
                             <button type="submit" class="submit-button">Modificar Datos</button>

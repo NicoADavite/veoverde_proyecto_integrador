@@ -1,13 +1,16 @@
 /*main*/
 
-.go-back{
-    margin: 30px;
+main{
+    padding: 30px 5px;
+    background-image: url("/images/brand-images/PRODUCTOS ALTA.png");
+    background-position-x: -380px;
 }
 
 .container{
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
     flex-wrap: wrap;
     margin: 20px 10px;
 }
@@ -34,18 +37,27 @@
     border-radius: 50%;
 }
 .child .titulo{
-    margin: 10px;
+    margin: 10px auto;
+    text-align: center;
 }
 
 .child .datos{
-    margin: 10px;
+    margin: 10px auto;
+    text-align: center;
 }
+
+.child .datos div{
+    margin: auto;
+    text-align: center;
+}
+
 .child .datos p{
     margin-top: 10px;
 }
 
 .child .edit-div{
-    margin: 10px;
+    margin: 10px auto;
+    text-align: center;
 }
 
 .child .edit-button{
@@ -70,13 +82,36 @@
 /* media */
 
 @media (min-width: 481px){
-    
+
+    main{
+        background-position-x: -300px;
+    }
+
+    .profile-picture{
+        max-width: 150px;
+    }    
 }
 
 @media (min-width: 768px){
 
+    main{
+        background-position-x: -200px;
+    }
+
+    .profile-picture{
+        max-width: 180px;
+    } 
+
 }
 
 @media (min-width: 1280px){
+
+    main{
+        background-position-x: 0px;
+    }
+
+    .profile-picture{
+        max-width: 195px;
+    } 
     
 }

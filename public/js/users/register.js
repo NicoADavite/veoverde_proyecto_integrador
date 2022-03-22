@@ -18,6 +18,9 @@ window.addEventListener("load", function() {
     let rePasswordInput = document.querySelector("#user_password-confirmation");
     let imageInput = document.querySelector("#user_image");
 
+    // Image Title
+    let imageTitle = document.querySelector(".image-title")
+
     // Divs de errores del front
     let erroresFirstName = document.querySelector("#errores-firstName");
     let erroresLastName = document.querySelector("#errores-lastName");
@@ -276,8 +279,11 @@ window.addEventListener("load", function() {
 
     // Validaciones on-time para la imagen
     imageInput.addEventListener("change", () => {
-        if(document.querySelector("#error-back-repassword")){
-            document.querySelector("#error-back-repassword").style.display = "none"
+
+        if(imageInput.value != ""){
+            imageTitle.innerText = imageInput.files[0].name;
+        } else {
+            imageTitle.innerText = "";
         }
 
         if(imageInput.value != ""){

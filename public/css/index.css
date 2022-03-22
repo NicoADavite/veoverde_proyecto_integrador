@@ -2,7 +2,8 @@
 
 main{
     padding: 20px 5px;
-    background-image: url("/images/brand-images/background.heic");
+    background-image: url("/images/brand-images/PRODUCTOS ALTA.png");
+    background-position-x: -420px;
 }
 
 main,
@@ -30,7 +31,7 @@ main,
 .us-div{
     margin: 20px 20px;
     padding: 20px 15px;
-    width: 100%;
+    width: 80%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -53,15 +54,34 @@ main,
     color: black;
     text-shadow: 0.5px 0.5px 0.8px rgb(49, 49, 49);
     text-align: center;
+    font-style: italic;
+}
+
+.eco-icons{
+    padding: 5px;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.eco-icons figure{
+    width: 5%;
+}
+
+.eco-icons figure img{
+    width: 100%;
 }
 
 .our-products{
-    border: 1px solid black;
-    border-radius: 4px;
-    box-shadow: 2px 2px 6px rgb(0 0 0 / 70%);;
+    /* border: 1px solid black; */
+    /* border-radius: 4px; */
+    /* box-shadow: 2px 2px 6px rgb(0 0 0 / 70%); */
     padding: 20px 15px;
     margin: 10px 15px;
-    background-color: rgb(233, 233, 233);
+    /* background-color: rgb(233, 233, 233); */
 }
 
 .product-article{
@@ -70,7 +90,7 @@ main,
 
 .our-products-title{
     width: 100%;
-    background-color: rgb(233, 233, 233);
+    /* background-color: rgb(233, 233, 233); */
     margin-bottom: 30px;
     text-transform: uppercase;
     top: 0.1px;
@@ -91,7 +111,7 @@ main,
 .product-article{
     margin-bottom: 20px;
     padding: 10px;
-    background-color: rgb(238, 238, 238);
+    background-color: rgba(253, 232, 203, 0.849);
     border: 1px solid rgb(0, 39, 0);
     border-radius: 5px;
     transition: all 450ms;
@@ -257,6 +277,13 @@ main,
 }
     
 @media (min-width: 768px){
+    main{
+        background-position-x: -370px;
+    }
+
+    .eco-icons figure{
+        width: 3.5%;
+    }
 
     .product-article{
         width: 48%;
@@ -267,7 +294,7 @@ main,
 @media (min-width: 1280px){
 
     main{
-        background-image: url("/images/brand-images/PRODUCTOS ALTA.png");
+        background-position-x: -50px;
     }
 
     .us{
@@ -277,6 +304,7 @@ main,
         justify-content: space-around;
         width: 100%;
         margin-top: 15px;
+        padding-top: 15px;
         margin-bottom: 25px;
     }
     

@@ -1,10 +1,11 @@
 /*Main*/
 
 main{
-    background-color: rgb(255, 255, 255);
+    /* background-color: rgb(255, 255, 255); */
+    background-image: url("/images/brand-images/background.heic");
 }
 
-.go-back {
+/* .go-back {
     display: flex;
     margin: 10px;
     }
@@ -14,7 +15,7 @@ main{
     text-decoration: none;
     color: teal;
     font-weight: bold;
-}
+} */
 
 section{
     margin: 0px auto;
@@ -22,15 +23,16 @@ section{
 
 .first-product{
     max-width:95%;
-    margin: 20px auto;
+    margin: auto;
+    padding: 30px 0px;
     display: flex;
     padding: 20px 15px;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
-    border: 1px solid rgb(0, 39, 0);
-    border-radius: 5px;
-    box-shadow: 2px 2px 6px rgb(0 0 0 / 60%);
+    /* border: 1px solid rgb(0, 39, 0); */
+    /* border-radius: 5px;
+    box-shadow: 2px 2px 6px rgb(0 0 0 / 60%); */
 }
 
 .product-title-div{
@@ -239,7 +241,7 @@ a:visited{
 }
 
 .description-div{
-    padding: 5%;
+    padding: 15px;
     margin-top: 15px;
 }
 
@@ -258,6 +260,7 @@ a:visited{
 
 .show{
     display: flex;
+    text-align: center;
 }
 
 /* media */
@@ -309,7 +312,7 @@ a:visited{
     }
     
     .first-product{
-        margin: 20px;
+        padding: 30px;
         display: flex;
         flex-direction: column;
     }
@@ -341,10 +344,18 @@ a:visited{
         width: 170px;
     }
 
+    .show{
+        font-size: 16px;
+    }
+
 }
 
 
 @media (min-width: 1280px){
+
+    main{
+        background-image: url("/images/brand-images/PRODUCTOS ALTA.png");
+    }
 
     .product-image-div{
         max-width: 48%;
@@ -365,6 +376,10 @@ a:visited{
         flex-wrap: wrap;
         justify-content: space-around;
         align-items: center;
+    }
+
+    .show{
+        font-size: 20px;
     }
 }
     

@@ -3,6 +3,7 @@
 main{
     background-image: url("/images/brand-images/PRODUCTOS ALTA.png");
     padding-bottom: 15px;
+    background-position-x: -390px;
 }
 
 .go-back {
@@ -165,13 +166,19 @@ h2.form-title{
 /* media */
 
 @media (min-width: 481px){
-    
+    main{
+        background-position-x: -350px;
+    }    
 }
 
 @media (min-width: 768px){
-
+    main{
+        background-position-x: -225px;
+    }
 }
 
 @media (min-width: 1280px){
-    
+    main{
+        background-position-x: 0px;
+    }    
 }
