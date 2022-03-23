@@ -7,7 +7,7 @@ footer{
 }
 
 .footer-nav{
-    padding: 20px 30px;
+    padding: 20px 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -97,7 +97,7 @@ footer{
 
 .footer-email-newsletter{
     margin-top: 30px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -117,7 +117,7 @@ footer{
 
 .footer-email-newsletter input{
     width: 55%; 
-    padding: 2px; 
+    padding: 6px;
     margin-right: 10px;
     border-radius: 5px;
     box-shadow: 2px 2px 6px rgb(0 0 0 / 40%);
@@ -135,7 +135,6 @@ footer{
     box-shadow: 2px 2px 6px rgb(0 0 0 / 40%);
     min-width: 90px;
     max-width: 95px;
-    max-height: 28px;
     transition: all 450ms;    
 }
     
@@ -256,23 +255,9 @@ a:visited{
 }
 */
 
-@media (min-width: 768px){
-
-    .footer-bottom .logo-footer{
-        order: -2;
-    }
-
-    .footer-bottom .footer-copyright{
-        align-self: flex-end;
-        margin: 0px;
-        width: 60%;
-        order: -1;
-    }
-
-}
 
 @media (min-width: 481px){
-
+    
     .our-products-title h2{
         font-size: 1.7em;
     }
@@ -287,18 +272,21 @@ a:visited{
     .product-article{
         width: 48%;
     }
-
-}
     
+}
+
 @media (min-width: 768px){
     .footer-nav{
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
+        align-items: flex-start;
     }
 
     .footer-nav-redes{
         width: 25%;
+        margin: 0px;
+        padding: 0px;
     }
 
     .footer-nav-redes h2{
@@ -311,11 +299,14 @@ a:visited{
 
     .footer-nav-nosotros{
         width: 32%;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: flex-start;
+        align-items: center;
     }
 
     .footer-nav-nosotros h2{
-        margin-bottom: 0px;
-        padding-bottom: 10px;
+        margin-bottom: 10px;
     }
 
     .footer-nosotros-location{
@@ -323,14 +314,27 @@ a:visited{
     }
 
     .footer-email-newsletter{
-        margin-top: 10px;
+        margin: 0px;
+        padding: 0px;
+        align-items: flex-start;
         width: 40%;
     }
 
     .footer-email-newsletter h3{
         font-size: 1.4rem;
-        margin-bottom: 10px;
+        margin-bottom: 14px;
         align-self: flex-start;
+    }
+
+    .footer-bottom .logo-footer{
+        order: -2;
+    }
+
+    .footer-bottom .footer-copyright{
+        align-self: flex-end;
+        margin: 0px;
+        width: 60%;
+        order: -1;
     }
 
 }

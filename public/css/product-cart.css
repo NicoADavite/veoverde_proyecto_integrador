@@ -10,7 +10,13 @@ main{
     align-items: center;
     padding: 20px 0px;
     background-image: url("/images/brand-images/PRODUCTOS ALTA.png");
-    background-position-x: -420px;    
+    background-position-x: -450px;    
+}
+
+.product-cart-h1{
+    text-align: center;
+    color: rgb(78, 119, 78);
+    padding: 20px;
 }
 
 .cart-title {
@@ -135,7 +141,7 @@ transform: scale(1.02);
 
 .total-amount-cart {
     width: 100%;
-    margin-top: 0px;
+    margin: 15px auto;
     padding: 20px;
     display: flex;
     justify-content: center;
@@ -156,7 +162,7 @@ transform: scale(1.02);
 .check-out button {
     width: auto;
     padding: 8px; 
-    background-color: #1F3A3B;
+    background-color: rgba(51, 218, 0, 0.76);
     text-align: center;
     border-radius: 15px; 
     box-shadow: 2px 2px 6px rgb(0 0 0 / 40%);
@@ -168,7 +174,7 @@ transform: scale(1.02);
 }
 
 .check-out button:hover {
-   background-color: rgb(175, 214, 175);
+   background-color: rgb(0, 255, 0);
 }
 
 .keep-buying{
@@ -182,7 +188,7 @@ transform: scale(1.02);
 .keep-buying button{
     width: auto;
     padding: 8px; 
-    background-color: #1F3A3B;
+    background-color: rgba(51, 218, 0, 0.76);
     text-align: center;
     border-radius: 15px; 
     box-shadow: 2px 2px 6px rgb(0 0 0 / 40%);
@@ -198,7 +204,7 @@ transform: scale(1.02);
 }
 
 .keep-buying button:hover {
-    background-color: rgb(175, 214, 175);
+    background-color: rgb(0, 255, 0);
  }
 
 .empty-cart{
@@ -206,8 +212,9 @@ transform: scale(1.02);
     padding: 20px;
     display: flex;
     flex-flow: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+    padding-top: 50px;
 }
 
 .empty-cart h1{
@@ -232,10 +239,20 @@ transform: scale(1.02);
 
 
 @media (min-width: 481px){
+
+    main{
+        background-position-x: -400px;
+        background-position-y: -15px;    
+    }
     
 }
 
 @media (min-width: 768px){
+
+    main{
+        background-position-x: -350px;
+        background-position-y: -30px;    
+    }
 
     .shopping-cart-options {
         font-size: 14px;
@@ -247,6 +264,15 @@ transform: scale(1.02);
     
     .description-cart {
         font-size: 20px;
+    }
+
+    .check-out{
+        width: 40%;
+    }
+
+    .keep-buying{
+        width: 40%;
+
     }
 
 }

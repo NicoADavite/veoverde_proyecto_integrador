@@ -54,7 +54,7 @@ window.addEventListener("load", () => {
         main.appendChild(cartTotalAmount);
 
         const cartTotalAmountString = document.createElement("strong");
-        cartTotalAmountString.innerHTML = "Total compra  $";
+        cartTotalAmountString.innerHTML = "TOTAL COMPRA   $";
         cartTotalAmount.appendChild(cartTotalAmountString);
 
         const cartTotalAmountNumber = document.createElement("strong");
@@ -64,7 +64,7 @@ window.addEventListener("load", () => {
         const cartCheckOut = document.createElement("div");
         cartCheckOut.style.display = "none";
         cartCheckOut.setAttribute("class", "check-out");
-        cartCheckOut.innerHTML = "<button>COMPRAR</button>";
+        cartCheckOut.innerHTML = "<button>COMPLETAR LA COMPRA   <i class='fas fa-credit-card'></i></button>";
         main.appendChild(cartCheckOut);
         cartCheckOut.addEventListener("click", () => {
           alert("Genial ya hiciste la compra! Te mandamos un email con los detalles de la compra!");
@@ -76,7 +76,7 @@ window.addEventListener("load", () => {
         const cartKeepBuying = document.createElement("div");
         cartKeepBuying.style.display = "none";
         cartKeepBuying.setAttribute("class", "keep-buying");
-        cartKeepBuying.innerHTML = "<button><a href='/products'>SEGUIR COMPRANDO</a></button>";
+        cartKeepBuying.innerHTML = "<button><a href='/products'>SEGUIR COMPRANDO   <i class='fas fa-shopping-bag'></i></a></button>";
         main.appendChild(cartKeepBuying);
 
         let cartProducts = JSON.parse(cartProductsJSON);
@@ -183,7 +183,7 @@ window.addEventListener("load", () => {
 
       const emptyCart = document.createElement("div");
       emptyCart.setAttribute("class", "empty-cart")
-      emptyCart.innerHTML = "<h1>El carrito de productos esta vacío</h1>";
+      emptyCart.innerHTML = "<h2>El carrito está vacío</h2>";
       emptyCart.innerHTML += "<button><a href='/products'>Volver a la lista de productos</a></button>";
       main.appendChild(emptyCart);
 

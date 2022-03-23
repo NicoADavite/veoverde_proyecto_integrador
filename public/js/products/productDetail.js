@@ -60,7 +60,10 @@ window.addEventListener("load", () => {
                 })
 
                 localStorage.setItem("cartProducts", JSON.stringify(cartProducts));
+
                 console.log(localStorage.cartProducts);
+
+                location.href = "http://localhost:3001/products/productCart";
 
             } else{
 
@@ -73,6 +76,8 @@ window.addEventListener("load", () => {
 
                 localStorage.setItem("cartProducts", JSON.stringify(cartProducts));
                 console.log(localStorage.cartProducts);
+
+                location.href = "http://localhost:3001/products/productCart";
 
             }               
 
@@ -90,6 +95,8 @@ window.addEventListener("load", () => {
             localStorage.setItem("cartProducts", JSON.stringify(cartProducts));
 
             console.log(localStorage.cartProducts);
+
+            location.href = "http://localhost:3001/products/productCart";
 
         }
 

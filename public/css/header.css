@@ -10,7 +10,7 @@
 header{
     padding: 25px 0px;
     background-image: url("/images/brand-images/pinos.png");
-    opacity: 80%;
+    opacity: 85%;
 }
 
 .top-header{
@@ -132,6 +132,7 @@ header{
     justify-self: flex-end;
     display: flex;
     justify-content: center;
+    position: relative;
 }
 
 .shopping-cart i{
@@ -143,6 +144,25 @@ header{
 .shopping-cart a:visited{
     color: white;
     text-shadow: 1.5px 1.5px 0.2px black;
+}
+
+.cart-number{
+    display: none;
+}
+
+.cart-number-show{
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    text-shadow: 1px 1px 0.5px black;
+    border: 0.5px solid rgba(0, 0, 0, 0.267);
+    padding: 4px 8px;
+    border-radius: 50%;
+    color: white;
+    background-color: rgba(3, 184, 3, 0.7);
+    position: absolute;
+    top: -70%;
+    right: 4px;
 }
 
 .header-search-form{

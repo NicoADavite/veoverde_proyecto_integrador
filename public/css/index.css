@@ -4,6 +4,7 @@ main{
     min-height: 42vh;
     padding: 20px 5px;
     background-image: url("/images/brand-images/PRODUCTOS ALTA.png");
+    background-repeat: no-repeat;
     background-position-x: -420px;
 }
 
@@ -120,7 +121,6 @@ main,
     text-align: center;
     /* position: sticky;
     top: 1px; */
-    opacity: 50%;
     padding-top: 10px;
     margin-bottom: 10px;
 }
@@ -154,25 +154,6 @@ main,
 .product-article-img img{
     max-width: 100%;      
     transition: all 650ms;
-}
-
-.product-article-discount{
-    width: 45%;
-    padding: 5px;
-    background-color: rgb(59, 59, 59);
-    color: white;
-    border-radius: 10px;
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    opacity: 90%;
-    transition: all 650ms;
-}
-
-.product-article:hover .product-article-discount{
-    transform: scale(1.1);
-    opacity: 80%;
-    top: 15px;
 }
 
 .discount-discount{
