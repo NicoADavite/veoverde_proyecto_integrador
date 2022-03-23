@@ -2,7 +2,8 @@
 
 main{
     /* background-color: rgb(255, 255, 255); */
-    background-image: url("/images/brand-images/background.heic");
+    background-image: url("/images/brand-images/PRODUCTOS ALTA.png");
+    background-position-x: -410px;
 }
 
 /* .go-back {
@@ -48,7 +49,6 @@ section{
 .product-image-div{
     width: 85%;
     max-width: 275px;
-    position: relative;
     margin: auto;
 }
 
@@ -100,10 +100,6 @@ section{
     font-weight: bold;
     text-align: center;
 }
-
-#cart-form{
-}
-
 
 .quantity{
     text-align: center;
@@ -267,6 +263,10 @@ a:visited{
 
 @media (min-width: 481px){
 
+    main{
+        background-position-x: -390px;
+    }
+
     .first-product{
         flex-direction: column;
         flex-wrap: wrap;
@@ -304,10 +304,11 @@ a:visited{
 @media (min-width: 768px){
 
     .product-details{
+        width: 100%;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-around;
+        justify-content: center;
         align-items: center;
     }
     
@@ -319,16 +320,16 @@ a:visited{
 
     .product-image-div{
         width: 45%;
+        max-width: 300px;
         margin: 0px;
-    }  
+    }
+
+    .price-buttons-ul{
+        width: 45%;
+    }
 
     .product-title{
         text-align: center;
-    }
-
-    .product-article-discount{
-        opacity: 80%;
-        width: 30%
     }
 
     .payment-shipping{
@@ -354,18 +355,19 @@ a:visited{
 @media (min-width: 1280px){
 
     main{
-        background-image: url("/images/brand-images/PRODUCTOS ALTA.png");
+        background-position-x: -200px;
     }
 
     .product-image-div{
-        max-width: 48%;
+        width: 48%;
+        max-width: 340px;
     }
     .product-image-div img{
         max-width: 80%;
     }
 
     .price-buttons-ul{
-        width: 48%;
+        width: 35%;
     }
 /* 
     .product-title{

@@ -1,0 +1,76 @@
+main{
+    min-height: 60vh;
+    background-image: url("/images/brand-images/PRODUCTOS ALTA.png");
+    padding: 15px;
+    background-position-x: -400px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-section{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center; 
+}
+
+.main-section img{
+    width: 70%;
+    margin-bottom: 15px;
+}
+
+.main-section h1{
+    margin-bottom: 15px;
+    color: rgb(78, 119, 78);
+}
+
+.main-section p{
+    margin-bottom: 15px;
+    font-size: 25px;
+}
+
+.main-section a{
+    text-decoration: none;
+    color: rgb(0, 173, 0);
+    font-size: 18px;
+}
+
+.main-section a:hover{
+    color: rgb(0, 212, 0);
+}
+
+@media (min-width: 481px) {
+    main{
+        background-position-x: -380px;
+    }
+    
+    .main-section img{
+        width: 60%;
+    }
+}
+
+@media (min-width: 768px) {
+    main{
+        background-position-x: -250px;
+    }
+
+    .main-section img{
+        width: 40%;
+        margin-bottom: 15px;
+    }
+}
+
+@media (min-width: 1280px) {
+    main{
+        background-position-y: -100px;
+        background-position-x: 0px;
+    }
+    
+    .main-section img{
+        width: 30%;
+        margin-bottom: 15px;
+    }
+}

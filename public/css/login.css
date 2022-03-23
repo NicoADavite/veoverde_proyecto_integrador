@@ -6,21 +6,6 @@ main{
     background-position-x: -390px;
 }
 
-.go-back {
-    display: flex;
-    margin: 15px 15px 5px;
-}
-    
-.go-back a{
-    padding-right: 2px;
-    text-decoration: none;
-    color: teal;
-    font-weight: bold;
-}
-.go-back a:hover{
-    color: rgb(4, 190, 190);
-}
-
 h2.form-title{
     margin-bottom: 20px;
     font-size: 25px;

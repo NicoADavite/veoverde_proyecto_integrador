@@ -43,6 +43,11 @@ app.use("/products", productsRouter); // define al productsRouter como enrutador
 app.use("/api/products", apiProductRouter); // define al apiProductsRouter como enrutador para todos aquellas solicitudes con el prefijo "/api/products"
 app.use("/api/users", apiUsersRouter); // define al apiUsersRouter como enrutador para todos aquellas solicitudes con el prefijo "/api/users"
 
+
+app.use((req, res, next) => {
+    res.status(404).render("error-404")
+})
+
 // ************ app.listen to lift the server on port 3000 ************
 
 let port = process.env.PORT || 3001;
