@@ -171,7 +171,7 @@ window.addEventListener("load", () => {
                   cartProductDiv.appendChild(cartProductOptions);
 
                   const cartProductDelete = document.createElement("li");
-                  cartProductDelete.innerHTML = `<button class="delete-product-button" onclick="deleteFromCart(${cartProductData.id})"><i class="fa-solid fa-trash-can"></i></button>`;
+                  cartProductDelete.innerHTML = `<button class="delete-product-button" onclick="deleteFromCart(${cartProductData.id})"><i class="far fa-trash-alt"></i></button>`;
                   cartProductOptions.appendChild(cartProductDelete);   
                     
                 })

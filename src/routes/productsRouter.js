@@ -1,7 +1,6 @@
 // ************ Require's ************
 const express = require("express");
 const router = express.Router();
-const multer = require('multer');
 const path = require('path');
 
 
@@ -10,7 +9,8 @@ const productsController = require("../controllers/productsController");
 
 
 // ************ Middlewares ************ 
-const upload = require('../middlewares/productMulterMiddleware');
+const multerMiddleware = require('../middlewares/multerMiddleware');
+const upload = multerMiddleware('products', 'product');
 const productValidationMiddleware = require("../middlewares/productValidationMiddleware");
 const adminMiddleware = require('../middlewares/adminMiddleware');
 
