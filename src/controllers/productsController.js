@@ -128,7 +128,7 @@ const productsController = {
     },
 
     // metodo para puttear el formulario de edicion del producto
-    update: (req, res) => {
+    update: async (req, res) => {
 
         let id = req.params.id;
         
@@ -161,6 +161,8 @@ const productsController = {
                 .then(product => {
                 
                     if(req.file != undefined){
+                        const imagePath = path.join(__dirname, `../../public/images/products/${product.image}`);
+                        fs.unlinkSync(imagePath);
                         img = req.file.filename;
                     } else {
                         if(product.image){
@@ -194,10 +196,17 @@ const productsController = {
     },
 
     // metodo para eliminar un producto 
-    destroy: (req, res) => {
+    destroy: async (req, res) => {
+        const id = req.params.id;
+
+        const productToDelete = await db.Products.findByPk(id);
+
+        const imagePath = path.join(__dirname, `../../public/images/products/${productToDelete.image}`);
+        fs.unlinkSync(imagePath);
+
         db.Products.destroy({
             where: {
-                id: req.params.id
+                id
             }
         })
             .then(result => {
