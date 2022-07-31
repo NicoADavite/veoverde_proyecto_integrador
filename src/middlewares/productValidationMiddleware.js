@@ -7,7 +7,7 @@ module.exports = [
         .isLength({ min : 5}).withMessage("El producto debe tener al menos 5 caracteres"),
     body("description")
         .notEmpty().withMessage("Tienes que escribir una descripción").bail()
-        .isLength({ min : 20 }).withMessage("La descripción del producto debe tener al menos 20 carcteres"),
+        .isLength({ min : 20 }).withMessage("La descripción del producto debe tener al menos 20 caracteres"),
     body("image").custom((value, { req }) => {
 
 		let file = req.file;
@@ -26,7 +26,7 @@ module.exports = [
 		return true;
 	}),        
 	body("category_id")
-        .notEmpty().withMessage("Tienes que elegir una categoria"),
+        .notEmpty().withMessage("Tienes que elegir una categoría"),
 	body("price")
         .notEmpty().withMessage("Tienes que escribir un precio para el producto").bail()
         .isDecimal({force_decimal: false}).withMessage("Solo puedes ingresar numeros y el caracter '.' ")

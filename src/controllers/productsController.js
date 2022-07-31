@@ -1,11 +1,10 @@
 const fs = require('fs');
-const { resolve } = require('path');
 const path = require("path");
 
 const {	validationResult } = require('express-validator');
 
 const db = require("../database/models/index");
-const sequelize = db.sequelize;
+// const sequelize = db.sequelize;
 const Op = db.Sequelize.Op;
 
 
@@ -64,6 +63,11 @@ const productsController = {
         let errors = validationResult(req);
 
 		if (errors.errors.length > 0) {
+
+            if(req.file.filename){
+                const imagePath = path.join(__dirname, `../../public/images/products/${req.file.filename}`);
+                fs.unlinkSync(imagePath);
+            }
 
             db.ProductCategories.findAll()
             .then(categories => {
@@ -136,6 +140,11 @@ const productsController = {
 
 		if (errors.errors.length > 0) {
 
+            if(req.file.filename){
+                const imagePath = path.join(__dirname, `../../public/images/products/${req.file.filename}`);
+                fs.unlinkSync(imagePath);
+            }
+
             let categoriesPromise = db.ProductCategories.findAll();
 
             let productPromise = db.Products.findByPk(id);
@@ -161,8 +170,10 @@ const productsController = {
                 .then(product => {
                 
                     if(req.file != undefined){
-                        const imagePath = path.join(__dirname, `../../public/images/products/${product.image}`);
-                        fs.unlinkSync(imagePath);
+                        if(product.image != 'default-image.png'){
+                            const imagePath = path.join(__dirname, `../../public/images/products/${product.image}`);
+                            fs.unlinkSync(imagePath);
+                        }
                         img = req.file.filename;
                     } else {
                         if(product.image){
@@ -201,8 +212,10 @@ const productsController = {
 
         const productToDelete = await db.Products.findByPk(id);
 
-        const imagePath = path.join(__dirname, `../../public/images/products/${productToDelete.image}`);
-        fs.unlinkSync(imagePath);
+        if(productToDelete.image != 'default-image.png'){
+            const imagePath = path.join(__dirname, `../../public/images/products/${productToDelete.image}`);
+            fs.unlinkSync(imagePath);
+        }
 
         db.Products.destroy({
             where: {
